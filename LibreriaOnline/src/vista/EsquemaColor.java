@@ -9,6 +9,8 @@ import java.awt.Color;
  * @author Iker Laforga
  *
  */
+
+//TODO MIRAR CARGA DE ARCHIVO CONFIG http://chuwiki.chuidiang.org/index.php?title=Leer_y_modificar_fichero_de_propiedades_en_java
 public class EsquemaColor {
 	
 	public Color sombra;

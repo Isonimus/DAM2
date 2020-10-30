@@ -15,7 +15,7 @@ import modelo.Motor;
  * @author Iker Laforga
  *
  */
-public class ConexionMySQL {
+public class ConexionMySQL { //MODIFICAR 
 	
 	public static final String DEFAULT_DRIVER = "com.mysql.jdbc.Driver";
 	public static final String DEFAULT_DB_URL = "jdbc:mysql://localhost/libreria";
