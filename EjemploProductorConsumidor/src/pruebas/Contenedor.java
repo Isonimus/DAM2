@@ -7,7 +7,7 @@ package pruebas;
  *                     operar correctamente, es decir, la que hace que
  *                     Consumidor espere hasta que haya un dato disponible, y
  *                     que productor no genere uno nuevo hasta que haya sido
- *                     consumido está en esta clase.
+ *                     consumido está esta clase.
  * 
  *                     La sincronización se lleva a cabo pues usando los métodos
  *                     wait() y notify()/notifiAll().
@@ -57,6 +57,7 @@ public class Contenedor {
 		// Almacena el valor en dato y notifica que hay un dato disponible.
 		dato = valor;
 		hayDato = true;
+		System.out.println(Thread.currentThread().getName() + ": " + dato);
 		notifyAll();
 	}
 
@@ -76,6 +77,7 @@ public class Contenedor {
 		// Cambia el valor de la bandera y devuelve el valor. Pero antes, notifica que
 		// el dato ya ha sido consumido y que se puede almacenar otro.
 		hayDato = false;
+		System.out.println(Thread.currentThread().getName() + ": " + dato);
 		notifyAll();
 		return dato;
 	}

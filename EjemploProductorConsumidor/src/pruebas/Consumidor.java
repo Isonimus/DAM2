@@ -8,17 +8,19 @@ package pruebas;
  **/
 
 public class Consumidor extends Thread {
+	private String nombre;
 	private Contenedor contenedor;
 
-	public Consumidor(Contenedor c) {
+	public Consumidor(String nombre, Contenedor c) {
+		super(nombre);
 		this.contenedor = c;
 	}
 
 	public void run() {
 		int value = 0;
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < ProductorConsumidorTest.NUM_ITERACIONES; i++) {
 			value = contenedor.get(); // Recupera el dato para mostrarlo en consola.
-			System.out.println("Consumidor.get: " + value);
+			// System.out.println("Consumidor. get: " + value);
 		}
 	}
 }
