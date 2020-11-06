@@ -35,6 +35,7 @@ package pruebas;
  **/
 
 public class Contenedor {
+	
 	private int dato; // Contiene el valor, que se almacena con put() y se devuelve con get()
 	private boolean hayDato = false; // Flag (bandera) que indica si el objeto tiene el dato o no.
 
@@ -52,6 +53,8 @@ public class Contenedor {
 				 **/
 				wait();
 			} catch (InterruptedException e) {
+				
+				// Manejar la excepción.
 			}
 		}
 		// Almacena el valor en dato y notifica que hay un dato disponible.
@@ -72,6 +75,8 @@ public class Contenedor {
 				 **/
 				wait();
 			} catch (InterruptedException e) {
+				
+				// Manejar la excepción.
 			}
 		}
 		// Cambia el valor de la bandera y devuelve el valor. Pero antes, notifica que

@@ -8,6 +8,7 @@ package pruebas;
  **/
 
 public class Consumidor extends Thread {
+	@SuppressWarnings("unused")
 	private String nombre;
 	private Contenedor contenedor;
 
@@ -17,6 +18,7 @@ public class Consumidor extends Thread {
 	}
 
 	public void run() {
+		@SuppressWarnings("unused")
 		int value = 0;
 		for (int i = 0; i < ProductorConsumidorTest.NUM_ITERACIONES; i++) {
 			value = contenedor.get(); // Recupera el dato para mostrarlo en consola.
