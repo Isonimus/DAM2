@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import servicio.ServicioMySQL;
+import servicio.ServicioBBDD;
 
 public class Modelo {
 	
@@ -17,7 +17,7 @@ public class Modelo {
 	public Modelo() {
 		
 		super();
-		this.conexion = ServicioMySQL.obtenerServicio().obtenerConexion();
+		this.conexion = ServicioBBDD.obtenerServicio().obtenerConexion();
 		
 		try {
 			sentencia = conexion.createStatement();
@@ -44,6 +44,8 @@ public class Modelo {
 	}
 	
 	public String registrarNuevoAutor(String autor) {
+		
+		//THROWS...
 		
 		int retorno = 0;
 		
