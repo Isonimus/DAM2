@@ -1,25 +1,29 @@
 package controlador;
 
+import java.sql.ResultSet;
+
 import modelo.Modelo;
-import vista.Vista;
 
 public class Controlador {
 
 	private Modelo modelo;
-	private Vista vista;
+	private ResultSet resultado;
 	
-	public Controlador(Modelo modelo, Vista vista) {
+	public Controlador(Modelo modelo) {
 		
 		super();
 		this.modelo = modelo;
-		this.vista = vista;
-		init();
 	}
 	
-	private void init(){
+	public ResultSet obtenerAutores () {
 		
-		System.out.println("Inicializando Controlador...");
-		this.vista.setControlador(this);
+		resultado = modelo.obtenerAutores();
+		return resultado;
+	}
+	
+	public void terminar() {
+		
+		modelo.terminar();
 	}
 
 	public Modelo getModelo() {
@@ -28,13 +32,5 @@ public class Controlador {
 
 	public void setModelo(Modelo modelo) {
 		this.modelo = modelo;
-	}
-
-	public Vista getVista() {
-		return vista;
-	}
-
-	public void setVista(Vista vista) {
-		this.vista = vista;
 	}
 }

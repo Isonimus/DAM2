@@ -14,9 +14,10 @@ public class Launcher {
 	public void launch() {
 		
 		Modelo modelo = new Modelo();
-		Vista vista = new Vista();
-		@SuppressWarnings("unused")
-		Controlador controlador = new Controlador(modelo, vista);
+		Controlador controlador = new Controlador(modelo);
+		Vista vista = new Vista(controlador);
+		vista.getAccion();
+		
 	}
 
 	public static void main(String[] args) {
