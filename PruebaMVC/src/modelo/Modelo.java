@@ -17,6 +17,7 @@ public class Modelo {
 	public Modelo() {
 		
 		super();
+		
 		this.conexion = ServicioBBDD.obtenerServicio().obtenerConexion();
 		
 		try {

@@ -10,7 +10,7 @@ import java.util.Vector;
  * CADA INSTANCIA DE ESTA CLASE ES UNA FILA
  * EN LA BDD
  * @author Iker Laforga
- *
+ * GETACTION = CONTROLADOR
  */
 
 public class Autor {
