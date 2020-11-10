@@ -16,7 +16,7 @@ public class ServicioBBDD {
 			Class.forName("com.mysql.jdbc.Driver");
 			String url = "jdbc:mysql://localhost:3306/libreria";
 			String user = "root";
-			String pass = "";
+			String pass = "admin";
 			
 			conexion = DriverManager.getConnection(url, user, pass);
 			

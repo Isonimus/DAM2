@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Vector;
 
 import servicio.ServicioBBDD;
 
@@ -26,28 +27,18 @@ public class Modelo {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		Autor.setConexionBDD(sentencia, resultado);
 	}
 	
-	public ResultSet obtenerAutores() {
+	public Vector<Autor> obtenerAutores() throws SQLException {
 		
-		try {
-			
-			String sql = "SELECT * FROM autor";
-			resultado = sentencia.executeQuery(sql);
-			
-		} catch (SQLException e) {
-			
-			System.out.println("ERROR: Fallo al obtener los autores.");
-			e.printStackTrace();
-		}
-		
-		return resultado;
+		return Autor.listarAutores();
 	}
 	
 	public String registrarNuevoAutor(String autor) {
 		
 		//THROWS...
-		
 		int retorno = 0;
 		
 		try {

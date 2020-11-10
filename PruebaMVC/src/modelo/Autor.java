@@ -6,11 +6,11 @@ import java.sql.Statement;
 import java.util.Vector;
 
 /**
- * CLASE DAO - MAPEA LA TABLA AUTOR
- * CADA INSTANCIA DE ESTA CLASE ES UNA FILA
- * EN LA BDD
+ * CLASE DAO - MAPEA LA TABLA AUTOR.
+ * CADA INSTANCIA DE ESTA CLASE ES UNA 
+ * FILA EN LA BDD
+ * 
  * @author Iker Laforga
- * GETACTION = CONTROLADOR
  */
 
 public class Autor {
@@ -46,15 +46,18 @@ public class Autor {
 	//================//
 	// ACCESO A DATOS
 	//================//
-	private ResultSet resultado;
-	private Statement sentencia;
+	private static ResultSet resultado;
+	private static Statement sentencia;
 	
-	public void setConexionBDD(Statement sentencia, ResultSet resultado) {
+	public static void setConexionBDD(Statement sentencia, ResultSet resultado) {
 		
 		setResultado(resultado);
 		setSentencia(sentencia);
 	}
 	
+	//================//
+	//    UTILIDAD
+	//================//
 	private static Vector<Autor> cargaResultSetToVector(ResultSet resultado) throws SQLException {
 		
 		Vector<Autor> autores = new Vector<Autor>();
@@ -62,30 +65,49 @@ public class Autor {
 		
 		while(resultado.next()) {
 			
+			int idAutor = resultado.getInt(1);
+			String nombreAutor = resultado.getString(2);
+			autor = new Autor(nombreAutor);
+			autor.setIdAutor(idAutor);
+			autores.add(autor);
 		}
 		
 		return autores;
 	}
 	
-	private static Vector<Autor> buscaResultadosConConsulta(String consulta){
+	private static Vector<Autor> buscaResultadosConConsulta(String consulta) throws SQLException{
 		
-		return null;
+		try {
+			
+			resultado = sentencia.executeQuery(consulta);
+			
+		} catch (SQLException e) {
+			
+			System.out.println("ERROR: Fallo al realizar la consulta.");
+			e.printStackTrace();
+		}
+		
+		return cargaResultSetToVector(resultado);
 	}
-
-	public ResultSet getResultado() {
+	
+	public static ResultSet getResultado() {
+		
 		return resultado;
 	}
 
-	public void setResultado(ResultSet resultado) {
-		this.resultado = resultado;
+	public static void setResultado(ResultSet resultado) {
+		
+		Autor.resultado = resultado;
 	}
 
-	public Statement getSentencia() {
+	public static Statement getSentencia() {
+		
 		return sentencia;
 	}
 
-	public void setSentencia(Statement sentencia) {
-		this.sentencia = sentencia;
+	public static void setSentencia(Statement sentencia) {
+		
+		Autor.sentencia = sentencia;
 	}
 	
 	//================//
@@ -93,7 +115,73 @@ public class Autor {
 	//================//
 	
 	//LECTURAS
-	//public static
-	//3 - leer todos, leer por ID, leer por nombre ('LIKE')
 	//return (retorno > 0) ? "Si si" : "Si no";
+	
+	//CREATE
+	public static String Insertar(String autor) {
+		
+		int retorno;
+		
+		try{
+			
+			String sql = "SELECT max(`cod_autor`) FROM autor";
+			resultado = sentencia.executeQuery(sql);
+			
+			int nuevaId = -1;
+			
+			while(resultado.next()) {
+				
+				nuevaId = resultado.getInt(1);
+			}
+			
+			sql = "INSERT INTO autor (cod_autor, nombre) VALUES (" + nuevaId + ", " + autor + ")";
+			retorno = sentencia.executeUpdate(sql);
+			
+		}catch(SQLException e) {
+			
+			retorno = 0;
+		}
+		
+		return (retorno > 0) ? "Autor " + autor + "añadido correctamente." : "Error al añadir el autor.";
+	}
+	
+	//READ:
+	//LEER TODOS
+	public static Vector<Autor> listarAutores() throws SQLException{
+		
+		return buscaResultadosConConsulta("Select * from autor");
+	}
+	
+	//LEER POR ID
+	public static Vector<Autor> buscarAutorPorId(int idAutor) throws SQLException{
+			
+		return buscaResultadosConConsulta("Select cod_autor, nombre from autor where cod_autor = " + idAutor);
+	}
+	
+	//LEER POR NOMBRE
+	public static Vector<Autor> buscarAutorPorNombre(String nombreAutor) throws SQLException{
+				
+		return buscaResultadosConConsulta("Select cod_autor, nombre from autor where nombre LIKE '" + nombreAutor + "'");
+	}
+	
+	//UPDATE
+	//SÓLO CAMBIA EL NOMBRE (LA ID NO VA A CAMBIAR)
+	
+	//DELETE
+	public static String Eliminar(int idAutor) {
+		
+		int retorno;
+		
+		try{
+			
+			String sql = "DELETE FROM autor WHERE cod_autor = " + idAutor;
+			retorno = sentencia.executeUpdate(sql);
+			
+		}catch(SQLException e) {
+			
+			retorno = 0;
+		}
+		
+		return (retorno > 0) ? "Autor " + idAutor + "eliminado correctamente." : "Error al eliminar el autor.";
+	}
 }

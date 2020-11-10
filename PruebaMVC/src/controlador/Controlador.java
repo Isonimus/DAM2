@@ -1,13 +1,14 @@
 package controlador;
 
-import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Vector;
 
+import modelo.Autor;
 import modelo.Modelo;
 
 public class Controlador {
 
 	private Modelo modelo;
-	private ResultSet resultado;
 	
 	public Controlador(Modelo modelo) {
 		
@@ -15,10 +16,9 @@ public class Controlador {
 		this.modelo = modelo;
 	}
 	
-	public ResultSet obtenerAutores () {
+	public Vector<Autor> obtenerAutores () throws SQLException {
 		
-		resultado = modelo.obtenerAutores();
-		return resultado;
+		return  modelo.obtenerAutores();
 	}
 	
 	public void terminar() {

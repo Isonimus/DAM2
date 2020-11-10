@@ -4,17 +4,19 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.Vector;
 
 import controlador.Controlador;
+import modelo.Autor;
 
-public class Vista {
+public class VistaAutor {
 	
 	private Controlador controlador;
 	private int opcion;
-	private ResultSet resultado;
+	private Vector<Autor> autores;
 	private Scanner scanner;
 	
-	public Vista(Controlador controlador){
+	public VistaAutor(Controlador controlador){
 		
 		super();
 		this.controlador = controlador;
@@ -302,26 +304,29 @@ public class Vista {
 	
 	private void listarAutores() {
 		
-		resultado = controlador.obtenerAutores();
-		
 		try {
 			
-			System.out.println("-------------------LISTA DE AUTORES-------------------");
-			
-			while(resultado.next()) {
-				
-				int codAutor = resultado.getInt(1);
-				String nombreAutor = resultado.getString(2);
-				System.out.println("Código Autor: " + codAutor + ". Nombre autor: " + nombreAutor + ".");
-			}
-			
-			System.out.println("--------------------================------------------");
+			autores = controlador.obtenerAutores();
 			
 		} catch (SQLException e) {
 			
-			System.out.println("ERROR: no han podido visualizarse los autores.");
+			mostrarFeedback("Error al obtener los autores.");
 			e.printStackTrace();
 		}
+		
+			
+		System.out.println("--------------------LISTA DE AUTORES------------------");
+		System.out.println("--------------------================------------------");
+		
+		for(Autor autor : autores) {
+			
+			int codAutor = autor.getIdAutor();
+			String nombreAutor = autor.getNombreAutor();
+			System.out.println("Código Autor: " + codAutor + " - Nombre autor: " + nombreAutor + ".");
+		}
+		
+		System.out.println("--------------------================------------------");
+			
 	}
 	
 	private void lanzarMensajeDespedida() {
