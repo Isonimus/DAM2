@@ -2,7 +2,6 @@ package modelo;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Vector;
 
 /**
@@ -13,7 +12,7 @@ import java.util.Vector;
  * @author Iker Laforga
  */
 
-public class Autor {
+public class Autor extends DAO{
 
 	//================//
 	//  JAVA BEAN (|)
@@ -43,17 +42,6 @@ public class Autor {
 		this.nombreAutor = nombreAutor;
 	}
 
-	//================//
-	// ACCESO A DATOS
-	//================//
-	private static ResultSet resultado;
-	private static Statement sentencia;
-	
-	public static void setConexionBDD(Statement sentencia, ResultSet resultado) {
-		
-		setResultado(resultado);
-		setSentencia(sentencia);
-	}
 	
 	//================//
 	//    UTILIDAD
@@ -79,7 +67,7 @@ public class Autor {
 		
 		try {
 			
-			resultado = sentencia.executeQuery(consulta);
+			setResultado(getSentencia().executeQuery(consulta)); 
 			
 		} catch (SQLException e) {
 			
@@ -87,35 +75,12 @@ public class Autor {
 			e.printStackTrace();
 		}
 		
-		return cargaResultSetToVector(resultado);
-	}
-	
-	public static ResultSet getResultado() {
-		
-		return resultado;
-	}
-
-	public static void setResultado(ResultSet resultado) {
-		
-		Autor.resultado = resultado;
-	}
-
-	public static Statement getSentencia() {
-		
-		return sentencia;
-	}
-
-	public static void setSentencia(Statement sentencia) {
-		
-		Autor.sentencia = sentencia;
+		return cargaResultSetToVector(getResultado());
 	}
 	
 	//================//
 	//    C.R.U.D
 	//================//
-	
-	//LECTURAS
-	//return (retorno > 0) ? "Si si" : "Si no";
 	
 	//CREATE
 	public static String Insertar(String autor) {
@@ -134,47 +99,48 @@ public class Autor {
 				nuevaId = resultado.getInt(1);
 			}
 			
-			sql = "INSERT INTO autor (cod_autor, nombre) VALUES (" + nuevaId + ", " + autor + ")";
-			retorno = sentencia.executeUpdate(sql);
+			String sql2 = "INSERT INTO autor (cod_autor, nombre) VALUES (" + (nuevaId + 1) + ", '" + autor + "')";
+			retorno = sentencia.executeUpdate(sql2);
 			
 		}catch(SQLException e) {
 			
+			e.printStackTrace();
 			retorno = 0;
 		}
 		
-		return (retorno > 0) ? "Autor " + autor + "añadido correctamente." : "Error al añadir el autor.";
+		return (retorno > 0) ? "Autor " + autor + " añadido correctamente." : "Error al añadir el autor.";
 	}
 	
 	//READ:
 	//LEER TODOS
-	public static Vector<Autor> listarAutores() throws SQLException{
+	public static Vector<Autor> listar() throws SQLException{
 		
 		return buscaResultadosConConsulta("Select * from autor");
 	}
 	
 	//LEER POR ID
-	public static Vector<Autor> buscarAutorPorId(int idAutor) throws SQLException{
+	public static Vector<Autor> buscarPorId(int id) throws SQLException{
 			
-		return buscaResultadosConConsulta("Select cod_autor, nombre from autor where cod_autor = " + idAutor);
+		return buscaResultadosConConsulta("Select cod_autor, nombre from autor where cod_autor = " + id);
 	}
 	
 	//LEER POR NOMBRE
-	public static Vector<Autor> buscarAutorPorNombre(String nombreAutor) throws SQLException{
+	public static Vector<Autor> buscarPorNombre(String nombre) throws SQLException{
 				
-		return buscaResultadosConConsulta("Select cod_autor, nombre from autor where nombre LIKE '" + nombreAutor + "'");
+		return buscaResultadosConConsulta("Select cod_autor, nombre from autor where nombre LIKE '" + nombre + "'");
 	}
 	
 	//UPDATE
 	//SÓLO CAMBIA EL NOMBRE (LA ID NO VA A CAMBIAR)
 	
 	//DELETE
-	public static String Eliminar(int idAutor) {
+	public static String Eliminar(int id) {
 		
 		int retorno;
 		
 		try{
 			
-			String sql = "DELETE FROM autor WHERE cod_autor = " + idAutor;
+			String sql = "DELETE FROM autor WHERE cod_autor = " + id;
 			retorno = sentencia.executeUpdate(sql);
 			
 		}catch(SQLException e) {
@@ -182,6 +148,6 @@ public class Autor {
 			retorno = 0;
 		}
 		
-		return (retorno > 0) ? "Autor " + idAutor + "eliminado correctamente." : "Error al eliminar el autor.";
+		return (retorno > 0) ? "Autor " + id + " eliminado correctamente." : "Error al eliminar el autor.";
 	}
 }

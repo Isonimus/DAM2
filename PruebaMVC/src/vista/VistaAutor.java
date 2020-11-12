@@ -1,83 +1,61 @@
 package vista;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 import java.util.Vector;
 
 import controlador.Controlador;
 import modelo.Autor;
 
-public class VistaAutor {
+public class VistaAutor extends Vista implements Consultable{
 	
-	private Controlador controlador;
-	private int opcion;
 	private Vector<Autor> autores;
-	private Scanner scanner;
 	
-	public VistaAutor(Controlador controlador){
+	public VistaAutor(Controlador controlador) {
 		
-		super();
-		this.controlador = controlador;
-		this.scanner = new Scanner(System.in);
+		super(controlador);
 	}
 	
 	public void getAccion() {
 		
-		System.out.println("---------------------LIBRERÍA ONLINE------------------");
+		System.out.println("-----------------MANTENIMIENTO DE AUTORES-------------");
 		
 		do {
 			
-			getMenuPrincipal();
-			getOpcion();
+			getMenu();
+			pedirOpcion();
 			
-			switch(opcion){
+			switch(getOpcion()){
 				
-				case 1:
-					mantenerAutores();
+				case 1: 
+					insertar();
 					break;
 					
 				case 2:
-					mantenerLibros();
+					System.out.println("Actualizar Autor");
 					break;
 					
 				case 3: 
-					mantenerEditoriales();
+					eliminar();
 					break;
 					
 				case 4: 
-					mantenerCategorias();
+					listar(); 
 					break;
 					
 				case 0:
-					System.out.println("Has elegido cerrar.");
-					controlador.terminar();
-					lanzarMensajeDespedida();
+					//getAccion();
 					break;
 					
 				default:
 					System.out.println("Opción incorrecta.");
 					break;
-			
 			}
 			
-		} while(opcion != 0);
-	}
-	
-	private void getMenuPrincipal() {
+		} while(getOpcion() != 0);
 		
-		System.out.println("------------------------OPCIONES----------------------");
-		System.out.println("Elige una opción:\n");
-		System.out.println("1 - Mantenimiento Autores");
-		System.out.println("2 - Mantenimiento Libros");
-		System.out.println("3 - Mantenimiento Editoriales");
-		System.out.println("4 - Mantenimiento Categorías");
-		System.out.println("0 - Salir");
-		System.out.println("-------------------ESPERANDO SELECCIÓN----------------");
 	}
 	
-	private void getMenuAutor() {
+	public void getMenu() {
 		
 		System.out.println("------------------------OPCIONES----------------------");
 		System.out.println("Elige una opción:\n");
@@ -89,224 +67,11 @@ public class VistaAutor {
 		System.out.println("-------------------ESPERANDO SELECCIÓN----------------");
 	}
 	
-	private void getMenuLibro() {
-		
-		System.out.println("------------------------OPCIONES----------------------");
-		System.out.println("Elige una opción:\n");
-		System.out.println("1 - Nuevo libro");
-		System.out.println("2 - Actualizar libro");
-		System.out.println("3 - Eliminar libro");
-		System.out.println("4 - Listar libros");
-		System.out.println("0 - Menú principal");
-		System.out.println("-------------------ESPERANDO SELECCIÓN----------------");
-	}
-	
-	private void getMenuEditorial() {
-		
-		System.out.println("------------------------OPCIONES----------------------");
-		System.out.println("Elige una opción:\n");
-		System.out.println("1 - Nueva editorial");
-		System.out.println("2 - Actualizar editorial");
-		System.out.println("3 - Eliminar editorial");
-		System.out.println("4 - Listar editoriales");
-		System.out.println("0 - Menú principal");
-		System.out.println("-------------------ESPERANDO SELECCIÓN----------------");
-	}
-	
-	private void getMenuCategoria() {
-		
-		System.out.println("------------------------OPCIONES----------------------");
-		System.out.println("Elige una opción:\n");
-		System.out.println("1 - Nueva categoría");
-		System.out.println("2 - Actualizar categoría");
-		System.out.println("3 - Eliminar categoría");
-		System.out.println("4 - Listar categorías");
-		System.out.println("0 - Menú principal");
-		System.out.println("-------------------ESPERANDO SELECCIÓN----------------");
-	}
-
-	private void mantenerAutores() {
-		
-		System.out.println("-----------------MANTENIMIENTO DE AUTORES-------------");
-		
-		do {
-			
-			getMenuAutor();
-			getOpcion();
-			
-			switch(opcion){
-				
-				case 1: 
-					System.out.println("Nuevo Autor");
-					break;
-					
-				case 2:
-					System.out.println("Actualizar Autor");
-					break;
-					
-				case 3: 
-					System.out.println("Eliminar Autor");
-					break;
-					
-				case 4: 
-					listarAutores(); 
-					break;
-					
-				case 0:
-					getAccion();
-					break;
-					
-				default:
-					System.out.println("Opción incorrecta.");
-					break;
-			}
-			
-		} while(opcion != 0);
-		
-	}
-	
-	private void mantenerLibros() {
-		
-		System.out.println("-----------------MANTENIMIENTO DE LIBROS--------------");
-		
-		do {
-			
-			getMenuLibro();
-			getOpcion();
-			
-			switch(opcion){
-				
-				case 1: 
-					System.out.println("Nuevo Libro");
-					break;
-					
-				case 2:
-					System.out.println("Actualizar Libro");
-					break;
-					
-				case 3: 
-					System.out.println("Eliminar Libro");
-					break;
-					
-				case 4: 
-					System.out.println("Listar Libros");
-					break;
-					
-				case 0:
-					getAccion();
-					break;
-					
-				default:
-					System.out.println("Opción incorrecta.");
-					break;
-			}
-			
-		} while(opcion != 0);
-	}
-
-	private void mantenerEditoriales() {
-	
-		System.out.println("--------------MANTENIMIENTO DE EDITORIALES------------");
-		
-		do {
-			
-			getMenuEditorial();
-			getOpcion();
-			
-			switch(opcion){
-				
-				case 1: 
-					System.out.println("Nueva Editorial");
-					break;
-					
-				case 2:
-					System.out.println("Actualizar Editorial");
-					break;
-					
-				case 3: 
-					System.out.println("Eliminar Editorial");
-					break;
-					
-				case 4: 
-					System.out.println("Listar Editoriales");
-					break;
-					
-				case 0:
-					getAccion();
-					break;
-					
-				default:
-					System.out.println("Opción incorrecta.");
-					break;
-			}
-			
-		} while(opcion != 0);
-	}
-
-	private void mantenerCategorias() {
-	
-		System.out.println("---------------MANTENIMIENTO DE CATEGORÍAS------------");
-		
-		do {
-			
-			getMenuCategoria();
-			getOpcion();
-			
-			switch(opcion){
-				
-				case 1: 
-					System.out.println("Nueva Categoría");
-					break;
-					
-				case 2:
-					System.out.println("Actualizar Categoría");
-					break;
-					
-				case 3: 
-					System.out.println("Eliminar Categoría");
-					break;
-					
-				case 4: 
-					System.out.println("Listar Categorías");
-					break;
-					
-				case 0:
-					getAccion();
-					break;
-					
-				default:
-					System.out.println("Opción incorrecta.");
-					break;
-			}
-			
-		} while(opcion != 0);
-	}
-	
-	private int getOpcion() {
+	public void listar() {
 		
 		try {
 			
-			opcion = scanner.nextInt();
-			
-		}catch(InputMismatchException e) {
-			
-			opcion = -1;
-			scanner.next();
-		}
-		
-		return opcion;
-	}
-	
-	private void mostrarFeedback(String feedback) {
-		
-		System.out.println(feedback);
-	}
-	
-	private void listarAutores() {
-		
-		try {
-			
-			autores = controlador.obtenerAutores();
+			autores = getControlador().obtenerAutores();
 			
 		} catch (SQLException e) {
 			
@@ -314,7 +79,6 @@ public class VistaAutor {
 			e.printStackTrace();
 		}
 		
-			
 		System.out.println("--------------------LISTA DE AUTORES------------------");
 		System.out.println("--------------------================------------------");
 		
@@ -326,22 +90,21 @@ public class VistaAutor {
 		}
 		
 		System.out.println("--------------------================------------------");
-			
 	}
 	
-	private void lanzarMensajeDespedida() {
+	public void insertar() {
 		
-		System.out.println("Cerrando aplicación.");
-		System.out.println("-----------------======== ADIÓS =========-------------");
+		System.out.println("Introduce el nombre del nuevo autor a insertar:");
+		String nombre = recogerString();
+		mostrarFeedback(getControlador().insertarAutor(nombre));
 	}
-
-	public Controlador getControlador() {
+	
+	public void eliminar() {
 		
-		return controlador;  
+		listar();
+		System.out.println("Introduce la ID del autor a eliminar:");
+		int id = recogerInt();
+		mostrarFeedback(getControlador().eliminarAutor(id));
 	}
-
-	public void setControlador(Controlador controlador) {
-		
-		this.controlador = controlador;
-	}
+	
 }

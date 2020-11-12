@@ -2,7 +2,7 @@ package launcher;
 
 import controlador.Controlador;
 import modelo.Modelo;
-import vista.VistaAutor;
+import vista.VistaPrincipal;
 
 public class Launcher {
 	
@@ -15,9 +15,8 @@ public class Launcher {
 		
 		Modelo modelo = new Modelo();
 		Controlador controlador = new Controlador(modelo);
-		VistaAutor vista = new VistaAutor(controlador);
+		VistaPrincipal vista = new VistaPrincipal(controlador);
 		vista.getAccion();
-		
 	}
 
 	public static void main(String[] args) {

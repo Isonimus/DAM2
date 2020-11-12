@@ -22,18 +22,48 @@ public class Modelo {
 		this.conexion = ServicioBBDD.obtenerServicio().obtenerConexion();
 		
 		try {
+			
 			sentencia = conexion.createStatement();
+			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
 		Autor.setConexionBDD(sentencia, resultado);
+		Editorial.setConexionBDD(sentencia, resultado);
+		Categoria.setConexionBDD(sentencia, resultado);
+		Libro.setConexionBDD(sentencia, resultado);
 	}
 	
 	public Vector<Autor> obtenerAutores() throws SQLException {
 		
-		return Autor.listarAutores();
+		return Autor.listar();
+	}
+	
+	public String insertarAutor(String autor) {
+		
+		return Autor.Insertar(autor);
+	}
+	
+	public String eliminarAutor(int id) {
+		
+		return Autor.Eliminar(id);
+	}
+	
+	public Vector<Editorial> obtenerEditoriales() throws SQLException {
+		
+		return Editorial.listar();
+	}
+	
+	public Vector<Categoria> obtenerCategorias() throws SQLException {
+		
+		return Categoria.listar();
+	}
+	
+	public Vector<Libro> obtenerLibros() throws SQLException {
+		
+		return Libro.listar();
 	}
 	
 	public String registrarNuevoAutor(String autor) {
