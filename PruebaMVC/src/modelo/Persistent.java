@@ -6,13 +6,8 @@ import java.util.Vector;
 
 public interface Persistent<T> {
 	
-	public static Vector<DAO> cargaResultSetToVector(ResultSet resultado) throws SQLException {
-		return null;
-	}
+	public Vector<DAO> cargaResultSetToVector(ResultSet resultado) throws SQLException;
 	
-	public static Vector<DAO> buscaResultadosConConsulta(String consulta) throws SQLException{
-		return null;
-		
-	}
+	public Vector<DAO> buscaResultadosConConsulta(String consulta) throws SQLException;
 	
 }

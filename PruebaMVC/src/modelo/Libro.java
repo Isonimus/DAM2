@@ -85,11 +85,10 @@ public class Libro extends DAO{
 	//return (retorno > 0) ? "Si si" : "Si no";
 	
 	//CREATE
-	public static String Insertar(String libro) {
+	public static String insertar(String libro) {
 		
 		int retorno;
 		
-		//TODO:REHACER ESTE MÉTODO COMPLETO
 		try{
 			
 			String sql = "SELECT max(`cod_autor`) FROM autor";
@@ -136,7 +135,7 @@ public class Libro extends DAO{
 	//SÓLO CAMBIA EL NOMBRE (LA ID NO VA A CAMBIAR)
 	
 	//DELETE
-	public static String Eliminar(String id) {
+	public static String eliminar(String id) {
 		
 		int retorno;
 		

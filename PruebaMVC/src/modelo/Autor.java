@@ -83,7 +83,7 @@ public class Autor extends DAO{
 	//================//
 	
 	//CREATE
-	public static String Insertar(String autor) {
+	public static String insertar(String autor) {
 		
 		int retorno;
 		
@@ -132,9 +132,25 @@ public class Autor extends DAO{
 	
 	//UPDATE
 	//SÓLO CAMBIA EL NOMBRE (LA ID NO VA A CAMBIAR)
+	public static String actualizar(int id, String nombre) {
+		
+		int retorno;
+		
+		try{
+			
+			String sql = "UPDATE autor SET nombre = '" + nombre + "' WHERE cod_autor = " + id;
+			retorno = sentencia.executeUpdate(sql);
+			
+		}catch(SQLException e) {
+			
+			retorno = 0;
+		}
+		
+		return (retorno > 0) ? "Autor " + id + " actualizado correctamente." : "Error al actualizar el autor.";
+	}
 	
 	//DELETE
-	public static String Eliminar(int id) {
+	public static String eliminar(int id) {
 		
 		int retorno;
 		

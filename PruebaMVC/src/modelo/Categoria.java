@@ -84,13 +84,8 @@ public class Categoria extends DAO{
 	//    C.R.U.D
 	//================//
 	
-	//LECTURAS
-	//return (retorno > 0) ? "Si si" : "Si no";
-	
-	//REFACTOR - IMPLEMENTS
-	
 	//CREATE
-	public static String Insertar(String categoria) {
+	public static String insertar(String categoria) {
 		
 		int retorno;
 		
@@ -106,7 +101,7 @@ public class Categoria extends DAO{
 				nuevaId = resultado.getInt(1);
 			}
 			
-			sql = "INSERT INTO categoria (cod_categoria, nombre) VALUES (" + nuevaId + ", " + categoria + ")";
+			sql = "INSERT INTO categoria (cod_categoria, nombre) VALUES (" + (nuevaId + 1) + ", '" + categoria + "')";
 			retorno = sentencia.executeUpdate(sql);
 			
 		}catch(SQLException e) {
@@ -114,7 +109,7 @@ public class Categoria extends DAO{
 			retorno = 0;
 		}
 		
-		return (retorno > 0) ? "Categoría " + categoria + "añadida correctamente." : "Error al añadir la categoría.";
+		return (retorno > 0) ? "Categoría " + categoria + " añadida correctamente." : "Error al añadir la categoría.";
 	}
 	
 	//READ:
@@ -138,9 +133,25 @@ public class Categoria extends DAO{
 	
 	//UPDATE
 	//SÓLO CAMBIA EL NOMBRE (LA ID NO VA A CAMBIAR)
+	public static String actualizar(int id, String nombre) {
+		
+		int retorno;
+		
+		try{
+			
+			String sql = "UPDATE categoria SET nombre = '" + nombre + "' WHERE cod_categoria = " + id;
+			retorno = sentencia.executeUpdate(sql);
+			
+		}catch(SQLException e) {
+			
+			retorno = 0;
+		}
+		
+		return (retorno > 0) ? "Categoría " + id + " actualizada correctamente." : "Error al actualizar la categoría.";
+	}
 	
 	//DELETE
-	public static String Eliminar(int id) {
+	public static String eliminar(int id) {
 		
 		int retorno;
 		
@@ -154,6 +165,6 @@ public class Categoria extends DAO{
 			retorno = 0;
 		}
 		
-		return (retorno > 0) ? "Categoría " + id + "eliminada correctamente." : "Error al eliminar la categoría.";
+		return (retorno > 0) ? "Categoría " + id + " eliminada correctamente." : "Error al eliminar la categoría.";
 	}
 }

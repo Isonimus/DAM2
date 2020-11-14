@@ -22,7 +22,7 @@ public abstract class Vista implements Selectable{
 		
 		try {
 			
-			setOpcion(getScanner().nextInt());
+			setOpcion(recogerInt());
 			
 		}catch(InputMismatchException e) {
 			
@@ -36,12 +36,13 @@ public abstract class Vista implements Selectable{
 	protected int recogerInt(){
 		
 		int integer = getScanner().nextInt();
+		getScanner().nextLine(); //LIMPIAR EL BUFFER
 		return integer;
 	}
 	
 	protected String recogerString(){
 		
-		String string = getScanner().next();
+		String string = getScanner().nextLine();
 		return string;
 	}
 	

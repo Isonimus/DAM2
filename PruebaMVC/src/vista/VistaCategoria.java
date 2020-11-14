@@ -39,15 +39,15 @@ public class VistaCategoria extends Vista implements Consultable{
 			switch(getOpcion()){
 				
 				case 1: 
-					System.out.println("Nueva Categoría");
+					insertar();
 					break;
 					
 				case 2:
-					System.out.println("Actualizar Categoría");
+					actualizar();
 					break;
 					
 				case 3: 
-					System.out.println("Eliminar Categoría");
+					eliminar();
 					break;
 					
 				case 4: 
@@ -66,6 +66,7 @@ public class VistaCategoria extends Vista implements Consultable{
 		} while(getOpcion() != 0);
 	}
 	
+	@Override
 	public void listar() {
 		
 		try {
@@ -90,6 +91,34 @@ public class VistaCategoria extends Vista implements Consultable{
 		}
 		
 		System.out.println("--------------------================------------------");
+	}
+	
+	@Override
+	public void insertar() {
+		
+		System.out.println("Introduce el nombre de la nueva categoría a insertar:");
+		String nombre = recogerString();
+		mostrarFeedback(getControlador().insertarCategoria(nombre));
+	}
+	
+	@Override
+	public void actualizar() {
+		
+		listar();
+		System.out.println("Introduce la ID de la categoría a actualizar:");
+		int id = recogerInt();
+		System.out.println("Introduce el nuevo nombre de la categoría " + id + ":");
+		String nombre = recogerString();
+		mostrarFeedback(getControlador().actualizarCategoria(id, nombre));
+	}
+	
+	@Override
+	public void eliminar() {
+		
+		listar();
+		System.out.println("Introduce la ID de la categoría a eliminar:");
+		int id = recogerInt();
+		mostrarFeedback(getControlador().eliminarCategoria(id));
 	}
 	
 }

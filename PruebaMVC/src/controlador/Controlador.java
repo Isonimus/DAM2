@@ -29,6 +29,11 @@ public class Controlador {
 		return modelo.insertarAutor(autor);
 	}
 	
+	public String actualizarAutor(int id, String nombre) {
+		
+		return modelo.actualizarAutor(id, nombre);
+	}
+	
 	public String eliminarAutor(int id) {
 		
 		return modelo.eliminarAutor(id);
@@ -39,9 +44,39 @@ public class Controlador {
 		return  modelo.obtenerEditoriales();
 	}
 	
+	public String insertarEditorial(String editorial) {
+		
+		return modelo.insertarEditorial(editorial);
+	}
+	
+	public String actualizarEditorial(int id, String nombre) {
+		
+		return modelo.actualizarEditorial(id, nombre);
+	}
+	
+	public String eliminarEditorial(int id) {
+		
+		return modelo.eliminarEditorial(id);
+	}
+	
 	public Vector<Categoria> obtenerCategorias () throws SQLException {
 		
 		return  modelo.obtenerCategorias();
+	}
+	
+	public String insertarCategoria(String categoria) {
+		
+		return modelo.insertarCategoria(categoria);
+	}
+	
+	public String actualizarCategoria(int id, String nombre) {
+		
+		return modelo.actualizarCategoria(id, nombre);
+	}
+	
+	public String eliminarCategoria(int id) {
+		
+		return modelo.eliminarCategoria(id);
 	}
 	
 	public Vector<Libro> obtenerLibros () throws SQLException {

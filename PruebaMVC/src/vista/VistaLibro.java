@@ -67,6 +67,7 @@ public class VistaLibro extends Vista implements Consultable{
 		} while(getOpcion() != 0);
 	}
 	
+	@Override
 	public void listar() {
 		
 		try {
@@ -92,5 +93,22 @@ public class VistaLibro extends Vista implements Consultable{
 		
 		System.out.println("--------------------================------------------");
 	}
+
+	@Override
+	public void insertar() {
+		// TODO Auto-generated method stub
+		
+	}
 	
+	@Override
+	public void actualizar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void eliminar() {
+		// TODO Auto-generated method stub
+		
+	}
 }

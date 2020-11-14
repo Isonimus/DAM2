@@ -3,7 +3,7 @@ package modelo;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public abstract class DAO{
+public abstract class DAO {
 	
 	protected static ResultSet resultado;
 	protected static Statement sentencia;

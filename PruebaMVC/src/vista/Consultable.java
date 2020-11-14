@@ -3,6 +3,7 @@ package vista;
 public interface Consultable {
 	
 	void listar();
-	//void insertar();
-	//void eliminar();
+	void insertar();
+	void actualizar();
+	void eliminar();
 }

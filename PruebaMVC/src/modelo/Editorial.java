@@ -84,11 +84,8 @@ public class Editorial extends DAO{
 	//    C.R.U.D
 	//================//
 	
-	//LECTURAS
-	//return (retorno > 0) ? "Si si" : "Si no";
-	
 	//CREATE
-	public static String Insertar(String editorial) {
+	public static String insertar(String editorial) {
 		
 		int retorno;
 		
@@ -104,7 +101,7 @@ public class Editorial extends DAO{
 				nuevaId = resultado.getInt(1);
 			}
 			
-			sql = "INSERT INTO editorial (cod_editorial, nombre) VALUES (" + nuevaId + ", " + editorial + ")";
+			sql = "INSERT INTO editorial (cod_editorial, nombre) VALUES (" + (nuevaId + 1) + ", '" + editorial + "')";
 			retorno = sentencia.executeUpdate(sql);
 			
 		}catch(SQLException e) {
@@ -112,7 +109,7 @@ public class Editorial extends DAO{
 			retorno = 0;
 		}
 		
-		return (retorno > 0) ? "Editorial " + editorial + "añadida correctamente." : "Error al añadir la editorial.";
+		return (retorno > 0) ? "Editorial " + editorial + " añadida correctamente." : "Error al añadir la editorial.";
 	}
 	
 	//READ:
@@ -136,9 +133,25 @@ public class Editorial extends DAO{
 	
 	//UPDATE
 	//SÓLO CAMBIA EL NOMBRE (LA ID NO VA A CAMBIAR)
+	public static String actualizar(int id, String nombre) {
+		
+		int retorno;
+		
+		try{
+			
+			String sql = "UPDATE editorial SET nombre = '" + nombre + "' WHERE cod_editorial = " + id;
+			retorno = sentencia.executeUpdate(sql);
+			
+		}catch(SQLException e) {
+			
+			retorno = 0;
+		}
+		
+		return (retorno > 0) ? "Editorial " + id + " actualizada correctamente." : "Error al actualizar la editorial.";
+	}
 	
 	//DELETE
-	public static String Eliminar(int id) {
+	public static String eliminar(int id) {
 		
 		int retorno;
 		
@@ -152,6 +165,6 @@ public class Editorial extends DAO{
 			retorno = 0;
 		}
 		
-		return (retorno > 0) ? "Editorial " + id + "eliminada correctamente." : "Error al eliminar la editorial.";
+		return (retorno > 0) ? "Editorial " + id + " eliminada correctamente." : "Error al eliminar la editorial.";
 	}
 }

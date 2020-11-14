@@ -27,15 +27,15 @@ public class VistaEditorial extends Vista implements Consultable{
 			switch(getOpcion()){
 				
 				case 1: 
-					System.out.println("Nueva Editorial");
+					insertar();
 					break;
 					
 				case 2:
-					System.out.println("Actualizar Editorial");
+					actualizar();
 					break;
 					
 				case 3: 
-					System.out.println("Eliminar Editorial");
+					eliminar();
 					break;
 					
 				case 4: 
@@ -66,6 +66,7 @@ public class VistaEditorial extends Vista implements Consultable{
 		System.out.println("-------------------ESPERANDO SELECCIÓN----------------");
 	}
 	
+	@Override
 	public void listar() {
 		
 		try {
@@ -92,4 +93,31 @@ public class VistaEditorial extends Vista implements Consultable{
 		System.out.println("--------------------================------------------");
 	}
 	
+	@Override
+	public void insertar() {
+		
+		System.out.println("Introduce el nombre de la nueva editorial a insertar:");
+		String nombre = recogerString();
+		mostrarFeedback(getControlador().insertarEditorial(nombre));
+	}
+	
+	@Override
+	public void actualizar() {
+		
+		listar();
+		System.out.println("Introduce la ID de la editorial a actualizar:");
+		int id = recogerInt();
+		System.out.println("Introduce el nuevo nombre de la editorial " + id + ":");
+		String nombre = recogerString();
+		mostrarFeedback(getControlador().actualizarEditorial(id, nombre));
+	}
+	
+	@Override
+	public void eliminar() {
+		
+		listar();
+		System.out.println("Introduce la ID de la editorial a eliminar:");
+		int id = recogerInt();
+		mostrarFeedback(getControlador().eliminarEditorial(id));
+	}
 }

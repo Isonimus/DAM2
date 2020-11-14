@@ -31,7 +31,7 @@ public class VistaAutor extends Vista implements Consultable{
 					break;
 					
 				case 2:
-					System.out.println("Actualizar Autor");
+					actualizar();
 					break;
 					
 				case 3: 
@@ -67,6 +67,7 @@ public class VistaAutor extends Vista implements Consultable{
 		System.out.println("-------------------ESPERANDO SELECCIÓN----------------");
 	}
 	
+	@Override
 	public void listar() {
 		
 		try {
@@ -92,6 +93,7 @@ public class VistaAutor extends Vista implements Consultable{
 		System.out.println("--------------------================------------------");
 	}
 	
+	@Override
 	public void insertar() {
 		
 		System.out.println("Introduce el nombre del nuevo autor a insertar:");
@@ -99,6 +101,18 @@ public class VistaAutor extends Vista implements Consultable{
 		mostrarFeedback(getControlador().insertarAutor(nombre));
 	}
 	
+	@Override
+	public void actualizar() {
+		
+		listar();
+		System.out.println("Introduce la ID del autor a actualizar:");
+		int id = recogerInt();
+		System.out.println("Introduce el nuevo nombre del autor " + id + ":");
+		String nombre = recogerString();
+		mostrarFeedback(getControlador().actualizarAutor(id, nombre));
+	}
+	
+	@Override
 	public void eliminar() {
 		
 		listar();

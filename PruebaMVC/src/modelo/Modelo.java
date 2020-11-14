@@ -24,16 +24,16 @@ public class Modelo {
 		try {
 			
 			sentencia = conexion.createStatement();
+			Autor.setConexionBDD(sentencia, resultado);
+			Editorial.setConexionBDD(sentencia, resultado);
+			Categoria.setConexionBDD(sentencia, resultado);
+			Libro.setConexionBDD(sentencia, resultado);
 			
 		} catch (SQLException e) {
 			
 			e.printStackTrace();
 		}
 		
-		Autor.setConexionBDD(sentencia, resultado);
-		Editorial.setConexionBDD(sentencia, resultado);
-		Categoria.setConexionBDD(sentencia, resultado);
-		Libro.setConexionBDD(sentencia, resultado);
 	}
 	
 	public Vector<Autor> obtenerAutores() throws SQLException {
@@ -43,12 +43,17 @@ public class Modelo {
 	
 	public String insertarAutor(String autor) {
 		
-		return Autor.Insertar(autor);
+		return Autor.insertar(autor);
+	}
+	
+	public String actualizarAutor(int id, String nombre){
+		
+		return Autor.actualizar(id, nombre);
 	}
 	
 	public String eliminarAutor(int id) {
 		
-		return Autor.Eliminar(id);
+		return Autor.eliminar(id);
 	}
 	
 	public Vector<Editorial> obtenerEditoriales() throws SQLException {
@@ -56,61 +61,44 @@ public class Modelo {
 		return Editorial.listar();
 	}
 	
+	public String insertarEditorial(String editorial) {
+		
+		return Editorial.insertar(editorial);
+	}
+	
+	public String actualizarEditorial(int id, String nombre){
+		
+		return Editorial.actualizar(id, nombre);
+	}
+	
+	public String eliminarEditorial(int id) {
+		
+		return Editorial.eliminar(id);
+	}
+	
 	public Vector<Categoria> obtenerCategorias() throws SQLException {
 		
 		return Categoria.listar();
 	}
 	
+	public String insertarCategoria(String categoria) {
+		
+		return Categoria.insertar(categoria);
+	}
+	
+	public String actualizarCategoria(int id, String nombre){
+		
+		return Categoria.actualizar(id, nombre);
+	}
+	
+	public String eliminarCategoria(int id) {
+		
+		return Categoria.eliminar(id);
+	}
+	
 	public Vector<Libro> obtenerLibros() throws SQLException {
 		
 		return Libro.listar();
-	}
-	
-	public String registrarNuevoAutor(String autor) {
-		
-		//THROWS...
-		int retorno = 0;
-		
-		try {
-			//RECOGER SIGUIENTE ID DESDE BDD
-			//if(hayId){
-			
-			//insertar nuevo autor con esa ID;
-			//retorno = sentencia.executeUpdate(arg0);
-		//}
-			
-		}catch (Exception e) {
-			
-		}
-		
-		//feedback = dependiendo del valor de la operación.
-		return "feedback";
-	}
-	
-	public String borrarAutor(int codAutor) {
-		
-		int retorno = 0;
-		
-		return "feedback";
-	}
-	
-	public ResultSet obtenerAutor(int codAutor) {
-		
-		return resultado;
-	}
-	
-	public String editarAutor(int codAutor, String nombreAutor) {
-		
-		try {
-			
-			String sql = "";
-			
-		}catch(Exception e) {
-			//SQLException e
-			
-		}
-		
-		return "feedback";
 	}
 	
 	public void terminar() {
