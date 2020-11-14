@@ -19,6 +19,8 @@ public class Controlador {
 		this.modelo = modelo;
 	}
 	
+	//AUTOR
+	
 	public Vector<Autor> obtenerAutores () throws SQLException {
 		
 		return  modelo.obtenerAutores();
@@ -38,6 +40,8 @@ public class Controlador {
 		
 		return modelo.eliminarAutor(id);
 	}
+	
+	//EDITORIAL
 	
 	public Vector<Editorial> obtenerEditoriales () throws SQLException {
 		
@@ -59,6 +63,8 @@ public class Controlador {
 		return modelo.eliminarEditorial(id);
 	}
 	
+	//CATEGORIA
+	
 	public Vector<Categoria> obtenerCategorias () throws SQLException {
 		
 		return  modelo.obtenerCategorias();
@@ -79,10 +85,19 @@ public class Controlador {
 		return modelo.eliminarCategoria(id);
 	}
 	
+	//LIBRO
+	
 	public Vector<Libro> obtenerLibros () throws SQLException {
 		
 		return  modelo.obtenerLibros();
 	}
+	
+	public String eliminarLibro(String isbn) {
+		
+		return modelo.eliminarLibro(isbn);
+	}
+	
+	//
 	
 	public void terminar() {
 		

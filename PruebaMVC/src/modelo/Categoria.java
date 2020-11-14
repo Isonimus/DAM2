@@ -98,10 +98,10 @@ public class Categoria extends DAO{
 			
 			while(resultado.next()) {
 				
-				nuevaId = resultado.getInt(1);
+				nuevaId = (resultado.getInt(1) + 1);
 			}
 			
-			sql = "INSERT INTO categoria (cod_categoria, nombre) VALUES (" + (nuevaId + 1) + ", '" + categoria + "')";
+			sql = "INSERT INTO categoria (cod_categoria, nombre) VALUES (" + nuevaId + ", '" + categoria + "')";
 			retorno = sentencia.executeUpdate(sql);
 			
 		}catch(SQLException e) {

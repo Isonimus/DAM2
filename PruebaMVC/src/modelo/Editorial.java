@@ -98,10 +98,10 @@ public class Editorial extends DAO{
 			
 			while(resultado.next()) {
 				
-				nuevaId = resultado.getInt(1);
+				nuevaId = (resultado.getInt(1) + 1);
 			}
 			
-			sql = "INSERT INTO editorial (cod_editorial, nombre) VALUES (" + (nuevaId + 1) + ", '" + editorial + "')";
+			sql = "INSERT INTO editorial (cod_editorial, nombre) VALUES (" + nuevaId + ", '" + editorial + "')";
 			retorno = sentencia.executeUpdate(sql);
 			
 		}catch(SQLException e) {

@@ -48,7 +48,7 @@ public class VistaLibro extends Vista implements Consultable{
 					break;
 					
 				case 3: 
-					System.out.println("Eliminar Libro");
+					eliminar();
 					break;
 					
 				case 4: 
@@ -108,7 +108,10 @@ public class VistaLibro extends Vista implements Consultable{
 
 	@Override
 	public void eliminar() {
-		// TODO Auto-generated method stub
 		
+		listar();
+		System.out.println("Introduce el ISBN del libro a eliminar:");
+		String isbn = recogerString();
+		mostrarFeedback(getControlador().eliminarLibro(isbn));
 	}
 }

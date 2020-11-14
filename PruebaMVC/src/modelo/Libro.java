@@ -81,9 +81,6 @@ public class Libro extends DAO{
 	//    C.R.U.D
 	//================//
 	
-	//LECTURAS
-	//return (retorno > 0) ? "Si si" : "Si no";
-	
 	//CREATE
 	public static String insertar(String libro) {
 		
@@ -109,7 +106,7 @@ public class Libro extends DAO{
 			retorno = 0;
 		}
 		
-		return (retorno > 0) ? "Autor " + libro + "añadido correctamente." : "Error al añadir el autor.";
+		return (retorno > 0) ? "Autor " + libro + " añadido correctamente." : "Error al añadir el autor.";
 	}
 	
 	//READ:
@@ -132,16 +129,16 @@ public class Libro extends DAO{
 	}
 	
 	//UPDATE
-	//SÓLO CAMBIA EL NOMBRE (LA ID NO VA A CAMBIAR)
+
 	
 	//DELETE
-	public static String eliminar(String id) {
+	public static String eliminar(String isbn) {
 		
 		int retorno;
 		
 		try{
 			
-			String sql = "DELETE FROM libro WHERE isbn = " + id;
+			String sql = "DELETE FROM libro WHERE isbn = '" + isbn + "'";
 			retorno = sentencia.executeUpdate(sql);
 			
 		}catch(SQLException e) {
@@ -149,6 +146,6 @@ public class Libro extends DAO{
 			retorno = 0;
 		}
 		
-		return (retorno > 0) ? "Libro " + id + "eliminado correctamente." : "Error al eliminar el libro.";
+		return (retorno > 0) ? "Libro " + isbn + " eliminado correctamente." : "Error al eliminar el libro.";
 	}
 }

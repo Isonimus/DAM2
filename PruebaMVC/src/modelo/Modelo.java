@@ -13,7 +13,6 @@ public class Modelo {
 	private Connection conexion;
 	private Statement sentencia;
 	private ResultSet resultado;
-	private String feedback;
 	
 	public Modelo() {
 		
@@ -24,6 +23,7 @@ public class Modelo {
 		try {
 			
 			sentencia = conexion.createStatement();
+			
 			Autor.setConexionBDD(sentencia, resultado);
 			Editorial.setConexionBDD(sentencia, resultado);
 			Categoria.setConexionBDD(sentencia, resultado);
@@ -31,11 +31,13 @@ public class Modelo {
 			
 		} catch (SQLException e) {
 			
+			System.out.println("Error en la conexión.");
 			e.printStackTrace();
 		}
 		
 	}
 	
+	// AUTOR
 	public Vector<Autor> obtenerAutores() throws SQLException {
 		
 		return Autor.listar();
@@ -56,6 +58,7 @@ public class Modelo {
 		return Autor.eliminar(id);
 	}
 	
+	//EDITORIAL
 	public Vector<Editorial> obtenerEditoriales() throws SQLException {
 		
 		return Editorial.listar();
@@ -76,6 +79,7 @@ public class Modelo {
 		return Editorial.eliminar(id);
 	}
 	
+	//CATEGORÍA
 	public Vector<Categoria> obtenerCategorias() throws SQLException {
 		
 		return Categoria.listar();
@@ -96,9 +100,15 @@ public class Modelo {
 		return Categoria.eliminar(id);
 	}
 	
+	//LIBRO
 	public Vector<Libro> obtenerLibros() throws SQLException {
 		
 		return Libro.listar();
+	}
+	
+	public String eliminarLibro(String isbn) {
+		
+		return Libro.eliminar(isbn);
 	}
 	
 	public void terminar() {

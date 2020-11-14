@@ -16,7 +16,7 @@ public class Launcher {
 		Modelo modelo = new Modelo();
 		Controlador controlador = new Controlador(modelo);
 		VistaPrincipal vista = new VistaPrincipal(controlador);
-		vista.getAccion();
+		vista.getAccion("---------------------LIBRERÍA ONLINE------------------");
 	}
 
 	public static void main(String[] args) {

@@ -96,10 +96,10 @@ public class Autor extends DAO{
 			
 			while(resultado.next()) {
 				
-				nuevaId = resultado.getInt(1);
+				nuevaId = (resultado.getInt(1) + 1);
 			}
 			
-			String sql2 = "INSERT INTO autor (cod_autor, nombre) VALUES (" + (nuevaId + 1) + ", '" + autor + "')";
+			String sql2 = "INSERT INTO autor (cod_autor, nombre) VALUES (" + nuevaId + ", '" + autor + "')";
 			retorno = sentencia.executeUpdate(sql2);
 			
 		}catch(SQLException e) {
