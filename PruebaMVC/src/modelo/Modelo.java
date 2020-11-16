@@ -18,7 +18,7 @@ public class Modelo {
 		
 		super();
 		
-		this.conexion = ServicioBBDD.obtenerServicio().obtenerConexion();
+		this.conexion = ServicioBBDD.obtenerServicio(ServicioBBDD.MYSQL).obtenerConexion();
 		
 		try {
 			
@@ -31,16 +31,20 @@ public class Modelo {
 			
 		} catch (SQLException e) {
 			
-			System.out.println("Error en la conexión.");
+			System.out.println("Error: Fallo al crear recursos de BDD.");
 			e.printStackTrace();
 		}
-		
 	}
 	
 	// AUTOR
 	public Vector<Autor> obtenerAutores() throws SQLException {
 		
 		return Autor.listar();
+	}
+	
+	public Vector<Autor> obtenerAutor() throws SQLException {
+		
+		return Autor.listar(); //TODO
 	}
 	
 	public String insertarAutor(String autor) {
@@ -64,6 +68,11 @@ public class Modelo {
 		return Editorial.listar();
 	}
 	
+	public Vector<Editorial> obtenerEditorial() throws SQLException {
+		
+		return Editorial.listar(); //TODO
+	}
+	
 	public String insertarEditorial(String editorial) {
 		
 		return Editorial.insertar(editorial);
@@ -85,6 +94,11 @@ public class Modelo {
 		return Categoria.listar();
 	}
 	
+	public Vector<Categoria> obtenerCategoria() throws SQLException {
+		
+		return Categoria.listar(); //TODO
+	}
+	
 	public String insertarCategoria(String categoria) {
 		
 		return Categoria.insertar(categoria);
@@ -104,6 +118,11 @@ public class Modelo {
 	public Vector<Libro> obtenerLibros() throws SQLException {
 		
 		return Libro.listar();
+	}
+	
+	public Vector<Libro> obtenerLibro() throws SQLException {
+		
+		return Libro.listar(); //TODO
 	}
 	
 	public String eliminarLibro(String isbn) {

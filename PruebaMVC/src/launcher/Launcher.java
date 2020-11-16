@@ -13,10 +13,10 @@ public class Launcher {
 	
 	public void launch() {
 		
-		Modelo modelo = new Modelo();
+		Modelo modelo = new Modelo(); //SERVICIOBBDD.MYSQL
 		Controlador controlador = new Controlador(modelo);
 		VistaPrincipal vista = new VistaPrincipal(controlador);
-		vista.getAccion("---------------------LIBRERÍA ONLINE------------------");
+		vista.getAccion();
 	}
 
 	public static void main(String[] args) {
@@ -24,5 +24,4 @@ public class Launcher {
 		Launcher launcher = new Launcher();
 		launcher.launch();
 	}
-
 }

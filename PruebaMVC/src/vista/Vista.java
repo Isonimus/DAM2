@@ -40,6 +40,13 @@ public abstract class Vista implements Selectable{
 		return integer;
 	}
 	
+	protected double recogerDouble(){
+		
+		double doble = getScanner().nextDouble();
+		getScanner().nextLine(); //LIMPIAR EL BUFFER
+		return doble;
+	}
+	
 	protected String recogerString(){
 		
 		String string = getScanner().nextLine();

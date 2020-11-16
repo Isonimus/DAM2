@@ -18,19 +18,23 @@ public class Libro extends DAO{
 	//  JAVA BEAN (|)
 	//================//
 	
-	private String isbn;
+	private int isbn;
 	private String nombreLibro;
+	private double precio;
+	private int stock;
+	private int categoria;
+	private int editorial;
 	
 	public Libro(String nombreLibro){
 	
 		setNombreLibro(nombreLibro);
 	}
 	
-	public String getIsbn() {
+	public int getIsbn() {
 		return isbn;
 	}
 
-	public void setIsbn(String isbn) {
+	public void setIsbn(int isbn) {
 		this.isbn = isbn;
 	}
 
@@ -42,6 +46,38 @@ public class Libro extends DAO{
 		this.nombreLibro = nombreLibro;
 	}
 	
+	public int getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(int categoria) {
+		this.categoria = categoria;
+	}
+
+	public int getEditorial() {
+		return editorial;
+	}
+
+	public void setEditorial(int editorial) {
+		this.editorial = editorial;
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
+	public int getStock() {
+		return stock;
+	}
+
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
+
 	//================//
 	//    UTILIDAD
 	//================//
@@ -52,10 +88,19 @@ public class Libro extends DAO{
 		
 		while(resultado.next()) {
 			
-			String isbn = resultado.getString(1);
+			int isbn = resultado.getInt(1);
 			String nombreLibro = resultado.getString(2);
+			double precio = resultado.getDouble(3);
+			int stock = resultado.getInt(4);
+			int categoria = resultado.getInt(5);
+			int editorial = resultado.getInt(6);
+		
 			libro = new Libro(nombreLibro);
 			libro.setIsbn(isbn);
+			libro.setPrecio(precio);
+			libro.setStock(stock);
+			libro.setCategoria(categoria);
+			libro.setEditorial(editorial);
 			libros.add(libro);
 		}
 		

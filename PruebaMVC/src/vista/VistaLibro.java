@@ -4,12 +4,18 @@ import java.sql.SQLException;
 import java.util.Vector;
 
 import controlador.Controlador;
+import modelo.Categoria;
+import modelo.Editorial;
 import modelo.Libro;
 
 public class VistaLibro extends Vista implements Consultable{
 	
-	
 	private Vector<Libro> libros;
+	private VistaCategoria vistaCat;
+	private VistaEditorial vistaEdi;
+	
+	//TIENE ACCESO A LA VISTA DE CATEGORÍAS, A LA DE AUTORES
+	//Y A LA DE EDITORIALES TODO
 	
 	public VistaLibro(Controlador controlador) {
 		
@@ -40,7 +46,7 @@ public class VistaLibro extends Vista implements Consultable{
 			switch(getOpcion()){
 				
 				case 1: 
-					System.out.println("Nuevo Libro");
+					insertar();
 					break;
 					
 				case 2:
@@ -70,9 +76,15 @@ public class VistaLibro extends Vista implements Consultable{
 	@Override
 	public void listar() {
 		
+		Vector<Categoria> categorias = null;
+		Vector<Editorial> editoriales = null;
+		//Vector<Autor> autores;
+		
 		try {
 			
 			libros = getControlador().obtenerLibros();
+			categorias = getControlador().obtenerCategorias();
+			editoriales = getControlador().obtenerEditoriales(); 
 			
 		} catch (SQLException e) {
 			
@@ -80,15 +92,34 @@ public class VistaLibro extends Vista implements Consultable{
 			e.printStackTrace();
 		}
 		
-			
 		System.out.println("---------------------LISTA DE LIBROS------------------");
 		System.out.println("---------------------===============------------------");
+		System.out.println("-ISBN-----TÍTULO-----CATEGORÍA-----EDITORIAL----------");
 		
 		for(Libro libro : libros) {
 			
-			String isbn = libro.getIsbn();
+			String categoria = null;
+			String editorial = null;
+			
+			for(Categoria categ : categorias) {
+				
+				if(categ.getIdCategoria() == libro.getCategoria()) {
+					
+					categoria = categ.getNombreCategoria();
+				}
+			}
+			
+			for(Editorial edit : editoriales) {
+				
+				if(edit.getIdEditorial() == libro.getEditorial()) {
+					
+					editorial = edit.getNombreEditorial();
+				}
+			}
+			
+			int isbn = libro.getIsbn();
 			String nombreLibro = libro.getNombreLibro();
-			System.out.println("Código Libro: " + isbn + " - Nombre libro: " + nombreLibro + ".");
+			System.out.println(isbn + " - " + nombreLibro + " - " + categoria + " - " + editorial);
 		}
 		
 		System.out.println("--------------------================------------------");
@@ -96,8 +127,31 @@ public class VistaLibro extends Vista implements Consultable{
 
 	@Override
 	public void insertar() {
-		// TODO Auto-generated method stub
 		
+		Libro libro;
+		vistaCat = new VistaCategoria(getControlador());
+		
+		System.out.println("Introduce el título del nuevo libro:");
+		libro = new Libro(recogerString());
+		
+		System.out.println("Introduce el ISBN del nuevo libro:");
+		libro.setIsbn(recogerInt());
+		
+		System.out.println("Introduce el precio del nuevo libro:");
+		libro.setPrecio(recogerDouble());
+		
+		System.out.println("Introduce el stock actual del nuevo libro:");
+		libro.setStock(recogerInt());
+		
+		System.out.println("Selecciona la categoría del nuevo libro:");
+		vistaCat.listar();
+		libro.setCategoria(recogerInt());
+		
+		System.out.println("Selecciona la editorial del nuevo libro:");
+		vistaEdi.listar();
+		libro.setEditorial(recogerInt());
+		
+		//libro.insertar(""); //TODO
 	}
 	
 	@Override

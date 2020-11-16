@@ -20,7 +20,6 @@ public class Controlador {
 	}
 	
 	//AUTOR
-	
 	public Vector<Autor> obtenerAutores () throws SQLException {
 		
 		return  modelo.obtenerAutores();
@@ -42,7 +41,6 @@ public class Controlador {
 	}
 	
 	//EDITORIAL
-	
 	public Vector<Editorial> obtenerEditoriales () throws SQLException {
 		
 		return  modelo.obtenerEditoriales();
@@ -64,7 +62,6 @@ public class Controlador {
 	}
 	
 	//CATEGORIA
-	
 	public Vector<Categoria> obtenerCategorias () throws SQLException {
 		
 		return  modelo.obtenerCategorias();
@@ -86,7 +83,6 @@ public class Controlador {
 	}
 	
 	//LIBRO
-	
 	public Vector<Libro> obtenerLibros () throws SQLException {
 		
 		return  modelo.obtenerLibros();

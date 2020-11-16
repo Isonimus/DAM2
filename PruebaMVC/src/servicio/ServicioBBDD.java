@@ -9,16 +9,27 @@ public class ServicioBBDD {
 	private static ServicioBBDD servicio;
 	private Connection conexion;
 	
-	private ServicioBBDD(){ //SINGLETON
+	public static final String MYSQL = "mysql";
+	public static final String ORACLE = "oracle";
+	public static final String POSTGRESQL = "postgresql";
+	
+	public static final String MYSQL_DRIVER = "com.mysql.jdbc.Driver";
+	public static final String ORACLE_DRIVER = "oracle.jdbc.OracleDriver";
+	public static final String POSTGRESQL_DRIVER = "org.postgresql.Driver";
+	
+	public static final String MYSQL_URL = "jdbc:mysql://localhost:3306/libreria";
+	public static final String ORACLE_URL = "jdbc:oracle:thin:@localhost:1521:orcl";
+	public static final String POSTGRESQL_URL = "jdbc:postgresql://localhost:5432/libreria";
+	
+	private final String USER = "root";
+	private final String PASS = "admin";
+	
+	private ServicioBBDD(String driver, String url){ //SINGLETON + FACTORY
 		
 		try {
 			
-			Class.forName("com.mysql.jdbc.Driver");
-			String url = "jdbc:mysql://localhost:3306/libreria";
-			String user = "root";
-			String pass = "";
-			
-			conexion = DriverManager.getConnection(url, user, pass);
+			Class.forName(driver);
+			conexion = DriverManager.getConnection(url, USER, PASS);
 			
 			System.out.println("Conexión establecida con la BDD.");
 			
@@ -34,11 +45,27 @@ public class ServicioBBDD {
 		}
 	}
 	
-	public static synchronized ServicioBBDD obtenerServicio() {
+	public static synchronized ServicioBBDD obtenerServicio(String servicioBBDD) {
 		
 		if(servicio == null) {
 			
-			servicio = new ServicioBBDD();
+			switch(servicioBBDD) {
+				
+				case ServicioBBDD.MYSQL:
+					
+					servicio = new ServicioBBDD(ServicioBBDD.MYSQL_DRIVER, ServicioBBDD.MYSQL_URL);
+					break;
+					
+				case ServicioBBDD.ORACLE:
+					
+					servicio = new ServicioBBDD(ServicioBBDD.ORACLE_DRIVER, ServicioBBDD.ORACLE_URL);
+					break;
+					
+				case ServicioBBDD.POSTGRESQL:
+					
+					servicio = new ServicioBBDD(ServicioBBDD.POSTGRESQL_DRIVER, ServicioBBDD.POSTGRESQL_URL);
+					break;
+			}
 		}
 		
 		return servicio;
