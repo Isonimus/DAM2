@@ -6,45 +6,58 @@ import java.net.*;
 public class ServerThread extends Thread {
 	
     private Socket socket;
-    char[] partida = new char[16];
+    char[][] partida;
+    int anchura = 4;
+    int altura = 4;
+    Cerebro brain;
  
     public ServerThread(Socket socket) {
     	
         this.socket = socket;
+        partida = new char[4][4];
+        brain = new Cerebro(4, 4);
         iniciarPartida();
     }
     
     public void iniciarPartida() {
     	
-    	System.out.println("¡Nueva partida!");
+    	System.out.println("¡Nueva partida!\n");
     	
-    	for(int i = 0; i < partida.length; i++) {
+    	for(int i = 0; i < altura; i++) {
     		
-    		partida[i] = 'v';
+    		for (int j = 0; j < anchura; j++) {
+    			
+    			partida[i][j] = 'v';
+    		}
     	}
     }
     
     public int jugar() {
-    	
+    
     	boolean elegido = false;
-    	int movimiento = 0;
+    	int fila = 0;
+    	int columna = 0;
     	
     	while(!elegido) {
     		
-    		movimiento = (int) (Math.random() * (partida.length -1));
+    		fila = (int) (Math.random() * (altura));
+    		columna = (int) (Math.random() * (anchura));
     		
-    		if(partida[movimiento] == 'v') {
+    		if(partida[fila][columna] == 'v') {
     			
     			elegido = true;
     		}
     	}
 
-    	return movimiento;
+    	return (fila * anchura) + columna;
     }
     
     public void mover(int posicion, char jugador) {
     	
-    	partida[posicion] = jugador;
+    	int fila = posicion / anchura;
+    	int columna = posicion % anchura;
+    	
+    	partida[fila][columna] = jugador;
     }
  
     public void run() {
@@ -64,7 +77,8 @@ public class ServerThread extends Thread {
                 movimientoJugador = reader.readLine();
                 mover(Integer.parseInt(movimientoJugador), 'X');
                 
-                int movimiento = jugar();
+                //int movimiento = jugar();
+                int movimiento = brain.getMovimiento(partida);
                 mover(movimiento, 'O');
                 
                 writer.println(movimiento);

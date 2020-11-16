@@ -8,14 +8,18 @@ public class Client {
 	
 	String hostname;
     int port;
-    char[] partida;
+    int anchura;
+    int altura;
+    char[][] partida;
     Scanner scanner;
     
-    Client(String hostname, int port) {
+    Client(String hostname, int port, int anchura, int altura) {
     	
     	this.hostname = hostname;
     	this.port = port;
-    	partida = new char[16];
+    	this.anchura = anchura;
+    	this.altura = altura;
+    	partida = new char[4][4];
     	scanner = new Scanner(System.in);
     	launch();
     }
@@ -66,39 +70,41 @@ public class Client {
     	
     	System.out.println("¡Nueva partida!\n");
     	
-    	for(int i = 0; i < partida.length; i++) {
+    	for(int i = 0; i < altura; i++) {
     		
-    		partida[i] = 'v';
+    		for (int j = 0; j < anchura; j++) {
+    			
+    			partida[i][j] = 'v';
+    		}
     	}
     }
     
-    public void renderTablero(char[] partida) {
+    public void renderTablero(char[][] partida) {
     	
-    	int contador = 0;
-    	
-    	for(int i = 0; i < partida.length; i++) {
+    	for(int i = 0; i < altura; i++) {
     		
     		System.out.print("|");
     		
-    		if(partida[i] == 'v') { //CASILLA VACÍA
+    		for (int j = 0; j < anchura; j++) {
     			
-    			System.out.print("   ");
+    			if(partida[i][j] == 'v') { //CASILLA VACÍA
+        			
+        			System.out.print("   ");
+        			
+        		}else if (partida[i][j] == 'X'){ 
+        			
+        			System.out.print(" X ");
+        			
+        		}else if (partida[i][j] == 'O'){
+        			
+        			System.out.print(" O ");
+        		}
     			
-    		}else if (partida[i] == 'X'){ 
-    			
-    			System.out.print(" X ");
-    			
-    		}else if (partida[i] == 'O'){
-    			
-    			System.out.print(" O ");
-    		}
-    		
-    		contador++;
-    		
-    		if(contador == 4) {
-    			
-    			contador = 0;
-    			System.out.println("|");
+    			if(j < 3) {
+    				System.out.print("|");
+    			}else {
+    				System.out.println("|");
+    			}
     		}
     	}
     	
@@ -107,12 +113,15 @@ public class Client {
     
     public void mover(int posicion, char jugador) {
     	
-    	partida[posicion] = jugador;
+    	int fila = posicion / anchura;
+    	int columna = posicion % anchura;
+    	
+    	partida[fila][columna] = jugador;
     }
  
     public static void main(String[] args) {
     	
-    	Client c = new Client("localhost", 9090);
+    	Client c = new Client("localhost", 9090, 4, 4);
     	c.launch();
     }
 }
