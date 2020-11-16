@@ -73,11 +73,18 @@ public class Cerebro {
     			
     		}else if(server & !oponente) {
     			
-    			puntuarFila(i, valor);
+    			if(valor == 4) {
+    				
+    				puntuarFila(i, valor*3);
+    				
+    			}else {
+    				
+    				puntuarFila(i, valor*2);
+    			}
     			
     		}else if(!oponente) {
     			
-    			puntuarFila(i, valor);
+    			puntuarFila(i, 1);
     		}
     	}
 	}
@@ -123,11 +130,18 @@ public class Cerebro {
     			
     		}else if(server & !oponente) {
     			
-    			puntuarColumna(i, valor);
+    			if(valor == 4) {
+    				
+    				puntuarFila(i, valor*3);
+    				
+    			}else {
+    				
+    				puntuarFila(i, valor*2);
+    			}
     			
     		}else if(!oponente) {
     			
-    			puntuarColumna(i, valor);
+    			puntuarColumna(i, 1);
     		}
 		}
 	}
@@ -171,11 +185,18 @@ public class Cerebro {
 			
 		}else if(server & !oponente) {
 			
-			puntuarDiagonal(1, valor);
+			if(valor == 4) {
+				
+				puntuarDiagonal(1, valor*3);
+				
+			}else {
+				
+				puntuarDiagonal(1, valor*2);
+			}
 			
-		}else if(!oponente) {
+		}else if(!oponente & !server) {
 			
-			puntuarDiagonal(1, valor);
+			puntuarDiagonal(1, 1);
 		}
 	}
 	
@@ -209,11 +230,18 @@ public class Cerebro {
 			
 		}else if(server & !oponente) {
 			
-			puntuarDiagonal(2, valor);
+			if(valor == 4) {
+				
+				puntuarDiagonal(2, valor*3);
+				
+			}else {
+				
+				puntuarDiagonal(2, valor*2);
+			}
 			
 		}else if(!oponente) {
 			
-			puntuarDiagonal(2, valor);
+			puntuarDiagonal(2, 1);
 		}
 	}
 	
