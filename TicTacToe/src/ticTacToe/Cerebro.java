@@ -31,7 +31,7 @@ public class Cerebro {
 		iniciarJugada();
 		poblarEstrategia(partida);
 		int movimiento = traducirEstrategia();
-		//renderTablero();
+		renderTablero();
 		return movimiento;
 	}
 	
@@ -294,6 +294,92 @@ public class Cerebro {
 		
 		return (fila * anchura) + columna;
 	}
+	
+	public boolean hayGanador(char[][] partida) {
+		
+		boolean ganador = false;
+		
+		//FILAS
+		for(int i = 0; i < altura && !ganador; i++) {
+    		
+			char contraste = partida[i][0];
+			
+			if(contraste != 'v') {
+				
+				ganador = true;
+				
+				for(int j = 1; j < anchura; j++) {
+					
+					if(partida[i][j] != contraste) {
+						
+						ganador = false;
+					}
+				}
+			}
+		}
+		
+		//COLUMNAS
+		for(int i = 0; i < anchura && !ganador; i++) {
+			
+			char contraste = partida[0][i];
+			
+			if(contraste != 'v') {
+				
+				ganador = true;
+				
+				for (int j = 1; j < altura; j++) {
+					
+					if(partida[j][i] != contraste) {
+						
+						ganador = false;
+					}
+				}
+			}
+		}
+		
+		//D1
+		if(!ganador) {
+			
+			char contraste = partida[0][0];
+			
+			if(contraste != 'v') {
+				
+				ganador = true;
+				
+				for(int i = 1; i < anchura; i++) {
+					
+					if(partida[i][i] != contraste) {
+						
+						ganador = false;
+					}
+				}
+			}
+		}
+		
+		//D2
+		if(!ganador) {
+			
+			int cont = altura-1;
+			char contraste = partida[cont][0];
+			
+			if(contraste != 'v') {
+				
+				ganador = true;
+				
+				for(int i = 1; i < anchura; i++) {
+					
+					cont --;
+					
+					if(partida[cont][i] != contraste) {
+						
+						ganador = false;
+					}
+				}
+			}
+		}
+		
+		return ganador;
+	} 
 	
 	 public void renderTablero() {
 	    	

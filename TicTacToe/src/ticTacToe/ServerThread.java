@@ -77,12 +77,22 @@ public class ServerThread extends Thread {
                 movimientoJugador = reader.readLine();
                 mover(Integer.parseInt(movimientoJugador), 'X');
                 
-                //int movimiento = jugar();
-                int movimiento = brain.getMovimiento(partida);
-                mover(movimiento, 'O');
+                if(brain.hayGanador(partida)) {
+                	
+                	System.out.println("¡Has ganado!");
+                	
+                }else {
+                	
+                	 //int movimiento = jugar();
+                    int movimiento = brain.getMovimiento(partida);
+                    mover(movimiento, 'O');
+                    if(brain.hayGanador(partida)) {
+                    	System.out.println("¡Has perdido!");
+                    }
+                    
+                    writer.println(movimiento);
+                }
                 
-                writer.println(movimiento);
- 
             } while (!movimientoJugador.equals("bye"));
  
             socket.close();
