@@ -10,6 +10,7 @@ public class ServerThread extends Thread {
     int anchura = 4;
     int altura = 4;
     Cerebro brain;
+    boolean jugando;
  
     public ServerThread(Socket socket) {
     	
@@ -22,6 +23,8 @@ public class ServerThread extends Thread {
     public void iniciarPartida() {
     	
     	System.out.println("¡Nueva partida!\n");
+    	
+    	jugando = true;
     	
     	for(int i = 0; i < altura; i++) {
     		
@@ -74,26 +77,37 @@ public class ServerThread extends Thread {
  
             do {
             	
+            	int respuesta = Integer.MIN_VALUE;
                 movimientoJugador = reader.readLine();
                 mover(Integer.parseInt(movimientoJugador), 'X');
                 
                 if(brain.hayGanador(partida)) {
                 	
-                	System.out.println("¡Has ganado!");
+                	System.out.println("¡" + socket.getInetAddress() + " ha ganado!(" + ((Integer.parseInt(movimientoJugador)) + 10000) + ")" );
+                	respuesta = 777; //CÓDIGO GANADOR
+                	jugando = false;
                 	
                 }else {
                 	
                 	 //int movimiento = jugar();
-                    int movimiento = brain.getMovimiento(partida);
-                    mover(movimiento, 'O');
-                    if(brain.hayGanador(partida)) {
-                    	System.out.println("¡Has perdido!");
-                    }
+                    int movimientoServer = brain.getMovimiento(partida);
+                    mover(movimientoServer, 'O');
                     
-                    writer.println(movimiento);
+                    if(brain.hayGanador(partida)) {
+                    	
+                    	System.out.println("¡" + socket.getInetAddress() + " ha perdido! (" + (movimientoServer + 1000) + ")");
+                    	respuesta = (movimientoServer + 1000); //CÓDIGO PERDEDOR
+                    	jugando = false;
+                    	
+                    }else {
+                    	
+                    	respuesta = movimientoServer; //CÓDIGO JUGADA
+                    }
                 }
                 
-            } while (!movimientoJugador.equals("bye"));
+                writer.println(respuesta);
+                
+            } while (jugando);
  
             socket.close();
             

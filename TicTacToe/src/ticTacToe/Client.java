@@ -12,6 +12,7 @@ public class Client {
     int altura;
     char[][] partida;
     Scanner scanner;
+    boolean jugando;
     
     Client(String hostname, int port, int anchura, int altura) {
     	
@@ -31,7 +32,6 @@ public class Client {
             OutputStream output = socket.getOutputStream();
             PrintWriter writer = new PrintWriter(output, true);
             int movimiento;
-            String text = ""; //CREAR SALIDA
             
             iniciarPartida();
  
@@ -48,11 +48,28 @@ public class Client {
                 InputStream input = socket.getInputStream();
                 BufferedReader reader = new BufferedReader(new InputStreamReader(input));
  
-                String respuesta = reader.readLine();
-                System.out.println("Jugada server: " + respuesta + "\n");
-                mover(Integer.parseInt(respuesta), 'O');
+                int respuestaServer = Integer.parseInt(reader.readLine());
+                
+                if(respuestaServer < (anchura * altura)) { //JUGADA NORMAL
+                	
+                	System.out.println("Jugada server: " + respuestaServer + "\n");
+                    mover(respuestaServer, 'O');
+                    
+                }else if(respuestaServer  == 777) { //HAS GANADO
+                	
+                	System.out.println("Server: ¡Has ganado!");
+                	jugando = false;
+                	
+                }else { //HAS PERDIDO
+                	
+                	System.out.println("Jugada server: " + respuestaServer + "\n");
+                    mover(respuestaServer - 1000, 'O');
+                    renderTablero(partida);
+                    System.out.println("¡Has perdido!");
+                    jugando = false;
+                }
  
-            } while (!text.equals("bye"));
+            } while (jugando);
  
             socket.close();
  
@@ -69,6 +86,8 @@ public class Client {
     public void iniciarPartida() {
     	
     	System.out.println("¡Nueva partida!\n");
+    	
+    	jugando = true;
     	
     	for(int i = 0; i < altura; i++) {
     		

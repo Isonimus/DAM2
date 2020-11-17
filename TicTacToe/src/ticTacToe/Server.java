@@ -17,7 +17,8 @@ public class Server {
     	//if (args.length < 1) return;
     	
         int port = Integer.parseInt("9090");
- 
+        System.out.println("Starting server...");
+        
         try (ServerSocket serverSocket = new ServerSocket(port)) {
  
             System.out.println("Server is listening on port " + port);
@@ -25,7 +26,7 @@ public class Server {
             while (true) {
             	
                 Socket socket = serverSocket.accept();
-                System.out.println("New client connected");
+                System.out.println("New client connected: " + socket.getInetAddress() + ":" + socket.getPort());
  
                 new ServerThread(socket).start();
             }
