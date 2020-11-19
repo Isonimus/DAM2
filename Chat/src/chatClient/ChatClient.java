@@ -49,7 +49,7 @@ public class ChatClient {
         //if (args.length < 2) return;
  
         //String hostname = args[0];
-    	String hostname = "172.16.1.10";
+    	String hostname = "localhost";
         //int port = Integer.parseInt(args[1]);
     	int port = 8989;
  
