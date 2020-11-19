@@ -2,6 +2,11 @@ package serializable;
 
 import java.io.Serializable;
 
+/**
+ * 
+ * @author Iker Laforga
+ *
+ */
 public class Bean implements Serializable{
 
 	private static final long serialVersionUID = 1L;

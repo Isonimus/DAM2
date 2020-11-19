@@ -4,6 +4,11 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
+/**
+ * 
+ * @author Iker Laforga
+ *
+ */
 public class Deserializator {
 
 	public Deserializator() {

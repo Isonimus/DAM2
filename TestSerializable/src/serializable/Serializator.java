@@ -4,6 +4,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
+/**
+ * 
+ * @author Iker Laforga
+ *
+ */
 public class Serializator {
 
 	public Serializator() {
