@@ -27,7 +27,7 @@ public class SerialSender {
 		
 		try {
 			
-			//GENERAR CONEXIÓN
+			// GENERAR CONEXIÓN
 			url = new URL("http://localhost:8080/SerializedCommunication/DemoServlet"); //172.16.1.10
 			conHTTP = (HttpURLConnection) url.openConnection();
 			conHTTP.setRequestMethod("POST");
