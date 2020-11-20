@@ -24,7 +24,6 @@ public class VistaCategoria extends Vista implements Consultable{
 		System.out.println("3 - Eliminar categoría");
 		System.out.println("4 - Listar categorías");
 		System.out.println("0 - Menú principal");
-		System.out.println("-------------------ESPERANDO SELECCIÓN----------------");
 	}
 
 	public void getAccion() {
@@ -34,7 +33,7 @@ public class VistaCategoria extends Vista implements Consultable{
 		do {
 			
 			getMenu();
-			pedirOpcion();
+			pedirOpcion("-------------------ESPERANDO SELECCIÓN----------------");
 			
 			switch(getOpcion()){
 				
@@ -105,8 +104,7 @@ public class VistaCategoria extends Vista implements Consultable{
 	public void actualizar() {
 		
 		listar();
-		System.out.println("Introduce la ID de la categoría a actualizar:");
-		int id = recogerInt();
+		int id = recogerInt("Introduce la ID de la categoría a actualizar:");
 		System.out.println("Introduce el nuevo nombre de la categoría " + id + ":");
 		String nombre = recogerString();
 		mostrarFeedback(getControlador().actualizarCategoria(id, nombre));
@@ -116,8 +114,7 @@ public class VistaCategoria extends Vista implements Consultable{
 	public void eliminar() {
 		
 		listar();
-		System.out.println("Introduce la ID de la categoría a eliminar:");
-		int id = recogerInt();
+		int id = recogerInt("Introduce la ID de la categoría a eliminar:");
 		mostrarFeedback(getControlador().eliminarCategoria(id));
 	}
 	

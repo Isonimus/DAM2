@@ -18,11 +18,11 @@ public abstract class Vista implements Selectable{
 		this.setScanner(new Scanner(System.in));
 	}
 	
-	protected int pedirOpcion() {
+	protected int pedirOpcion(String mensaje) {
 		
 		try {
 			
-			setOpcion(recogerInt());
+			setOpcion(recogerInt(mensaje));
 			
 		}catch(InputMismatchException e) {
 			
@@ -33,21 +33,67 @@ public abstract class Vista implements Selectable{
 		return getOpcion();
 	}
 	
-	protected int recogerInt(){
+	protected int recogerInt(String mensaje){
 		
-		int integer = getScanner().nextInt();
-		getScanner().nextLine(); //LIMPIAR EL BUFFER
+		int integer = Integer.MIN_VALUE;
+		boolean correcto = false;
+		
+		while(!correcto) {
+			
+			System.out.println(mensaje);
+			
+			try {
+				
+				integer = getScanner().nextInt();
+				getScanner().nextLine(); //LIMPIAR EL BUFFER
+				
+				if(integer >= 0) {
+					correcto = true;
+				}else {
+					mostrarFeedback("Debes introducir un valor mayor que cero.");
+				}
+				
+			}catch(InputMismatchException e) {
+				
+				mostrarFeedback("Debes introducir un valor numérico.");
+				getScanner().next();
+			}
+		}
+		
 		return integer;
 	}
 	
-	protected double recogerDouble(){
+	protected double recogerDouble(String mensaje){ 
 		
-		double doble = getScanner().nextDouble();
-		getScanner().nextLine(); //LIMPIAR EL BUFFER
+		double doble = Double.MIN_VALUE;
+		boolean correcto = false;
+		
+		while(!correcto) {
+			
+			System.out.println(mensaje);
+			
+			try {
+				
+				doble = getScanner().nextDouble();
+				getScanner().nextLine(); //LIMPIAR EL BUFFER
+				
+				if(doble >= 0) {
+					correcto = true;
+				}else {
+					mostrarFeedback("Debes introducir un valor mayor que cero.");
+				}
+				
+			}catch(InputMismatchException e) {
+				
+				mostrarFeedback("Debes introducir un valor numérico.");
+				getScanner().next();
+			}
+		}
+		
 		return doble;
 	}
 	
-	protected String recogerString(){
+	protected String recogerString(){ //SANITIZAR TODO
 		
 		String string = getScanner().nextLine();
 		return string;

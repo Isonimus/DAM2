@@ -175,32 +175,13 @@ public class Libro extends DAO{
 	public static Vector<Autor> listarAutores(int isbn) throws SQLException{
 		
 		Vector<Autor> autores = new Vector<Autor>();
-		Autor autor;
-		String consulta = "SELECT cod_autor FROM autor_libro WHERE isbn = " + isbn;
-		System.out.println(consulta);
-	
-		resultado = sentencia.executeQuery(consulta);
+		Vector<AutorLibro> relaciones = AutorLibro.buscarPorIsbn(isbn);
 		
-		
-		while(resultado.next()) {
-			/*
-			int id = resultado.getInt(1);
-			Vector<Autor> autoresRescatados = Autor.buscarPorId(id);
-			autor = autoresRescatados.get(0);
-			System.out.println(autor.getIdAutor() + " - " + id);
-			autores.add(autor);
-			*/
-			int id = resultado.getInt(1);
+		for(AutorLibro relacion : relaciones) {
 			
-			for(Autor aut : Autor.buscarPorId(id)) {
-				
-				aut.getIdAutor();
-			}
-			
-			System.out.println(id);
+			autores.add(Autor.buscarPorId(relacion.getCodAutor()).get(0));
 		}
 		
-		System.out.println("DAO: num Autores: " + autores.size());
 		return autores;
 	}
 	

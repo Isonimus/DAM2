@@ -37,12 +37,11 @@ public class VistaLibro extends Vista implements Consultable{
 		System.out.println("3 - Eliminar libro");
 		System.out.println("4 - Listar libros");
 		System.out.println("0 - Menú principal");
-		System.out.println("-------------------ESPERANDO SELECCIÓN----------------");
 	}
 	
 	public void getMenuActualizar() {
 		
-		System.out.println("------------------------OPCIONES----------------------");
+		System.out.println("--------------------ACTUALIZAR LIBRO------------------");
 		System.out.println("Elige una opción:\n");
 		System.out.println("1 - Actualizar ISBN");
 		System.out.println("2 - Actualizar título");
@@ -52,7 +51,6 @@ public class VistaLibro extends Vista implements Consultable{
 		System.out.println("6 - Actualizar editorial");
 		System.out.println("7 - Actualizar autores");
 		System.out.println("0 - volver");
-		System.out.println("-------------------ESPERANDO SELECCIÓN----------------");
 	}
 	
 	public void getMenuAutores() {
@@ -62,7 +60,6 @@ public class VistaLibro extends Vista implements Consultable{
 		System.out.println("1 - Añadir autor");
 		System.out.println("2 - Eliminar Autor");
 		System.out.println("0 - Volver");
-		System.out.println("-------------------ESPERANDO SELECCIÓN----------------");
 	}
 	
 	public void getAccion() {
@@ -72,7 +69,7 @@ public class VistaLibro extends Vista implements Consultable{
 		do {
 			
 			getMenu();
-			pedirOpcion();
+			pedirOpcion("-------------------ESPERANDO SELECCIÓN----------------");
 			
 			switch(getOpcion()){
 				
@@ -214,22 +211,17 @@ public class VistaLibro extends Vista implements Consultable{
 		System.out.println("Introduce el título del nuevo libro:");
 		libro = new Libro(recogerString());
 		
-		System.out.println("Introduce el ISBN del nuevo libro:");
-		libro.setIsbn(recogerInt());
+		libro.setIsbn(recogerInt("Introduce el ISBN del nuevo libro:")); //COMPROBAR QUE NO EXISTA
 		
-		System.out.println("Introduce el precio del nuevo libro:");
-		libro.setPrecio(recogerDouble());
+		libro.setPrecio(recogerDouble("Introduce el precio del nuevo libro:"));
 		
-		System.out.println("Introduce el stock actual del nuevo libro:");
-		libro.setStock(recogerInt());
+		libro.setStock(recogerInt("Introduce el stock actual del nuevo libro:"));
 		
-		System.out.println("Selecciona la categoría del nuevo libro:");
 		vistaCat.listar();
-		libro.setCategoria(recogerInt());
+		libro.setCategoria(recogerInt("Selecciona la categoría del nuevo libro:"));
 		
-		System.out.println("Selecciona la editorial del nuevo libro:");
 		vistaEdi.listar();
-		libro.setEditorial(recogerInt());
+		libro.setEditorial(recogerInt("Selecciona la editorial del nuevo libro:"));
 		
 		mostrarFeedback(getControlador().insertarLibro(libro));
 	}
@@ -239,16 +231,14 @@ public class VistaLibro extends Vista implements Consultable{
 		
 		editando = true;
 		listar();
-		System.out.println("--------------------ACTUALIZAR LIBRO------------------");
-		System.out.println("Introduce el ISBN del libro a actualizar:");
-		
-		int isbn = recogerInt();
+		//System.out.println("--------------------ACTUALIZAR LIBRO------------------");
+		int isbn = recogerInt("Introduce el ISBN del libro a actualizar:");
 		
 		do {
 			
 			getMenuActualizar();
 			
-			switch(recogerInt()){
+			switch(recogerInt("-------------------ESPERANDO SELECCIÓN----------------")){
 			
 				case 1: 
 					System.out.println("ISBN");
@@ -261,35 +251,29 @@ public class VistaLibro extends Vista implements Consultable{
 					break;
 					
 				case 3: 
-					System.out.println("Introduce el nuevo precio del libro:");
-					int precio = recogerInt();
+					int precio = recogerInt("Introduce el nuevo precio del libro:");
 					System.out.println(getControlador().actualizarLibro(isbn, "precio", Integer.toString(precio)));
 					break;
 					
 				case 4: 
-					System.out.println("Introduce el nuevo stock del libro:");
-					int stock = recogerInt();
+					int stock = recogerInt("Introduce el nuevo stock del libro:");
 					System.out.println(getControlador().actualizarLibro(isbn, "stock", Integer.toString(stock)));
 					break;
 					
 				case 5: 
 					vistaCat.listar();
-					System.out.println("Introduce la nueva categoría del libro:");
-					int categoria = recogerInt();
+					int categoria = recogerInt("Introduce la nueva categoría del libro:");
 					System.out.println(getControlador().actualizarLibro(isbn, "cod_categoria", Integer.toString(categoria)));
 					break;
 					
 				case 6: 
 					vistaEdi.listar();
-					System.out.println("Introduce la nueva editorial del libro:");
-					int editorial = recogerInt();
+					int editorial = recogerInt("Introduce la nueva editorial del libro:");
 					System.out.println(getControlador().actualizarLibro(isbn, "cod_editorial", Integer.toString(editorial)));
 					break;
 					
 				case 7: 
 					actualizarAutores(isbn);
-					//int editorial = recogerInt();
-					//System.out.println(getControlador().actualizarLibro(isbn, "cod_editorial", Integer.toString(editorial)));
 					break;
 					
 				case 0:
@@ -312,19 +296,17 @@ public class VistaLibro extends Vista implements Consultable{
 			
 			getMenuAutores();
 			
-			switch(recogerInt()){
+			switch(recogerInt("-------------------ESPERANDO SELECCIÓN----------------")){
 			
 				case 1:
 					vistaAut.listar();
-					System.out.println("Introduce el código del autor a añadir:");
-					idAutor = recogerInt();
+					idAutor = recogerInt("Introduce el código del autor a añadir:");
 					System.out.println(getControlador().addAutorLibro(idAutor, isbn));
 					break;
 					
 				case 2:
 					listarAutores(isbn);
-					System.out.println("Introduce el código del autor a eliminar:");
-					idAutor = recogerInt();
+					idAutor = recogerInt("Introduce el código del autor a eliminar:");
 					System.out.println(getControlador().dropAutorLibro(idAutor, isbn));
 					break;
 					
@@ -346,8 +328,7 @@ public class VistaLibro extends Vista implements Consultable{
 		
 		listar();
 		System.out.println("---------------------ELIMINAR LIBRO-------------------");
-		System.out.println("Introduce el ISBN del libro a eliminar:");
-		int isbn = recogerInt();
+		int isbn = recogerInt("Introduce el ISBN del libro a eliminar:");
 		mostrarFeedback(getControlador().eliminarLibro(isbn));
 	}
 }

@@ -119,7 +119,7 @@ public class AutorLibro extends DAO{
 		
 		try{
 			
-			String sql = "DELETE FROM libro WHERE isbn = '" + isbn + "'";
+			String sql = "DELETE FROM autor_libro WHERE isbn = " + isbn + " AND cod_autor = " + codAutor;
 			retorno = sentencia.executeUpdate(sql);
 			
 		}catch(SQLException e) {

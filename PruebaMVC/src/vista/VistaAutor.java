@@ -22,7 +22,7 @@ public class VistaAutor extends Vista implements Consultable{
 		do {
 			
 			getMenu();
-			pedirOpcion();
+			pedirOpcion("-------------------ESPERANDO SELECCIÓN----------------");
 			
 			switch(getOpcion()){
 				
@@ -64,7 +64,6 @@ public class VistaAutor extends Vista implements Consultable{
 		System.out.println("3 - Eliminar autor");
 		System.out.println("4 - Listar autores");
 		System.out.println("0 - Menú principal");
-		System.out.println("-------------------ESPERANDO SELECCIÓN----------------");
 	}
 	
 	@Override
@@ -105,8 +104,7 @@ public class VistaAutor extends Vista implements Consultable{
 	public void actualizar() {
 		
 		listar();
-		System.out.println("Introduce la ID del autor a actualizar:");
-		int id = recogerInt();
+		int id = recogerInt("Introduce la ID del autor a actualizar:");
 		System.out.println("Introduce el nuevo nombre del autor " + id + ":");
 		String nombre = recogerString();
 		mostrarFeedback(getControlador().actualizarAutor(id, nombre));
@@ -116,8 +114,7 @@ public class VistaAutor extends Vista implements Consultable{
 	public void eliminar() {
 		
 		listar();
-		System.out.println("Introduce la ID del autor a eliminar:");
-		int id = recogerInt();
+		int id = recogerInt("Introduce la ID del autor a eliminar:");
 		mostrarFeedback(getControlador().eliminarAutor(id));
 	}
 	

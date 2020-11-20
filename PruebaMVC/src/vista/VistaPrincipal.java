@@ -25,7 +25,7 @@ public class VistaPrincipal extends Vista {
 		do {
 			
 			getMenu();
-			pedirOpcion();
+			pedirOpcion("-------------------ESPERANDO SELECCIÓN----------------");
 			
 			switch(getOpcion()){
 				
@@ -70,7 +70,6 @@ public class VistaPrincipal extends Vista {
 		System.out.println("3 - Mantenimiento Editoriales");
 		System.out.println("4 - Mantenimiento Categorías");
 		System.out.println("0 - Salir");
-		System.out.println("-------------------ESPERANDO SELECCIÓN----------------");
 	}
 	
 	private void lanzarMensajeDespedida() {
