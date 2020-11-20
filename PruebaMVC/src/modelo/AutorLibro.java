@@ -106,7 +106,6 @@ public class AutorLibro extends DAO{
 		return buscaResultadosConConsulta("Select cod_autor, isbn from autor_libro where isbn = " + isbn);
 	}
 	
-	
 	//LEER POR AUTOR
 	public static Vector<AutorLibro> buscarPorCodAutor(int codAutor) throws SQLException{
 				
