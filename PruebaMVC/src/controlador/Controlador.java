@@ -88,7 +88,32 @@ public class Controlador {
 		return  modelo.obtenerLibros();
 	}
 	
-	public String eliminarLibro(String isbn) {
+	public Vector<Autor> obtenerAutoresLibro(int isbn) throws SQLException{
+		
+		return modelo.obtenerAutoresLibro(isbn);
+	}
+	
+	public String dropAutorLibro(int idAutor, int isbn) {
+		
+		return modelo.dropAutorLibro(idAutor, isbn);
+	}
+	
+	public String actualizarLibro(int isbn, String propiedad, String valor) {
+		
+		return modelo.actualizarLibro(isbn, propiedad, valor);
+	}
+	
+	public String addAutorLibro(int idAutor, int isbn) {
+		
+		return modelo.addAutorLibro(idAutor, isbn);
+	}
+	
+	public String insertarLibro(Libro libro) {
+		
+		return modelo.insertarLibro(libro);
+	}
+	
+	public String eliminarLibro(int isbn) {
 		
 		return modelo.eliminarLibro(isbn);
 	}

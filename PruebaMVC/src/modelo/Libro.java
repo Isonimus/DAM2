@@ -127,23 +127,21 @@ public class Libro extends DAO{
 	//================//
 	
 	//CREATE
-	public static String insertar(String libro) {
+	public static String insertar(Libro libro) {
 		
 		int retorno;
 		
 		try{
 			
-			String sql = "SELECT max(`cod_autor`) FROM autor";
-			resultado = sentencia.executeQuery(sql);
 			
-			int nuevaId = -1;
+			String sql = "INSERT INTO libro (isbn, titulo, precio, stock, cod_categoria, cod_editorial) VALUES "
+					+ "(" + libro.getIsbn() 
+					+ ", '" + libro.getNombreLibro() 
+					+ "', " + libro.getPrecio() 
+					+ ", " + libro.getStock() 
+					+ ", " + libro.getCategoria() 
+					+ ", " + libro.getEditorial() + ")";
 			
-			while(resultado.next()) {
-				
-				nuevaId = resultado.getInt(1);
-			}
-			
-			sql = "INSERT INTO autor (cod_autor, nombre) VALUES (" + nuevaId + ", " + libro + ")";
 			retorno = sentencia.executeUpdate(sql);
 			
 		}catch(SQLException e) {
@@ -151,7 +149,7 @@ public class Libro extends DAO{
 			retorno = 0;
 		}
 		
-		return (retorno > 0) ? "Autor " + libro + " añadido correctamente." : "Error al añadir el autor.";
+		return (retorno > 0) ? "Libro " + libro.getNombreLibro() + " añadido correctamente." : "Error al añadir el libro.";
 	}
 	
 	//READ:
@@ -162,7 +160,7 @@ public class Libro extends DAO{
 	}
 	
 	//LEER POR ID
-	public static Vector<Libro> buscarPorId(String id) throws SQLException{
+	public static Vector<Libro> buscarPorId(int id) throws SQLException{
 			
 		return buscaResultadosConConsulta("Select isbn, titulo from libro where isbn = " + id);
 	}
@@ -173,11 +171,104 @@ public class Libro extends DAO{
 		return buscaResultadosConConsulta("Select isbn, titulo from libro where titulo LIKE '" + titulo + "'");
 	}
 	
-	//UPDATE
-
+	//LEER AUTORES DE UN LIBRO
+	public static Vector<Autor> listarAutores(int isbn) throws SQLException{
+		
+		Vector<Autor> autores = new Vector<Autor>();
+		Autor autor;
+		String consulta = "SELECT cod_autor FROM autor_libro WHERE isbn = " + isbn;
+		System.out.println(consulta);
 	
+		resultado = sentencia.executeQuery(consulta);
+		
+		
+		while(resultado.next()) {
+			/*
+			int id = resultado.getInt(1);
+			Vector<Autor> autoresRescatados = Autor.buscarPorId(id);
+			autor = autoresRescatados.get(0);
+			System.out.println(autor.getIdAutor() + " - " + id);
+			autores.add(autor);
+			*/
+			int id = resultado.getInt(1);
+			
+			for(Autor aut : Autor.buscarPorId(id)) {
+				
+				aut.getIdAutor();
+			}
+			
+			System.out.println(id);
+		}
+		
+		System.out.println("DAO: num Autores: " + autores.size());
+		return autores;
+	}
+	
+	//UPDATE
+	public static String actualizar(int isbn, String propiedad, String valor) {
+		
+		int retorno;
+		String sql;
+		
+		if(propiedad.equals("titulo")) {
+			
+			valor = "'" + valor + "'";	
+		}
+		
+		try {
+			
+			sql = "UPDATE libro SET " + propiedad + " = " + valor + " WHERE isbn = " + isbn;
+			retorno = sentencia.executeUpdate(sql);
+			
+		} catch (SQLException e) {
+			
+			retorno = 0;
+		}
+		
+		return (retorno > 0) ? "Libro " + isbn + " editado correctamente." : "Error al editar el libro.";
+	}
+	
+	//ACTUALIZAR AUTORES
+	//AÑADIR AUTOR
+	public static String addAutor(int idAutor, int isbn) {
+		
+		int retorno;
+		String sql;
+		
+		try {
+			
+			sql = "INSERT INTO autor_libro (cod_autor, isbn) VALUES (" + idAutor + ", " + isbn + ")";
+			retorno = sentencia.executeUpdate(sql);
+			
+		} catch (SQLException e) {
+			
+			retorno = 0;
+		}
+
+		return (retorno > 0) ? "Autor añadido correctamente al libro " + isbn + "." : "Error al añadir el autor al libro.";
+	}
+	
+	//ELIMINAR AUTOR
+	public static String dropAutor(int idAutor, int isbn) {
+		
+		int retorno;
+		String sql;
+		
+		try {
+			
+			sql = "DELETE FROM autor_libro WHERE cod_autor = " + idAutor + " AND isbn = " + isbn;
+			retorno = sentencia.executeUpdate(sql);
+			
+		} catch (SQLException e) {
+			
+			retorno = 0;
+		}
+
+		return (retorno > 0) ? "Autor eliminado correctamente del libro " + isbn + "." : "Error al eliminar el autor del libro.";
+	}
+
 	//DELETE
-	public static String eliminar(String isbn) {
+	public static String eliminar(int isbn) {
 		
 		int retorno;
 		

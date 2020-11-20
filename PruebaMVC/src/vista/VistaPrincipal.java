@@ -62,6 +62,7 @@ public class VistaPrincipal extends Vista {
 	
 	public void getMenu() {
 		
+		System.out.println("---------------------MENÚ PRINCIPAL-------------------");
 		System.out.println("------------------------OPCIONES----------------------");
 		System.out.println("Elige una opción:\n");
 		System.out.println("1 - Mantenimiento Autores");
@@ -77,5 +78,4 @@ public class VistaPrincipal extends Vista {
 		System.out.println("Cerrando aplicación.");
 		System.out.println("-----------------======== ADIÓS =========-------------");
 	}
-
 }

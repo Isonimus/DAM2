@@ -125,7 +125,32 @@ public class Modelo {
 		return Libro.listar(); //TODO
 	}
 	
-	public String eliminarLibro(String isbn) {
+	public Vector<Autor> obtenerAutoresLibro(int isbn) throws SQLException{
+		
+		return Libro.listarAutores(isbn); 
+	}
+	
+	public String dropAutorLibro(int idAutor, int isbn) {
+		
+		return Libro.dropAutor(idAutor, isbn);
+	}
+	
+	public String insertarLibro(Libro libro) {
+		
+		return Libro.insertar(libro);
+	}
+	
+	public String actualizarLibro(int isbn, String propiedad, String valor) {
+		
+		return Libro.actualizar(isbn, propiedad, valor);
+	}
+	
+	public String addAutorLibro(int idAutor, int isbn) {
+		
+		return Libro.addAutor(idAutor, isbn);
+	}
+	
+	public String eliminarLibro(int isbn) {
 		
 		return Libro.eliminar(isbn);
 	}
