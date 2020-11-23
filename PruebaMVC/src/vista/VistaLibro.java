@@ -134,7 +134,7 @@ public class VistaLibro extends Vista implements Consultable{
 		System.out.println("---------------------===============------------------");
 		System.out.println("-ISBN-----TÍTULO-----CATEGORÍA-----EDITORIAL----------");
 		
-		int maxLength = Integer.MIN_VALUE;
+		int maxLength = Integer.MIN_VALUE; //TODO CREAR MÉTODO MEDIRARRAY(ARRAY):INT
 		
 		for(Libro libro : libros) {
 			
