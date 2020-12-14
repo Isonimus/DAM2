@@ -165,7 +165,7 @@ public class Categoria extends DAO{
 			retorno = 0;
 		}
 		
-		return (retorno > 0) ? "Categoría " + id + " actualizada correctamente." : "Error al actualizar la categoría.";
+		return (retorno > 0) ? "Modificación de categoría correcta." : "Error al actualizar la categoría.";
 	}
 	
 	//DELETE
@@ -183,6 +183,6 @@ public class Categoria extends DAO{
 			retorno = 0;
 		}
 		
-		return (retorno > 0) ? "Categoría " + id + " eliminada correctamente." : "Error al eliminar la categoría.";
+		return (retorno > 0) ? "Se ha borrado la categoría." : "Error al eliminar la categoría.";
 	}
 }

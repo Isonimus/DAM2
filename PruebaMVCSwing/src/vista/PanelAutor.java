@@ -195,14 +195,6 @@ public class PanelAutor implements ActionListener,
 		
 	}
 	
-	public void reestablecerPanelCRUD(){
-		
-	}
-	
-	public void deshabilitarPanelEdicion() {
-		
-	}
-	
 	public JPanel getPanelCentral() {
 		
 		return panelCentral;
@@ -211,15 +203,6 @@ public class PanelAutor implements ActionListener,
 	public Dimension getTamanoMarcoRequerido() {
 		
 		return tamanoMarcoRequerido;
-	}
-	
-	public void modificarRegistro(int id, String valor, int fila, int columna) {
-		
-		String pregunta = "Ha modificado el nombre del autor. ¿Está seguro?";
-		String feedback = "No se ha modificado el autor.";
-		if(preguntarUsuario(pregunta) == JOptionPane.YES_OPTION) {
-			
-		}
 	}
 
 	@Override
@@ -309,10 +292,10 @@ public class PanelAutor implements ActionListener,
 
 	@Override
 	public void actionPerformed(ActionEvent ae) {
-		
+		System.out.println(ae.getActionCommand());
 		switch(ae.getActionCommand()) {
 			
-			case "nuevo":
+			case "Nuevo":
 				tabla.setEnabled(true);
 				tabla.clearSelection();
 				deshabilitarPanelCRUD();
@@ -362,29 +345,110 @@ public class PanelAutor implements ActionListener,
 		}
 		
 	}
-
-	private void borrarRegistro() {
-		// TODO Auto-generated method stub
+	
+	// MÉTODOS DE UTILIDAD
+	// PANEL EDICIÓN
+	private void habilitarPanelEdicion() {
 		
+		textoNuevo.setEnabled(true);
+		textoNuevo.requestFocus();
+		cancelarNuevo.setEnabled(true);
+		aceptarNuevo.setEnabled(true);
+	}
+	
+	public void deshabilitarPanelEdicion() {
+		
+		textoNuevo.setText("");
+		textoNuevo.setEnabled(false);
+		cancelarNuevo.setEnabled(false);
+		aceptarNuevo.setEnabled(false);
+	}
+	
+	// PANEL CRUD
+	public void reestablecerPanelCRUD(){
+		
+		editar.setEnabled(false);
+		borrar.setEnabled(false);
+		nuevo.setEnabled(true);
 	}
 
 	private void habilitarPanelCRUD() {
-		// TODO Auto-generated method stub
 		
+		editar.setEnabled(true);
+		borrar.setEnabled(true);
+		nuevo.setEnabled(true);
+	}
+	
+	private void deshabilitarPanelCRUD() {
+
+		editar.setEnabled(false);
+		borrar.setEnabled(false);
+		nuevo.setEnabled(false);
+	}
+	
+	//JOPTIONPANE DE INFO AL USUARIO
+	private void informarUsuario(String mensaje) {
+		
+		JOptionPane.showMessageDialog(marco, mensaje, tituloFuncion.getText(), JOptionPane.INFORMATION_MESSAGE);
+	}
+	
+	//Método genérico para preguntar al usuario
+	private int preguntarUsuario(String pregunta) {
+		
+		int confirmacion = JOptionPane.showConfirmDialog(marco, pregunta);
+		return confirmacion;
+	}
+	
+	// EL CRUD
+	//Modifica el regisro seleccionado
+	private void modificarRegistro() {
+		
+		String feedBack = controlador.actualizarAutor((int)tabla.getValueAt(tabla.getSelectedRow(), 0), textoNuevo.getText());
+		//
+		if (feedBack.equals("Modificación de autor correcta.")) {
+			modeloTabla.setValueAt(textoNuevo.getText(), tabla.getSelectedRow(), 1);
+		}
+		informarUsuario(feedBack);
+	}
+	
+	//Cuando la modificación se produce en la propia tabla
+	private void modificarRegistro(int claveModificacion, String valorModificacion, int fila, int columna) {
+		
+		String pregunta = "Ha modificado el nombre del autor cuyo código es: " + claveModificacion + "\n¿Está seguro?";
+		String feedBack = "No se ha modificado el autor.";
+		if (preguntarUsuario(pregunta) == JOptionPane.YES_OPTION) {
+			feedBack = controlador.actualizarAutor(claveModificacion, valorModificacion);
+		}
+		else {
+			tabla.setValueAt(valorInicialCeldaAUX, fila, columna);
+		}
+		informarUsuario(feedBack);
+	}
+	
+	private void borrarRegistro() {
+		//Preparación pregunta para el usuario
+		String pregunta = "Va a borrar el autor con código: " + tabla.getValueAt(tabla.getSelectedRow(), 0) + "\n¿Está seguro?";
+		String feedBack = "No se ha borrado el autor.";
+		if (preguntarUsuario(pregunta) == JOptionPane.YES_OPTION) {
+			feedBack = controlador.eliminarAutor((int)tabla.getValueAt(tabla.getSelectedRow(), 0));
+			//
+			if (feedBack.equals("Se ha borrado el autor.")) {
+				modeloTabla.removeRow(tabla.getSelectedRow());
+			}
+		}
+		informarUsuario(feedBack);
 	}
 
 	private void registrarNuevo() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private void habilitarPanelEdicion() {
-		textoNuevo.setEnabled(true);
-		
-	}
-
-	private void deshabilitarPanelCRUD() {
-		// TODO Auto-generated method stub
-		
+		//Se solicita al controlador que registre los datos y se informa del resultado al usuario
+		informarUsuario(controlador.insertarAutor(textoNuevo.getText()));
+		//Se limpia la tabla de datos
+		modeloTabla.setRowCount(0);
+		modeloTabla.setColumnCount(0);
+		//Se carga la tabla que ya contiene los datos nuevos y se muestra el último registro añadido
+		cargarDatosEnTabla(modeloTabla);
+		//Se muestra la última entrada en la tabla
+		tabla.setRowSelectionInterval(tabla.getRowCount() - 1, tabla.getRowCount() - 1);
+		tabla.scrollRectToVisible(tabla.getCellRect(tabla.getRowCount() -1 , 0, true));
 	}
 }

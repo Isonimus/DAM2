@@ -163,7 +163,7 @@ public class Autor extends DAO{
 			retorno = 0;
 		}
 		
-		return (retorno > 0) ? "Autor " + id + " actualizado correctamente." : "Error al actualizar el autor.";
+		return (retorno > 0) ? "Modificación de autor correcta." : "Error al actualizar el autor.";
 	}
 	
 	//DELETE
@@ -181,6 +181,6 @@ public class Autor extends DAO{
 			retorno = 0;
 		}
 		
-		return (retorno > 0) ? "Autor " + id + " eliminado correctamente." : "Error al eliminar el autor.";
+		return (retorno > 0) ? "Se ha borrado el autor." : "Error al eliminar el autor.";
 	}
 }

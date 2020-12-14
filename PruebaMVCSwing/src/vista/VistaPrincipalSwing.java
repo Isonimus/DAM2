@@ -21,10 +21,9 @@ public class VistaPrincipalSwing  implements WindowListener, ActionListener{
 	private Controlador controlador;
 	private JFrame marco;
 	private PanelAutor panelAutor;
-	/*
 	private PanelEditorial panelEditorial;
 	private PanelCategoria panelCategoria;
-	private Panelibro panelLibro;*/
+	private PanelLibro panelLibro;
 	private JMenuBar menu;
 	private JMenu menuApp;
 	private JMenuItem menuAppAbout;
@@ -256,6 +255,99 @@ public class VistaPrincipalSwing  implements WindowListener, ActionListener{
 				
 				marco.add(panelAutor.getPanelCentral(), BorderLayout.CENTER);
 				marco.setSize(panelAutor.getTamanoMarcoRequerido());
+				marco.validate();
+				marco.repaint();
+			}
+
+		}
+		
+		if(actionCommand.equals("Mantener editoriales")) {
+			
+			if(itemMenuAux != null) {
+				
+				itemMenuAux.setEnabled(true);
+			}
+			
+			itemMenuAux = menuEditorialMantenimiento;
+			menuEditorialMantenimiento.setEnabled(false);
+			
+			//SI HABÍA ALGO CARGADO EN PANEL CENTRAL, QUITAR
+			if(marco.getContentPane().getComponentCount() == 5) {
+				
+				marco.getContentPane().remove(4);
+			}
+			
+			//SI ES LA PRIMERA VEZ QUE SE CARGA, SE CREA
+			if(panelEditorial == null) {
+				
+				panelEditorial = new PanelEditorial(marco, controlador);
+				
+			}else{
+				
+				marco.add(panelEditorial.getPanelCentral(), BorderLayout.CENTER);
+				marco.setSize(panelEditorial.getTamanoMarcoRequerido());
+				marco.validate();
+				marco.repaint();
+			}
+
+		}
+		
+		if(actionCommand.equals("Mantener categorías")) {
+			
+			if(itemMenuAux != null) {
+				
+				itemMenuAux.setEnabled(true);
+			}
+			
+			itemMenuAux = menuCategoriaMantenimiento;
+			menuCategoriaMantenimiento.setEnabled(false);
+			
+			//SI HABÍA ALGO CARGADO EN PANEL CENTRAL, QUITAR
+			if(marco.getContentPane().getComponentCount() == 5) {
+				
+				marco.getContentPane().remove(4);
+			}
+			
+			//SI ES LA PRIMERA VEZ QUE SE CARGA, SE CREA
+			if(panelCategoria == null) {
+				
+				panelCategoria = new PanelCategoria(marco, controlador);
+				
+			}else{
+				
+				marco.add(panelCategoria.getPanelCentral(), BorderLayout.CENTER);
+				marco.setSize(panelCategoria.getTamanoMarcoRequerido());
+				marco.validate();
+				marco.repaint();
+			}
+
+		}
+		
+		if(actionCommand.equals("Mantener libros")) {
+			
+			if(itemMenuAux != null) {
+				
+				itemMenuAux.setEnabled(true);
+			}
+			
+			itemMenuAux = menuAlmacenMantenimiento;
+			menuAlmacenMantenimiento.setEnabled(false);
+			
+			//SI HABÍA ALGO CARGADO EN PANEL CENTRAL, QUITAR
+			if(marco.getContentPane().getComponentCount() == 5) {
+				
+				marco.getContentPane().remove(4);
+			}
+			
+			//SI ES LA PRIMERA VEZ QUE SE CARGA, SE CREA
+			if(panelLibro == null) {
+				
+				panelLibro = new PanelLibro(marco, controlador);
+				
+			}else{
+				
+				marco.add(panelLibro.getPanelCentral(), BorderLayout.CENTER);
+				marco.setSize(panelLibro.getTamanoMarcoRequerido());
 				marco.validate();
 				marco.repaint();
 			}

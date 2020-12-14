@@ -165,7 +165,7 @@ public class Editorial extends DAO{
 			retorno = 0;
 		}
 		
-		return (retorno > 0) ? "Editorial " + id + " actualizada correctamente." : "Error al actualizar la editorial.";
+		return (retorno > 0) ? "Modificación de editorial correcta." : "Error al actualizar la editorial.";
 	}
 	
 	//DELETE
@@ -183,6 +183,6 @@ public class Editorial extends DAO{
 			retorno = 0;
 		}
 		
-		return (retorno > 0) ? "Editorial " + id + " eliminada correctamente." : "Error al eliminar la editorial.";
+		return (retorno > 0) ? "Se ha borrado la editorial." : "Error al eliminar la editorial.";
 	}
 }
