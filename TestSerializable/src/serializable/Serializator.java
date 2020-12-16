@@ -27,6 +27,7 @@ public class Serializator {
 			System.out.printf("Serialized data is saved in C:\\Serializable\\" + bean.getName() + ".ser");
 			
 		} catch (IOException i) {
+			
 			i.printStackTrace();
 		}
 	}

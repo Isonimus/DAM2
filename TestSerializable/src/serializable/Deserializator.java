@@ -28,9 +28,11 @@ public class Deserializator {
 	         fileIn.close();
 	         
 	      } catch (IOException i) {
+	    	  
 	         i.printStackTrace();
 	     
 	      } catch (ClassNotFoundException c) {
+	    	  
 	         System.out.println("Clase Bean no encontrada.");
 	         c.printStackTrace();
 	      }
