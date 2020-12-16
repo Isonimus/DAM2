@@ -4,6 +4,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Vector;
 
+import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
+
 /**
  * CLASE DAO - MAPEA LA TABLA LIBRO.
  * CADA INSTANCIA DE ESTA CLASE ES UNA 
@@ -148,6 +150,26 @@ public class Libro extends DAO{
 		return resultado;
 	}
 	
+	public static ResultSet obtenerDatosMasMetadatosAutoresLibro(int isbn) {
+		
+		try {
+			
+			String sqlQuery = "SELECT autor.cod_autor as 'CÓDIGO', "
+					+ "nombre as 'NOMBRE' "
+					+ "FROM autor JOIN autor_libro on autor.cod_autor = autor_libro.cod_autor "
+					+ "WHERE ISBN = '" + isbn + "'";
+			
+			resultado = Libro.sentencia.executeQuery(sqlQuery);
+			
+		} catch (SQLException e) {
+			
+			System.out.println("LIBRO: fallo al obtener datos + metadatos.");
+			e.printStackTrace();
+		}
+		
+		return resultado;
+	}
+	
 	//================//
 	//    C.R.U.D
 	//================//
@@ -235,24 +257,66 @@ public class Libro extends DAO{
 		return (retorno > 0) ? "Libro " + isbn + " editado correctamente." : "Error al editar el libro.";
 	}
 	
+	//UPDATE (SWING)
+	public static String actualizar(int isbn, Libro libro) {
+		
+		int retorno;
+		String error;
+		
+		try {
+			
+			String sql = "UPDATE libro SET isbn = " + libro.getIsbn() + 
+						", titulo = '" + libro.getNombreLibro() + 
+						"', precio = " + libro.getPrecio() + 
+						", stock = " + libro.getStock() + 
+						", cod_categoria = " + libro.getCategoria() +  
+						", cod_editorial = " + libro.getEditorial() + 
+						" WHERE isbn = " + isbn;
+			
+			retorno = sentencia.executeUpdate(sql);
+			error = "";
+			
+		} catch (MySQLIntegrityConstraintViolationException e) {
+			
+			retorno = 0;
+			error = "El libro tiene autores asignados, y su ISBN no puede modificarse.\nPor favor, elimina los autores e inténtalo de nuevo.";
+			
+		} catch (SQLException e) {
+			
+			retorno = 0;
+			error = "Error al modificar el libro.";
+			//e.printStackTrace();
+		}
+		
+		return (retorno > 0) ? "Modificación de libro correcta." : error;
+	}
+	
 	//ACTUALIZAR AUTORES
 	//AÑADIR AUTOR
 	public static String addAutor(int idAutor, int isbn) {
 		
 		int retorno;
 		String sql;
+		String error;
 		
 		try {
 			
 			sql = "INSERT INTO autor_libro (cod_autor, isbn) VALUES (" + idAutor + ", " + isbn + ")";
 			retorno = sentencia.executeUpdate(sql);
+			error = "";
+		
+		} catch (MySQLIntegrityConstraintViolationException e) {
 			
+			retorno = 0;
+			error = "Error: El autor " + idAutor + " ya está asignado al libro.";
+					
 		} catch (SQLException e) {
 			
 			retorno = 0;
+			error = "Error al añadir el autor al libro.";
 		}
 
-		return (retorno > 0) ? "Autor añadido correctamente al libro " + isbn + "." : "Error al añadir el autor al libro.";
+		return (retorno > 0) ? "Autor añadido correctamente al libro " + isbn + "." : error;
 	}
 	
 	//ELIMINAR AUTOR
@@ -278,18 +342,26 @@ public class Libro extends DAO{
 	public static String eliminar(int isbn) {
 		
 		int retorno;
+		String error;
 		
 		try{
 			
 			String sql = "DELETE FROM libro WHERE isbn = '" + isbn + "'";
 			retorno = sentencia.executeUpdate(sql);
+			error = "";
+			
+		} catch (MySQLIntegrityConstraintViolationException e) {
+			
+			retorno = 0;
+			error = "El libro tiene autores asignados, y no puede eliminarse.\nPor favor, elimina los autores e inténtalo de nuevo.";
 			
 		}catch(SQLException e) {
 			
 			retorno = 0;
+			error = "Error al eliminar el libro.";
 		}
 		
-		return (retorno > 0) ? "Libro " + isbn + " eliminado correctamente." : "Error al eliminar el libro.";
+		return (retorno > 0) ? "Se ha borrado el libro." : error;
 	}
 	
 	//EXISTE
@@ -314,5 +386,4 @@ public class Libro extends DAO{
 		
 		return existe;
 	}
-	
 }

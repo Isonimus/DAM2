@@ -163,6 +163,12 @@ public class Modelo {
 		return Libro.actualizar(isbn, propiedad, valor);
 	}
 	
+	//GUI SWING
+	public String actualizarLibro(int isbn, Libro libro) {
+		
+		return Libro.actualizar(isbn, libro);
+	}
+	
 	public String addAutorLibro(int idAutor, int isbn) {
 		
 		return Libro.addAutor(idAutor, isbn);
@@ -177,6 +183,11 @@ public class Modelo {
 	public ResultSet obtenerDatosMasMetadatosLibro() {
 		
 		return Libro.obtenerDatosMasMetadatosTabla();
+	}
+	
+	public ResultSet obtenerDatosMasMetadatosAutoresLibro(int isbn) {
+		
+		return Libro.obtenerDatosMasMetadatosAutoresLibro(isbn);
 	}
 	
 	public void terminar() {
