@@ -22,7 +22,7 @@ public class ServicioBBDD {
 	public static final String POSTGRESQL_URL = "jdbc:postgresql://localhost:5432/libreria";
 	
 	private final String USER = "root";
-	private final String PASS = "";
+	private final String PASS = "admin";
 	
 	private ServicioBBDD(String driver, String url){ //SINGLETON + FACTORY
 		

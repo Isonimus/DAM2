@@ -607,7 +607,7 @@ public class PanelLibro implements ActionListener,
 			
 			case "Nuevo":
 				tablaLibros.setEnabled(true);
-				tablaLibros.clearSelection();
+				tablaLibros.getSelectionModel().clearSelection();
 				deshabilitarPanelCRUD();
 				habilitarPanelEdicion();
 				solapas.setSelectedIndex(1);
@@ -615,7 +615,6 @@ public class PanelLibro implements ActionListener,
 				break;
 				
 			case "Cancelar":
-				deshabilitarPanelEdicion();
 				modoEdicion = false;
 				etiquetaNuevo.setText("Nuevo Libro: ");
 				aceptarNuevo.setActionCommand("Aceptar");
@@ -623,15 +622,38 @@ public class PanelLibro implements ActionListener,
 				tablaLibros.setEnabled(true);
 				tablaLibros.clearSelection();
 				valorInicialISBN = null;
+				deshabilitarPanelEdicion();
 				solapas.setSelectedIndex(0);
 				solapas.setTabComponentAt(1, new JLabel("Nuevo libro"));
+				solapas.setEnabledAt(0, true);
+				modeloTablaAutoresLibro.setRowCount(0);
+				modeloTablaAutoresLibro.setColumnCount(0);
 				break;
 				
 			case "Aceptar":
-				registrarNuevo();
-				deshabilitarPanelEdicion();
-				habilitarPanelCRUD();
-				tablaLibros.setEnabled(true);
+				
+				try {
+					
+					registrarNuevo();
+					reestablecerPanelCRUD();
+					deshabilitarPanelEdicion();
+					tablaLibros.setEnabled(true);
+				
+				}catch(NumberFormatException e) {
+					
+					informarUsuario("Los datos introducidos no tienen el formato correcto.\n"
+							+ "Por favor, comprueba que correspondan con el siguiente patrón:\n"
+							+ "ISBN -> Valor numérico de 8 o 13 cifras.\n"
+							+ "Título -> Texto.\n"
+							+ "Precio -> Valor numérico, admite decimales.\n"
+							+ "Existencias -> Valor numérico entero. ");
+					
+				}catch(NullPointerException e) {
+					
+					informarUsuario("Debes seleccionar una Categoría y una Editorial para el libro.");
+					
+				}
+				
 				break;
 				
 			case "Borrar":
@@ -643,16 +665,9 @@ public class PanelLibro implements ActionListener,
 				tablaLibros.setEnabled(false);
 				deshabilitarPanelCRUD();
 				cargarCombos();
-				etiquetaNuevo.setText("Editar Libro: ");
+				etiquetaNuevo.setText("Editar Libro: "); 
 				valorInicialISBN = String.valueOf(tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 0));
-				textoISBN.setText(valorInicialISBN);
-				textoTitulo.setText((String) tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 1));
-				textoPrecio.setText(String.valueOf(tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 2)));
-				textoExistencias.setText(String.valueOf(tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 3)));
-				int categoriaSeleccionada = parsearCategoria(String.valueOf(tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 4)));
-				comboCategorias.setSelectedIndex(categoriaSeleccionada);
-				int editorialSeleccionada = parsearEditorial(String.valueOf(tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 5)));
-				comboEditoriales.setSelectedIndex(editorialSeleccionada);
+				cargarSeleccionEnFormulario();
 				habilitarPanelEdicion();
 				aceptarNuevo.setActionCommand("Modificar");
 				solapas.setSelectedIndex(1);
@@ -660,28 +675,46 @@ public class PanelLibro implements ActionListener,
 				break;
 				
 			case "Modificar":
-				modificarRegistro();
-				deshabilitarPanelEdicion();
-				etiquetaNuevo.setText("Nuevo Libro: ");
-				aceptarNuevo.setActionCommand("Aceptar");
-				habilitarPanelCRUD();
-				tablaLibros.setEnabled(true);
-				modoEdicion = false;
-				solapas.setTabComponentAt(1, new JLabel("Nuevo libro"));
-				valorInicialISBN = null;
+				
+				try {
+					
+					modificarRegistro();
+					etiquetaNuevo.setText("Nuevo Libro: ");
+					aceptarNuevo.setActionCommand("Aceptar");
+					reestablecerPanelCRUD();
+					deshabilitarPanelEdicion();
+					tablaLibros.setEnabled(true);
+					modoEdicion = false;
+					solapas.setTabComponentAt(1, new JLabel("Nuevo libro"));
+					valorInicialISBN = null;
+					
+				}catch(NumberFormatException e) {
+					
+					informarUsuario("Los datos introducidos no tienen el formato correcto.\n"
+							+ "Por favor, comprueba que correspondan con el siguiente patrón:\n"
+							+ "ISBN -> Valor numérico de 8 o 13 cifras.\n"
+							+ "Título -> Texto.\n"
+							+ "Precio -> Valor numérico, admite decimales.\n"
+							+ "Existencias -> Valor numérico entero. ");
+				}
+				
 				break;
 				
 			case "Limpiar":
-				limpiarFormulario();
+				
+				if(modoEdicion) {
+					cargarSeleccionEnFormulario();
+				}else {
+					limpiarFormulario();
+				}
 				break;
 				
 			case "Recargar":
-				//ACTUALIZAR LOS COMBOS
 				cargarCombos();
 				break;
 				
 			case "Quitar Autor":
-				//ELIMINAR UN AUTOR DE UN LIBRO (DROP AUTOR)
+				
 				int id = (int) tablaAutoresLibro.getValueAt(tablaAutoresLibro.getSelectedRow(), 0);
 				int isbn = (int) tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 0);
 				eliminarAutor(id, isbn);
@@ -689,7 +722,7 @@ public class PanelLibro implements ActionListener,
 				break;
 				
 			case "Anyadir Autor":
-				//AÑADIR UN AUTOR AL LIBRO SELECCIONADO(TODO: SI NO EXISTE YA)
+				
 				int id2 = (int) tablaAutores.getValueAt(tablaAutores.getSelectedRow(), 0);
 				int isbn2 = (int) tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 0);
 				anyadirAutor(id2, isbn2);
@@ -697,7 +730,7 @@ public class PanelLibro implements ActionListener,
 				break;
 				
 			case "Recargar Autores":
-				//RECARGAR LA LISTA GENERAL DE AUTORES
+				
 				modeloTablaAutores.setColumnCount(0);
 				modeloTablaAutores.setRowCount(0);
 				cargarDatosEnTablaAutores(modeloTablaAutores);
@@ -776,8 +809,20 @@ public class PanelLibro implements ActionListener,
 		textoTitulo.setText("");
 		textoPrecio.setText("");
 		textoExistencias.setText("");
-		comboCategorias.setSelectedIndex(0);
-		comboEditoriales.setSelectedIndex(0);
+		comboCategorias.setSelectedIndex(-1);
+		comboEditoriales.setSelectedIndex(-1);
+	}
+	
+	private void cargarSeleccionEnFormulario() {
+		
+		textoISBN.setText(valorInicialISBN);
+		textoTitulo.setText((String) tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 1));
+		textoPrecio.setText(String.valueOf(tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 2)));
+		textoExistencias.setText(String.valueOf(tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 3)));
+		int categoriaSeleccionada = parsearCategoria(String.valueOf(tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 4)));
+		comboCategorias.setSelectedIndex(categoriaSeleccionada);
+		int editorialSeleccionada = parsearEditorial(String.valueOf(tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 5)));
+		comboEditoriales.setSelectedIndex(editorialSeleccionada);
 	}
 	
 	//JOPTIONPANE DE INFO AL USUARIO
@@ -908,17 +953,18 @@ public class PanelLibro implements ActionListener,
 		//Se muestra la última entrada en la tabla
 		tablaLibros.setRowSelectionInterval(tablaLibros.getRowCount() - 1, tablaLibros.getRowCount() - 1);
 		tablaLibros.scrollRectToVisible(tablaLibros.getCellRect(tablaLibros.getRowCount() -1 , 0, true));
+		tablaLibros.clearSelection();
 	}
 	
-	private Libro generarLibro() {
+	private Libro generarLibro() throws NumberFormatException, NullPointerException{
 		
 		Libro libro = new Libro(textoTitulo.getText());
-		libro.setIsbn(Integer.parseInt(textoISBN.getText()));
-		libro.setPrecio(Double.parseDouble(textoPrecio.getText()));
-		libro.setStock(Integer.parseInt(textoExistencias.getText()));
-		Categoria categoria = (Categoria) comboCategorias.getSelectedItem();
+		libro.setIsbn(Integer.parseInt(textoISBN.getText())); //CAPTURAR EXCEPCIÓN DE FORMATO MISMATCH
+		libro.setPrecio(Double.parseDouble(textoPrecio.getText())); // CAPTURAR EXCEPCIÓN DE FORMATO MISMATCH
+		libro.setStock(Integer.parseInt(textoExistencias.getText())); // CAPTURAR EXCEPCIÓN DE FORMATO MISMATCH
+		Categoria categoria = (Categoria) comboCategorias.getSelectedItem(); //CONTROL DE COMBO VACÍO TODO
 		libro.setCategoria(categoria.getIdCategoria());
-		Editorial editorial = (Editorial) comboEditoriales.getSelectedItem();
+		Editorial editorial = (Editorial) comboEditoriales.getSelectedItem(); //CONTROL DE COMBO VACÍO TODO
 		libro.setEditorial(editorial.getIdEditorial());
 		return libro;
 	}
