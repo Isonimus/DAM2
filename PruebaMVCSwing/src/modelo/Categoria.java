@@ -42,6 +42,9 @@ public class Categoria extends DAO{
 		this.nombreCategoria = nombreCategoria;
 	}
 	
+	public String toString() {
+		return getNombreCategoria();
+	}
 	//================//
 	//    UTILIDAD
 	//================//

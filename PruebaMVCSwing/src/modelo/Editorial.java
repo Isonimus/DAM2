@@ -42,6 +42,10 @@ public class Editorial extends DAO{
 		this.nombreEditorial = nombreEditorial;
 	}
 	
+	public String toString() {
+		return getNombreEditorial();
+	}
+	
 	//================//
 	//    UTILIDAD
 	//================//

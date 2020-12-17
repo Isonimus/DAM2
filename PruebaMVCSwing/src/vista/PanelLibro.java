@@ -13,6 +13,8 @@ import java.awt.event.MouseListener;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.util.Vector;
+
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -32,6 +34,8 @@ import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 
 import controlador.Controlador;
+import modelo.Categoria;
+import modelo.Editorial;
 import modelo.Libro;
 
 public class PanelLibro implements ActionListener, 
@@ -77,9 +81,9 @@ public class PanelLibro implements ActionListener,
 	private JLabel etiquetaExistencias;
 	private JTextField textoExistencias;
 	private JLabel etiquetaCategoria;
-	private JComboBox<String> comboCategorias;
+	private JComboBox<Categoria> comboCategorias;
 	private JLabel etiquetaEditorial;
-	private JComboBox<String> comboEditoriales;
+	private JComboBox<Editorial> comboEditoriales;
 	private JButton cancelarNuevo;
 	private JButton aceptarNuevo;
 	private JButton limpiarNuevo;
@@ -178,6 +182,7 @@ public class PanelLibro implements ActionListener,
 		//BOTONES
 		quitarAutor = new JButton("Quitar Autor");
 		quitarAutor.addActionListener(this);
+		quitarAutor.setEnabled(false);
 		
 		//AUTORES GENERAL
 		autoresTitulo = new JLabel("    Autores");
@@ -251,9 +256,9 @@ public class PanelLibro implements ActionListener,
 		etiquetaExistencias = new JLabel("Existencias");
 		textoExistencias = new JTextField();
 		etiquetaCategoria = new JLabel("Categoría");
-		comboCategorias = new JComboBox<String>();
+		comboCategorias = new JComboBox<Categoria>();
 		etiquetaEditorial = new JLabel("Editorial");
-		comboEditoriales = new JComboBox<String>();
+		comboEditoriales = new JComboBox<Editorial>();
 		cancelarNuevo = new JButton("Cancelar");
 		cancelarNuevo.setMaximumSize(dimensionBoton);
 		aceptarNuevo = new JButton("Aceptar");
@@ -262,6 +267,7 @@ public class PanelLibro implements ActionListener,
 		limpiarNuevo.setMaximumSize(dimensionBoton);
 		recargarListas = new JButton("Recargar");
 		recargarListas.setMaximumSize(dimensionBoton);
+		cargarCombos();
 		deshabilitarPanelEdicion();
 		
 		//PANELES EDICION
@@ -319,8 +325,7 @@ public class PanelLibro implements ActionListener,
 		
 		solapas = new JTabbedPane();
 		solapas.addTab("Autores", null, panelGeneralAutores, "Editar autores del libro");
-		solapas.addTab("Nuevo libro", null, panelEdicion,
-		                  "Añadir nuevo libro");
+		solapas.addTab("Nuevo libro", null, panelEdicion, "Añadir nuevo libro");
 		
 		panelCentral.add(tituloFuncion, BorderLayout.NORTH);
 		panelCentral.add(panelTabla, BorderLayout.CENTER);
@@ -439,7 +444,29 @@ public class PanelLibro implements ActionListener,
 			
 			e.printStackTrace();
 		}
+	}
+	
+	public void cargarCombos() {
 		
+		try {
+			
+			Vector<Categoria> categorias = controlador.obtenerCategorias();
+			Vector<Editorial> editoriales = controlador.obtenerEditoriales();
+			comboCategorias.removeAllItems();
+			comboEditoriales.removeAllItems();
+			
+			for(Categoria categoria : categorias) {
+				comboCategorias.addItem(categoria);
+			}
+			
+			for(Editorial editorial : editoriales) {
+				comboEditoriales.addItem(editorial);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public JPanel getPanelCentral() {
@@ -481,16 +508,26 @@ public class PanelLibro implements ActionListener,
 			System.out.println("Tabla superior: ISBN " + isbn);
 			cargarDatosEnTablaAutoresLibro(modeloTablaAutoresLibro, isbn);
 			habilitarPanelAutores();
+			deshabilitarPanelAutores();
+			tablaAutores.getSelectionModel().clearSelection();
 			
 		}else if(tabla == tablaAutoresLibro) {
 			
 			int id = (int) tabla.getValueAt(tabla.getSelectedRow(), 0);
+			quitarAutor.setEnabled(true);
 			System.out.println("Tabla media: Código " + id);
 			
 		}else if(tabla == tablaAutores) {
 			
 			int codAutor = (int) tabla.getValueAt(tabla.getSelectedRow(), 0);
+			
+			if(tablaLibros.getSelectedRowCount() > 0) {
+				
+				anyadirAutor.setEnabled(true);
+			}
+			
 			System.out.println("Tabla inferior: Código " + codAutor);
+			
 		}
 	}
 
@@ -574,6 +611,7 @@ public class PanelLibro implements ActionListener,
 				deshabilitarPanelCRUD();
 				habilitarPanelEdicion();
 				solapas.setSelectedIndex(1);
+				//solapas.setTabComponentAt(1, new JLabel("Nuevo libro"));
 				break;
 				
 			case "Cancelar":
@@ -586,6 +624,7 @@ public class PanelLibro implements ActionListener,
 				tablaLibros.clearSelection();
 				valorInicialISBN = null;
 				solapas.setSelectedIndex(0);
+				solapas.setTabComponentAt(1, new JLabel("Nuevo libro"));
 				break;
 				
 			case "Aceptar":
@@ -603,15 +642,21 @@ public class PanelLibro implements ActionListener,
 				modoEdicion = true;
 				tablaLibros.setEnabled(false);
 				deshabilitarPanelCRUD();
+				cargarCombos();
 				etiquetaNuevo.setText("Editar Libro: ");
 				valorInicialISBN = String.valueOf(tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 0));
 				textoISBN.setText(valorInicialISBN);
 				textoTitulo.setText((String) tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 1));
 				textoPrecio.setText(String.valueOf(tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 2)));
 				textoExistencias.setText(String.valueOf(tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 3)));
+				int categoriaSeleccionada = parsearCategoria(String.valueOf(tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 4)));
+				comboCategorias.setSelectedIndex(categoriaSeleccionada);
+				int editorialSeleccionada = parsearEditorial(String.valueOf(tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 5)));
+				comboEditoriales.setSelectedIndex(editorialSeleccionada);
 				habilitarPanelEdicion();
 				aceptarNuevo.setActionCommand("Modificar");
 				solapas.setSelectedIndex(1);
+				solapas.setTabComponentAt(1, new JLabel("Editar libro"));
 				break;
 				
 			case "Modificar":
@@ -622,6 +667,7 @@ public class PanelLibro implements ActionListener,
 				habilitarPanelCRUD();
 				tablaLibros.setEnabled(true);
 				modoEdicion = false;
+				solapas.setTabComponentAt(1, new JLabel("Nuevo libro"));
 				valorInicialISBN = null;
 				break;
 				
@@ -631,6 +677,7 @@ public class PanelLibro implements ActionListener,
 				
 			case "Recargar":
 				//ACTUALIZAR LOS COMBOS
+				cargarCombos();
 				break;
 				
 			case "Quitar Autor":
@@ -716,14 +763,11 @@ public class PanelLibro implements ActionListener,
 		
 		quitarAutor.setEnabled(false);
 		anyadirAutor.setEnabled(false);
-		recargarAutores.setEnabled(false);
 	}
 	
 	private void habilitarPanelAutores() {
 		
-		quitarAutor.setEnabled(true);
 		anyadirAutor.setEnabled(true);
-		recargarAutores.setEnabled(true);
 	}
 	
 	private void limpiarFormulario() {
@@ -732,6 +776,8 @@ public class PanelLibro implements ActionListener,
 		textoTitulo.setText("");
 		textoPrecio.setText("");
 		textoExistencias.setText("");
+		comboCategorias.setSelectedIndex(0);
+		comboEditoriales.setSelectedIndex(0);
 	}
 	
 	//JOPTIONPANE DE INFO AL USUARIO
@@ -756,13 +802,10 @@ public class PanelLibro implements ActionListener,
 		
 		if (feedBack.equals("Modificación de libro correcta.")) {
 			
-			modeloTabla.setValueAt(libro.getIsbn(), tablaLibros.getSelectedRow(), 0);
-			modeloTabla.setValueAt(libro.getNombreLibro(), tablaLibros.getSelectedRow(), 1);
-			modeloTabla.setValueAt(libro.getPrecio(), tablaLibros.getSelectedRow(), 2);
-			modeloTabla.setValueAt(libro.getStock(), tablaLibros.getSelectedRow(), 3);
-			//TODO: CARGAR LA EDITORIAL Y EL GÉNERO
+			modeloTabla.setRowCount(0);
+			modeloTabla.setColumnCount(0);
+			cargarDatosEnTabla(modeloTabla);
 		}
-		
 		informarUsuario(feedBack);
 	}
 	
@@ -839,9 +882,11 @@ public class PanelLibro implements ActionListener,
 		String feedBack = "No se ha borrado el libro.";
 		
 		if (preguntarUsuario(pregunta) == JOptionPane.YES_OPTION) {
+			
 			feedBack = controlador.eliminarLibro((int)tablaLibros.getValueAt(tablaLibros.getSelectedRow(), 0));
 			
 			if (feedBack.equals("Se ha borrado el libro.")) {
+				
 				modeloTabla.removeRow(tablaLibros.getSelectedRow());
 			}
 		}
@@ -871,8 +916,56 @@ public class PanelLibro implements ActionListener,
 		libro.setIsbn(Integer.parseInt(textoISBN.getText()));
 		libro.setPrecio(Double.parseDouble(textoPrecio.getText()));
 		libro.setStock(Integer.parseInt(textoExistencias.getText()));
-		libro.setCategoria(1); //TODO - TOMAR DEL COMBO
-		libro.setEditorial(1); //TODO - TOMAR DEL COMBO
+		Categoria categoria = (Categoria) comboCategorias.getSelectedItem();
+		libro.setCategoria(categoria.getIdCategoria());
+		Editorial editorial = (Editorial) comboEditoriales.getSelectedItem();
+		libro.setEditorial(editorial.getIdEditorial());
 		return libro;
+	}
+	
+	private int parsearCategoria(String categoria) {
+		
+		int index = -1; 
+		
+		try {
+			
+			Vector<Categoria> categorias = controlador.obtenerCategorias();
+			
+			for(int i = 0; i < categorias.size() && index < 0; i++) {
+				
+				if(categorias.get(i).getNombreCategoria().equals(categoria)) {
+					
+					index = i;
+				}
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return index;
+	}
+	
+	private int parsearEditorial(String editorial) {
+		
+		int index = -1; 
+		
+		try {
+			
+			Vector<Editorial> editoriales = controlador.obtenerEditoriales();
+			
+			for(int i = 0; i < editoriales.size() && index < 0; i++) {
+				
+				if(editoriales.get(i).getNombreEditorial().equals(editorial)) {
+					
+					index = i;
+				}
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return index;
 	}
 }
