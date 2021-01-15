@@ -1,0 +1,42 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from CalculadoraService WSDL service -->
+
+  <service name="Calculadora" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://calculadora"/>
+      <parameter name="wsdlServiceElement" value="CalculadoraService"/>
+      <parameter name="schemaQualified" value="http://calculadora"/>
+      <parameter name="wsdlServicePort" value="Calculadora"/>
+      <parameter name="className" value="calculadora.CalculadoraSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="Calculadora"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="sumar" qname="operNS:sumar" xmlns:operNS="http://calculadora" returnQName="retNS:sumarReturn" xmlns:retNS="http://calculadora" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:a" xmlns:pns="http://calculadora" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:b" xmlns:pns="http://calculadora" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="restar" qname="operNS:restar" xmlns:operNS="http://calculadora" returnQName="retNS:restarReturn" xmlns:retNS="http://calculadora" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:a" xmlns:pns="http://calculadora" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:b" xmlns:pns="http://calculadora" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="multiplicar" qname="operNS:multiplicar" xmlns:operNS="http://calculadora" returnQName="retNS:multiplicarReturn" xmlns:retNS="http://calculadora" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:a" xmlns:pns="http://calculadora" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:b" xmlns:pns="http://calculadora" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="dividir" qname="operNS:dividir" xmlns:operNS="http://calculadora" returnQName="retNS:dividirReturn" xmlns:retNS="http://calculadora" returnType="rtns:float" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:a" xmlns:pns="http://calculadora" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:b" xmlns:pns="http://calculadora" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="sumar restar multiplicar dividir"/>
+
+  </service>
+</deployment>
