@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import utilidades.ControladorVisitas;
-
+//URL: http://localhost:8080/Cookies/home
 public class ContadorVisitas extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
