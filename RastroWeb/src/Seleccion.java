@@ -25,7 +25,6 @@ public class Seleccion extends HttpServlet {
     @SuppressWarnings("unchecked")
     public void init() throws ServletException{
     	//SE RECUPERA DEL CONTEXTO LA COLECCIÓN DE PRODUCTOS
-    	//productosOfertados = new Hashtable<String, Producto>();
     	productosOfertados = (Hashtable<String, Producto>) this.getServletConfig().getServletContext().getAttribute("productosOfertados");
     }
     
@@ -50,13 +49,28 @@ public class Seleccion extends HttpServlet {
 		
 		//SE BUSCA CUÁL HA SIDO LA SELECCIÓN DEL USUARIO
 		while(seleccion == null) {
+			
 			oferta = ofertas.nextElement();
 			seleccion = request.getParameter(oferta);
 		}
 		
-		//SE CREA LA LÍNEA DETALLE DEL PEDIDO
-		pedido.setAttribute(oferta, productosOfertados.get(oferta));
+		//UPDATE
+		//COMPROBAR SI YA EXISTE EN LA SESIÓN
+		Producto p = (Producto) pedido.getAttribute(oferta);
+		//SI NO EXISTE, AÑADIR
+		if(p == null) {
+			
+			//SE CREA LA ENTRADA DEL PRODUCTO EN LA SESIÓN
+			pedido.setAttribute(oferta, productosOfertados.get(oferta));
+			
+		}else { //SI YA EXISTE, INCREMENTAR CANTIDAD Y AÑADIR
+			
+			p.setCantidad(p.getCantidad() + 1);
+			pedido.setAttribute(oferta, p);
+		}
 		
+		System.out.println(productosOfertados.get(oferta).getDescripcion());
+
 		Enumeration<String> productosPedido = pedido.getAttributeNames();
 		Producto producto;
 		
@@ -69,26 +83,32 @@ public class Seleccion extends HttpServlet {
 		pw.println("</HEAD>");
 		pw.println("<BODY>");
 		pw.println("<H3> SELECCIÓN (RastroWeb)</H3>");
+		pw.println("<form action = \"Deseleccion\" method =\"POST\">");
 		pw.println("<TABLE border = \"1\">");
 		pw.println("<TR>");
 		pw.println("<TH align = \"center\"><b>Referencia</b></TD>");
 		pw.println("<TH align = \"center\"><b>Descripción</b></TD>");
 		pw.println("<TH align = \"center\"><b>Precio/u</b></TD>");
 		pw.println("<TH align = \"center\"><b>Unidades</b></TD>");
+		pw.println("<TH align = \"center\"><b>Quitar</b></TD>");
 		pw.println("</TR>");
 		
 		//SE CREA UNA FILA POR CADA PRODUCTO EN EL PEDIDO
 		while(productosPedido.hasMoreElements()) {
-			producto = (Producto) pedido.getAttribute(productosPedido.nextElement());
+			String codeOferta = productosPedido.nextElement();
+			producto = (Producto) pedido.getAttribute(codeOferta);
 			pw.println("<TR>");
-			pw.println("<TD>" + producto.getId() + "</TD>");
-			pw.println("<TD>" + producto.getDescripcion() + "</TD>");
-			pw.println("<TD>" + producto.getImporte() + "</TD>");
+			pw.println("<TD align = \"center\">" + producto.getId() + "</TD>");
+			pw.println("<TD align = \"center\">" + producto.getDescripcion() + "</TD>");
+			pw.println("<TD align = \"center\">" + producto.getImporte() + "</TD>");
+			pw.println("<TD align = \"center\">" + producto.getCantidad() + "</TD>");
+			pw.println("<TD><input type=\"submit\" name = \"" + codeOferta + "\" value = \"-\" style = \"width: 100%\"></TD>");
 			pw.println();
 			pw.println("</TR>");
 		}
 		
 		pw.println("</TABLE>");
+		pw.println("</FORM>");
 		pw.println("<form action = \"Oferta\">");
 		pw.println("<input type = \"submit\" value = \"Ir a ofertas\">");
 		pw.println("</FORM>");

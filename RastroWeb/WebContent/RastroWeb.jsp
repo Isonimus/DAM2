@@ -7,7 +7,7 @@
 	<title>E-Commerce > RastroWeb</title>
 	</head>
 	<body>
-		<H1>Bienveniddos a Rastro-Web</H1>
+		<H1>Bienvenidos a Rastro-Web</H1>
 		<H3>Las mejores rebajas de Internet</H3>
 		<form action = "Oferta">
 			<input type = "submit" value = "Entrar">

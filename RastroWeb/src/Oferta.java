@@ -32,7 +32,7 @@ public class Oferta extends HttpServlet {
     	productosOfertados.put("OF04", new Producto(4444, "Lavavajillas express", 658.00));
     	productosOfertados.put("OF05", new Producto(4321, "Taladradora con batería", 100.00));
     	
-    	//UNA VEZ CERADA LA COLECCIÓN SE COMPARTE CON EL RESTO DE LA APLICACIÓN
+    	//UNA VEZ CREADA LA COLECCIÓN SE COMPARTE CON EL RESTO DE LA APLICACIÓN
     	//SE PUBLICA EN EL CONTEXTO DE LA APLICACIÓN 
     	//(EL CONTEXTO ES OTRA ESTRUCTURA CLAVE => VALOR)
     	this.getServletConfig().getServletContext().setAttribute("productosOfertados", productosOfertados);
@@ -73,7 +73,7 @@ public class Oferta extends HttpServlet {
 			//Y SE MUESTRA
 			oferta = ofertas.nextElement();
 			producto = productosOfertados.get(oferta);
-			//SE MONTA LA FILA DE LATABLA CON CADA PRODUCTO
+			//SE MONTA LA FILA DE LA TABLA CON CADA PRODUCTO
 			pw.println("<TR>");
 			pw.println("<TD>" + producto.getId() + "</TD>");
 			pw.println("<TD>" + producto.getDescripcion() + "</TD>");
