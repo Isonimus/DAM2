@@ -4,8 +4,8 @@
 
 	<!-- INSTRUCCIONES DE USO:
 	
-		name = "Nombre arbitrario para el pool de conexiones con BDD (el recurso)."
-		type = "Tipo del pool de conexiones."
+		name = "Nombre arbitrario para el pool de conexiones con BDD (el recurso)." 
+		type = "Tipo del pool de conexiones.."
 		description = "Descripción del recurso."
 		auth = "Autenticación ante el gestor de recursos."
 		username = "Usuario autorizado para el recurso."
