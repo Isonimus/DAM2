@@ -1,0 +1,13 @@
+body{
+	background-color:rgb(237, 235, 236);
+}
+
+th{
+	font-family : arial;
+    background-color:aliceblue;
+}
+
+td{
+	font-family : arial;
+    background-color:rgb(249, 253, 232);
+}

@@ -20,9 +20,10 @@ public class GeneralDAO {
 	
 	public static ResultSet getTop10Books() {
 		
-		String consulta = "SELECT L.isbn, L.titulo, CA.nombre, ED.nombre, sum(C.cantidad)\r\n"
-				+ "FROM libreria.libro as L \r\n"
-				+ "JOIN libreria.detalle_compra as C \r\n"
+		String consulta = "SELECT L.isbn as ISBN, L.titulo as TITULO, CA.nombre as CATEGORIA, ED.nombre as EDITORIAL, sum(C.cantidad) as VENDIDOS, \r\n"
+				+ "(SELECT GROUP_CONCAT(\" \", autor.nombre) FROM autor_libro JOIN autor ON autor_libro.cod_autor = autor.cod_autor WHERE autor_libro.isbn = L.isbn) as AUTORES\r\n"
+				+ "FROM libreria.libro as L\r\n"
+				+ "JOIN libreria.detalle_compra as C\r\n"
 				+ "ON L.isbn = C.isbn_libro\r\n"
 				+ "JOIN libreria.categoria as CA ON L.cod_categoria = CA.cod_categoria\r\n"
 				+ "JOIN libreria.editorial as ED ON L.cod_editorial = ED.cod_editorial\r\n"

@@ -1,0 +1,33 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<Context>
+
+	<!-- INSTRUCCIONES DE USO:
+	
+		name = "Nombre arbitrario para el pool de conexiones con BDD (el recurso)." 
+		type = "Tipo del pool de conexiones.."
+		description = "Descripción del recurso."
+		auth = "Autenticación ante el gestor de recursos."
+		username = "Usuario autorizado para el recurso."
+		password = "Clave del usuario autorizado."
+		driverClassName = "Clase que conecta con el recurso."
+		url = "Localización del recurso."
+		maxActive = "Máximo número de conexiones activas permitidas."
+		maxIdle = "Máximo número de conexiones libres."
+		maxWait = "Tiempo máximo esperando para obtener una conexión (ms)." -->
+	 
+	<Resource
+	
+		name = "poolConexiones"
+		type = "javax.sql.DataSource"
+		desctiption = "Recurso para conexión con la BDD del proyecto Librería Online"
+		auth="Container"
+		username="root"
+		password=""
+		driverClassName="com.mysql.jdbc.Driver"
+		url ="jdbc:mysql://localhost:3306/libreria"
+		maxActive = "2"
+		maxIdle = "1"
+		maxWait = "5000"/>
+		
+</Context>
