@@ -11,3 +11,13 @@ td{
 	font-family : arial;
     background-color:rgb(249, 253, 232);
 }
+
+h1{
+	font-family : arial;
+}
+
+#contenedor{
+	
+	display: flex;
+  	justify-content: center;
+}
