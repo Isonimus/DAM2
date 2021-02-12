@@ -1,0 +1,20 @@
+<informe xmlns="http://elvex.ugr.es/informe" 
+    fecha="2002-12-31">
+  <proveedores>
+    <proveedor id="95819">
+      <suministro sku="872-AA" cantidad="1" />
+      <suministro sku="926-AA" cantidad="1" />
+      <suministro sku="833-AA" cantidad="1" />
+      <suministro sku="455-BX" cantidad="1" />
+    </proveedor>
+    <proveedor id="63143">
+      <suministro sku="455-BX" cantidad="4" />
+    </proveedor>
+  </proveedores>
+  <piezas>
+    <pieza sku="872-AA">Monitor</pieza>
+    <pieza sku="926-AA">Impresora</pieza>
+    <pieza sku="833-AA">Escáner</pieza>
+    <pieza sku="455-BX">CD-R</pieza>
+  </piezas>
+</informe>
