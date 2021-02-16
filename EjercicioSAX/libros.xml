@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libros>
+	<libro isbn="978-84-8346-520-2">
+		<titulo>El Ocho</titulo>
+		<autor>Katherine Neville</autor>
+		<anyo>1988</anyo>
+		<editorial>Ballantine Books</editorial>
+	</libro>
+	<libro isbn="954-32-2847-038-1">
+		<titulo>Drácula</titulo>
+		<autor>Bram Stoker</autor>
+		<anyo>1897</anyo>
+		<editorial>Penguin Books</editorial>
+	</libro>
+	<libro isbn="934-78-1478-937-3">
+		<titulo>El Paraíso Perdido</titulo>
+		<autor>John Milton</autor>
+		<anyo>1674</anyo>
+		<editorial>Ballantine Books</editorial>
+	</libro>
+</libros>
