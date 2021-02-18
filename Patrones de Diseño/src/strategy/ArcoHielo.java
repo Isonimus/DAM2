@@ -1,6 +1,6 @@
 package strategy;
 
-public class ArcoHielo {
+public class ArcoHielo extends AtaqueHielo{
 	
 	private int dmg = 20;
 	
@@ -33,7 +33,7 @@ public class ArcoHielo {
 	
 	public void terminarTurno() {
 		System.out.println("Has alcanzado al objetivo.");
-		System.out.println("El objetivo recibe " + dmg + "puntos de daño.");
+		System.out.println("El objetivo recibe " + dmg + " puntos de daño.");
 		System.out.println("¡Ahora tu objetivo está congelado!");
 		System.out.println("Turno terminado.");
 	}

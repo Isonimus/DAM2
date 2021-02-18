@@ -21,7 +21,7 @@ public class ArcoNormal extends AtaqueNormal{
 	
 	public void terminarTurno() {
 		System.out.println("Has alcanzado al objetivo.");
-		System.out.println("El objetivo recibe " + dmg + "puntos de daño.");
+		System.out.println("El objetivo recibe " + dmg + " puntos de daño.");
 		System.out.println("Turno terminado.");
 	}
 }
