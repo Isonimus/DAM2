@@ -4,8 +4,7 @@ public abstract class FactoryDispositivos {
 	// OBJETO 'CONTENEDOR'
 	// PREPARAMOS NUESTRO ENUM CON LOS TIPOS DE DISPOSITIVO
 	// QUE SE PUEDE PEDIR A LA FACTORY
-	public enum tiposDispositivos {CONSOLA, PC;};
-	
+	public enum tiposDispositivos {CONSOLA, PC;}	
 	public FactoryDispositivos() {}
 	
 	public static Jugable getDispositivo(tiposDispositivos tipo) {

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_HhXiUHIhEeu7meSiANIrxg" name="Builder">
+    <eAnnotations xmi:id="_Hm3tYHIhEeu7meSiANIrxg" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_Hm3tYXIhEeu7meSiANIrxg" source="codegen">
+        <details xmi:id="_Hm3tYnIhEeu7meSiANIrxg" key="codegenDirectory" value="/Patrones de Diseño/src"/>
+        <details xmi:id="_HuIL8HIhEeu7meSiANIrxg" key="AssociatedSourceCode" value="/Patrones de Diseño/src/builder/BarbacoaPizzaBuilder.java;1459268705/1;/Patrones de Diseño/src/builder/MargaritaPizzaBuilder.java;2823044201/1;/Patrones de Diseño/src/builder/Pizza.java;313615623/1;/Patrones de Diseño/src/builder/PizzaBuilder.java;1265602861/1;/Patrones de Diseño/src/builder/Trattoria.java;3476985137/1;/Patrones de Diseño/src/builder/ViernesNoche.java;3529096466/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_HsChQHIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_HsChQXIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_HsChQnIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_HsChQ3IhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_HsChRHIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_HsChRXIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_HsChRnIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_HsChR3IhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_HsChSHIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_HsDvYHIhEeu7meSiANIrxg" name="builder">
+      <packagedElement xmi:type="uml:Class" xmi:id="_HsIn4HIhEeu7meSiANIrxg" name="BarbacoaPizzaBuilder">
+        <ownedComment xmi:id="_HsfNM3IhEeu7meSiANIrxg">
+          <body>ESTE ES UN BUILDER CONCRETO. IMPLEMENTA LOS &#xD;
+MÉTODOS ABSTRACTOS DEL ABSTRACT BUILDER&#xD;
+A SU FORMA CONCRETA, PARA PRODUCIR PIZZAS&#xD;
+DE UN ÚNICO TIPO (BARBACOA)&#xD;
+&#xD;
+@author Iker Laforga&#xD;
+ *</body>
+        </ownedComment>
+        <generalization xmi:id="_Hsbi0HIhEeu7meSiANIrxg" general="_HsM5UHIhEeu7meSiANIrxg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Hsd_EXIhEeu7meSiANIrxg" name="buildMasa" specification="_HsJO8HIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>pizza.setMasa(&quot;Gruesa&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Hsd_EnIhEeu7meSiANIrxg" name="buildSalsa" specification="_HsJO9HIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>pizza.setSalsa(&quot;Barbacoa&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Hsd_E3IhEeu7meSiANIrxg" name="buildRelleno" specification="_HsJ2AnIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>pizza.setRelleno(&quot;Carne y pollo marinado&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_HsJO8HIhEeu7meSiANIrxg" name="buildMasa" method="_Hsd_EXIhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_HsJO9HIhEeu7meSiANIrxg" name="buildSalsa" method="_Hsd_EnIhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_HsJ2AnIhEeu7meSiANIrxg" name="buildRelleno" method="_Hsd_E3IhEeu7meSiANIrxg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_HsKdEHIhEeu7meSiANIrxg" name="MargaritaPizzaBuilder">
+        <ownedComment xmi:id="_HsfNNHIhEeu7meSiANIrxg">
+          <body>ESTE ES UN BUILDER CONCRETO. IMPLEMENTA LOS &#xD;
+MÉTODOS ABSTRACTOS DEL ABSTRACT BUILDER&#xD;
+A SU FORMA CONCRETA, PARA PRODUCIR PIZZAS&#xD;
+DE UN ÚNICO TIPO (Margarita)&#xD;
+&#xD;
+@author Iker Laforga&#xD;
+ *</body>
+        </ownedComment>
+        <generalization xmi:id="_Hsbi0XIhEeu7meSiANIrxg" general="_HsM5UHIhEeu7meSiANIrxg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Hsd_FHIhEeu7meSiANIrxg" name="buildMasa" specification="_HsKdEXIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>pizza.setMasa(&quot;Fina&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Hsd_FXIhEeu7meSiANIrxg" name="buildSalsa" specification="_HsKdFXIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>pizza.setSalsa(&quot;Tomate y orégano&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Hsd_FnIhEeu7meSiANIrxg" name="buildRelleno" specification="_HsLEI3IhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>pizza.setRelleno(&quot;Prosciutto y albahaca&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_HsKdEXIhEeu7meSiANIrxg" name="buildMasa" method="_Hsd_FHIhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_HsKdFXIhEeu7meSiANIrxg" name="buildSalsa" method="_Hsd_FXIhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_HsLEI3IhEeu7meSiANIrxg" name="buildRelleno" method="_Hsd_FnIhEeu7meSiANIrxg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_HsLrMHIhEeu7meSiANIrxg" name="Pizza">
+        <ownedComment xmi:id="_HsfNNXIhEeu7meSiANIrxg">
+          <body>CLASE PRODUCTO&#xD;
+@author Iker Laforga&#xD;
+ *</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_Hscw8HIhEeu7meSiANIrxg" name="masa" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_Hscw8XIhEeu7meSiANIrxg" value="null"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Hscw83IhEeu7meSiANIrxg" name="salsa" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_Hscw9HIhEeu7meSiANIrxg" value="null"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_HsdYAHIhEeu7meSiANIrxg" name="relleno" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_HsdYAXIhEeu7meSiANIrxg" value="null"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_HsemIHIhEeu7meSiANIrxg" name="toString" specification="_HsLrMXIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_HsemIXIhEeu7meSiANIrxg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return &quot;Pizza con masa &quot; + masa + &quot;, salsa &quot; + salsa + &quot; y relleno de &quot; + relleno + &quot;.&quot;;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_HsemInIhEeu7meSiANIrxg" name="setMasa" specification="_HsMSQHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_HsemI3IhEeu7meSiANIrxg" name="masa">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.masa = masa;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_HsemJHIhEeu7meSiANIrxg" name="setSalsa" specification="_HsMSQnIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_HsemJXIhEeu7meSiANIrxg" name="salsa">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.salsa = salsa;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_HsemJnIhEeu7meSiANIrxg" name="setRelleno" specification="_HsMSRHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_HsemJ3IhEeu7meSiANIrxg" name="relleno">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.relleno = relleno;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_HsLrMXIhEeu7meSiANIrxg" name="toString" method="_HsemIHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_HsLrMnIhEeu7meSiANIrxg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_HsMSQHIhEeu7meSiANIrxg" name="setMasa" method="_HsemInIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_HsMSQXIhEeu7meSiANIrxg" name="masa">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_HsMSQnIhEeu7meSiANIrxg" name="setSalsa" method="_HsemJHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_HsMSQ3IhEeu7meSiANIrxg" name="salsa">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_HsMSRHIhEeu7meSiANIrxg" name="setRelleno" method="_HsemJnIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_HsMSRXIhEeu7meSiANIrxg" name="relleno">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_HsM5UHIhEeu7meSiANIrxg" name="PizzaBuilder" isAbstract="true">
+        <ownedComment xmi:id="_HsfNNnIhEeu7meSiANIrxg">
+          <body>ESTE ES EL CONSTRUCTOR ABSTRACTO&#xD;
+TIENE COMO ATRIBUTO UN OBJETO DE &#xD;
+LA CLASE PRODUCTO. CONTENE MÉTODOS&#xD;
+ABSTRACTOS PARA LOS CONCRETE BUILDERS,&#xD;
+QUE LOS USARÁN PARA ASIGNAR AL PRODUCTO&#xD;
+SUS VALORES PREDETERMINADOS.&#xD;
+&#xD;
+@author Iker Laforga&#xD;
+ *</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_HsdYA3IhEeu7meSiANIrxg" name="pizza" visibility="protected" type="_HsLrMHIhEeu7meSiANIrxg" association="_Hsf0QHIhEeu7meSiANIrxg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_HsemKHIhEeu7meSiANIrxg" name="getPizza" specification="_HsM5UXIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_HsemKXIhEeu7meSiANIrxg" type="_HsLrMHIhEeu7meSiANIrxg" direction="return"/>
+          <language>java</language>
+          <body>return pizza;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_HsemKnIhEeu7meSiANIrxg" name="crearNuevaPizza" specification="_HsM5UnIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>pizza = new Pizza();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_HsM5UXIhEeu7meSiANIrxg" name="getPizza" method="_HsemKHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_Hsbi0nIhEeu7meSiANIrxg" type="_HsLrMHIhEeu7meSiANIrxg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_HsM5UnIhEeu7meSiANIrxg" name="crearNuevaPizza" method="_HsemKnIhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_HsM5U3IhEeu7meSiANIrxg" name="buildMasa" isAbstract="true"/>
+        <ownedOperation xmi:id="_HsNgYHIhEeu7meSiANIrxg" name="buildSalsa" isAbstract="true"/>
+        <ownedOperation xmi:id="_HsNgYXIhEeu7meSiANIrxg" name="buildRelleno" isAbstract="true"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_HsNgYnIhEeu7meSiANIrxg" name="Trattoria">
+        <ownedComment xmi:id="_HsfNN3IhEeu7meSiANIrxg">
+          <body>CLASE DIRECTOR&#xD;
+GENERALIZA TODO&#xD;
+@author multi&#xD;
+ *</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_HsdYBXIhEeu7meSiANIrxg" name="pizzaBuilder" visibility="private" type="_HsM5UHIhEeu7meSiANIrxg" association="_HsgbUXIhEeu7meSiANIrxg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_HsemK3IhEeu7meSiANIrxg" name="setPizzaBuilder" specification="_HscJ4HIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_HsemLHIhEeu7meSiANIrxg" name="pb" type="_HsM5UHIhEeu7meSiANIrxg"/>
+          <language>java</language>
+          <body>pizzaBuilder = pb;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_HsemLXIhEeu7meSiANIrxg" name="getPizza" specification="_HsOHcHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_HsemLnIhEeu7meSiANIrxg" type="_HsLrMHIhEeu7meSiANIrxg" direction="return"/>
+          <language>java</language>
+          <body>return pizzaBuilder.getPizza();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_HsemL3IhEeu7meSiANIrxg" name="prepararPizza" specification="_HsOHcXIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>pizzaBuilder.crearNuevaPizza();&#xD;
+		pizzaBuilder.buildMasa();&#xD;
+		pizzaBuilder.buildSalsa();&#xD;
+		pizzaBuilder.buildRelleno();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_HsOHcHIhEeu7meSiANIrxg" name="getPizza" method="_HsemLXIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_HscJ4nIhEeu7meSiANIrxg" type="_HsLrMHIhEeu7meSiANIrxg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_HsOHcXIhEeu7meSiANIrxg" name="prepararPizza" method="_HsemL3IhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_HscJ4HIhEeu7meSiANIrxg" name="setPizzaBuilder" method="_HsemK3IhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_HscJ4XIhEeu7meSiANIrxg" name="pb" type="_HsM5UHIhEeu7meSiANIrxg"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_HsOugHIhEeu7meSiANIrxg" name="ViernesNoche">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_HsfNMHIhEeu7meSiANIrxg" name="main" specification="_HsOugXIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_HsfNMXIhEeu7meSiANIrxg" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HsfNMnIhEeu7meSiANIrxg" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>Trattoria trattoria = new Trattoria(); //EL DIRECTOR&#xD;
+		PizzaBuilder builderBarbacoa = new BarbacoaPizzaBuilder();&#xD;
+		PizzaBuilder builderMargarita = new MargaritaPizzaBuilder(); &#xD;
+		&#xD;
+		trattoria.setPizzaBuilder(builderBarbacoa);&#xD;
+		trattoria.prepararPizza();&#xD;
+		&#xD;
+		Pizza pizza = trattoria.getPizza();&#xD;
+		&#xD;
+		System.out.println(pizza);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_HsOugXIhEeu7meSiANIrxg" name="main" isStatic="true" method="_HsfNMHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_HsOugnIhEeu7meSiANIrxg" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HsPVkXIhEeu7meSiANIrxg" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Hsf0QHIhEeu7meSiANIrxg" name="" memberEnd="_Hsf0QXIhEeu7meSiANIrxg _HsdYA3IhEeu7meSiANIrxg">
+        <ownedEnd xmi:id="_Hsf0QXIhEeu7meSiANIrxg" name="" type="_HsM5UHIhEeu7meSiANIrxg" association="_Hsf0QHIhEeu7meSiANIrxg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_HsgbUXIhEeu7meSiANIrxg" name="" memberEnd="_HsgbUnIhEeu7meSiANIrxg _HsdYBXIhEeu7meSiANIrxg">
+        <ownedEnd xmi:id="_HsgbUnIhEeu7meSiANIrxg" name="" type="_HsNgYnIhEeu7meSiANIrxg" association="_HsgbUXIhEeu7meSiANIrxg"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_Hm3tY3IhEeu7meSiANIrxg">
+      <eAnnotations xmi:id="_Hm3tZHIhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_Hm4UcHIhEeu7meSiANIrxg" base_Package="_HhXiUHIhEeu7meSiANIrxg">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_HsJO8XIhEeu7meSiANIrxg" base_Element="_HsJO8HIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:Annotations xmi:id="_HsJO8nIhEeu7meSiANIrxg" base_Element="_HsJO8HIhEeu7meSiANIrxg">
+    <annotations xmi:id="_HsJO83IhEeu7meSiANIrxg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_HsJO9XIhEeu7meSiANIrxg" base_Element="_HsJO9HIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:Annotations xmi:id="_HsJ2AHIhEeu7meSiANIrxg" base_Element="_HsJO9HIhEeu7meSiANIrxg">
+    <annotations xmi:id="_HsJ2AXIhEeu7meSiANIrxg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_HsJ2A3IhEeu7meSiANIrxg" base_Element="_HsJ2AnIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:Annotations xmi:id="_HsJ2BHIhEeu7meSiANIrxg" base_Element="_HsJ2AnIhEeu7meSiANIrxg">
+    <annotations xmi:id="_HsJ2BXIhEeu7meSiANIrxg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_HsKdEnIhEeu7meSiANIrxg" base_Element="_HsKdEXIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:Annotations xmi:id="_HsKdE3IhEeu7meSiANIrxg" base_Element="_HsKdEXIhEeu7meSiANIrxg">
+    <annotations xmi:id="_HsKdFHIhEeu7meSiANIrxg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_HsLEIHIhEeu7meSiANIrxg" base_Element="_HsKdFXIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:Annotations xmi:id="_HsLEIXIhEeu7meSiANIrxg" base_Element="_HsKdFXIhEeu7meSiANIrxg">
+    <annotations xmi:id="_HsLEInIhEeu7meSiANIrxg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_HsLEJHIhEeu7meSiANIrxg" base_Element="_HsLEI3IhEeu7meSiANIrxg"/>
+  <UMLLabProfile:Annotations xmi:id="_HsLEJXIhEeu7meSiANIrxg" base_Element="_HsLEI3IhEeu7meSiANIrxg">
+    <annotations xmi:id="_HsLEJnIhEeu7meSiANIrxg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_HsPVkHIhEeu7meSiANIrxg" base_Element="_HsOugXIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:Array xmi:id="_HsPVknIhEeu7meSiANIrxg" base_Element="_HsOugnIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:Annotations xmi:id="_HsPVk3IhEeu7meSiANIrxg" base_Element="_HsOugXIhEeu7meSiANIrxg">
+    <annotations xmi:id="_HsPVlHIhEeu7meSiANIrxg" name="SuppressWarnings">
+      <annotationParameters xmi:id="_HsPVlXIhEeu7meSiANIrxg" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_HsfNOHIhEeu7meSiANIrxg" value="&quot;unused&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Hscw8nIhEeu7meSiANIrxg" base_Element="_Hscw8HIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Hscw9XIhEeu7meSiANIrxg" base_Element="_Hscw83IhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_HsdYAnIhEeu7meSiANIrxg" base_Element="_HsdYAHIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_HsdYBHIhEeu7meSiANIrxg" base_Element="_HsdYA3IhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Hsd_EHIhEeu7meSiANIrxg" base_Element="_HsdYBXIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:Reference xmi:id="_HsgbUHIhEeu7meSiANIrxg" base_Element="_Hsf0QHIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:Reference xmi:id="_HsgbU3IhEeu7meSiANIrxg" base_Element="_HsgbUXIhEeu7meSiANIrxg"/>
+</xmi:XMI>

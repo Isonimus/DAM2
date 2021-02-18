@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_c7tkAHIhEeu7meSiANIrxg">
+  <modelElement href="InyeccionDependencias.uml#_dGeCgHIhEeu7meSiANIrxg"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_e8cFoXIhEeu7meSiANIrxg" targetItem="_e8dTyXIhEeu7meSiANIrxg" sourceItem="_e8cFoHIhEeu7meSiANIrxg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_e8dTwHIhEeu7meSiANIrxg" sourceAnchor="137.0,0.0" targetAnchor="100.0,36.0" target="_e8eh4HIhEeu7meSiANIrxg" source="_e8dTyXIhEeu7meSiANIrxg">
+    <modelElement href="InyeccionDependencias.uml#_dG0n0HIhEeu7meSiANIrxg"/>
+    <bendpoints xmi:id="_fE1MoHIhEeu7meSiANIrxg" sourceY="-237" targetX="267"/>
+    <stereotypes xmi:id="_e8dTwXIhEeu7meSiANIrxg" name="Reference">
+      <modelElement href="InyeccionDependencias.uml#_dG0n0nIhEeu7meSiANIrxg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_e8dTwnIhEeu7meSiANIrxg" text="">
+      <visualProperties xmi:id="_fE1zsHIhEeu7meSiANIrxg" position="-15.35844827285996,160.03451815350422"/>
+    </nameVisual>
+    <sourceRole xmi:id="_e8dTw3IhEeu7meSiANIrxg" aggregationKind="NONE" name="">
+      <modelElement href="InyeccionDependencias.uml#_dG0n0XIhEeu7meSiANIrxg"/>
+      <visualProperties xmi:id="_fE1Mo3IhEeu7meSiANIrxg" position="1.1016012301280682,-81.05650311885083"/>
+      <visibility xmi:id="_e8dTxHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_e8dTxXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_e8dTxnIhEeu7meSiANIrxg" aggregationKind="NONE" name="dispositivo" navigable="true">
+      <modelElement href="InyeccionDependencias.uml#_dGyyoXIhEeu7meSiANIrxg"/>
+      <visualProperties xmi:id="_fE1zsXIhEeu7meSiANIrxg" position="239.38673817098274,138.7038961356036"/>
+      <visibility xmi:id="_e8dTx3IhEeu7meSiANIrxg" label="~"/>
+      <cardinality xmi:id="_e8dTyHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_e8g-IHIhEeu7meSiANIrxg" sourceAnchor="138.0,0.0" targetAnchor="50.0,71.0" dashed="true" superClass="_e8eh4HIhEeu7meSiANIrxg" subClass="_e8hlMHIhEeu7meSiANIrxg">
+    <modelElement href="InyeccionDependencias.uml#_dGxkgHIhEeu7meSiANIrxg"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_e8izUHIhEeu7meSiANIrxg" sourceAnchor="98.0,0.0" targetAnchor="50.0,71.0" dashed="true" superClass="_e8eh4HIhEeu7meSiANIrxg" subClass="_e8kBcHIhEeu7meSiANIrxg">
+    <modelElement href="InyeccionDependencias.uml#_dGyLl3IhEeu7meSiANIrxg"/>
+    <bendpoints xmi:id="_fE1MoXIhEeu7meSiANIrxg" sourceY="-27" targetX="-307" targetY="28"/>
+    <bendpoints xmi:id="_fE1MonIhEeu7meSiANIrxg" sourceX="307" sourceY="-27" targetY="28"/>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_e8cFoHIhEeu7meSiANIrxg" sourceConnectionVisual="_e8cFoXIhEeu7meSiANIrxg" text="INYECCIÓN DE DEPENDENCIAS&#xD;&#xA;&#xD;&#xA;1 - LAS CLASES DEBEN CONTENER CONCEPTOS ABSTRACTOS&#xD;&#xA;EN VEZ DE IMPLEMENTACIONES CONCRETAS PARA EVITAR ACOPLAMIENTO&#xD;&#xA;&#xD;&#xA;2 - LOS OBJETOS QUE REQUIEREN LAS CLASES DEBEN SER APORTADOS&#xD;&#xA;(INYECTADOS) POR UNA TERCERA PARTE, EN VEZ DE SER CREADOS&#xD;&#xA;POR LA CLASE QUE LOS REQUIERE (DE NUEVO, AYUDA A DESACOPLAR EL &#xD;&#xA;CÓDIGO DE UNA IMPLEMENTACIÓN CONCRETA)&#xD;&#xA;&#xD;&#xA;@author Iker Laforga&#xD;&#xA; *" item="_e8dTyXIhEeu7meSiANIrxg">
+    <modelElement href="InyeccionDependencias.uml#_dG0Az3IhEeu7meSiANIrxg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_e8dTyXIhEeu7meSiANIrxg" comments="_e8cFoHIhEeu7meSiANIrxg" targetConnectionVisual="_e8cFoXIhEeu7meSiANIrxg" name="Jugador" associationsOut="_e8dTwHIhEeu7meSiANIrxg">
+    <modelElement href="InyeccionDependencias.uml#_dGkwMnIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_e8dTynIhEeu7meSiANIrxg" position="30.0,30.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_e8dTy3IhEeu7meSiANIrxg" label="+"/>
+    <attributes xmi:id="_e8dTzHIhEeu7meSiANIrxg" name="dispositivo">
+      <modelElement href="InyeccionDependencias.uml#_dGyyoXIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_e8dTzXIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="InyeccionDependencias.uml#_dGzZsHIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_e8dTznIhEeu7meSiANIrxg" label="~"/>
+      <cardinality xmi:id="_e8dTz3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_e8dT0HIhEeu7meSiANIrxg" name="Jugable">
+        <modelElement href="InyeccionDependencias.uml#_dGkwMHIhEeu7meSiANIrxg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_e8dT0XIhEeu7meSiANIrxg" name="jugar">
+      <modelElement href="InyeccionDependencias.uml#_dGlXQHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_e8dT0nIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_e8dT03IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_e8dT1HIhEeu7meSiANIrxg" name="Jugador">
+      <modelElement href="InyeccionDependencias.uml#_dGyLknIhEeu7meSiANIrxg"/>
+      <keywords xmi:id="_e8dT1XIhEeu7meSiANIrxg" keyword="create"/>
+      <visibility xmi:id="_e8dT1nIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_e8dT13IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_e8dT2HIhEeu7meSiANIrxg">
+        <modelElement href="InyeccionDependencias.uml#_dGyLlnIhEeu7meSiANIrxg"/>
+        <type xmi:id="_e8dT2XIhEeu7meSiANIrxg" name="Jugador">
+          <modelElement href="InyeccionDependencias.uml#_dGkwMnIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_e8dT2nIhEeu7meSiANIrxg" name="dispositivo">
+        <modelElement href="InyeccionDependencias.uml#_dGyLk3IhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_e8dT23IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_e8dT3HIhEeu7meSiANIrxg" name="Jugable">
+          <modelElement href="InyeccionDependencias.uml#_dGkwMHIhEeu7meSiANIrxg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_e8eh4HIhEeu7meSiANIrxg" name="Jugable" associationsIn="_e8dTwHIhEeu7meSiANIrxg" subclassedBy="_e8g-IHIhEeu7meSiANIrxg _e8izUHIhEeu7meSiANIrxg">
+    <modelElement href="InyeccionDependencias.uml#_dGkwMHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_e8eh4XIhEeu7meSiANIrxg" position="-200.0,-243.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_e8eh4nIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_e8eh43IhEeu7meSiANIrxg" name="jugar">
+      <modelElement href="InyeccionDependencias.uml#_dGkwMXIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_e8eh5HIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_e8eh5XIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_e8gXEHIhEeu7meSiANIrxg" name="ViernesNoche">
+    <modelElement href="InyeccionDependencias.uml#_dGmlYHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_e8gXEXIhEeu7meSiANIrxg" position="72.0,163.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_e8gXEnIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_e8gXE3IhEeu7meSiANIrxg" name="main" staticOperation="true">
+      <modelElement href="InyeccionDependencias.uml#_dGmlYXIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_e8gXFHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_e8gXFXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_e8gXFnIhEeu7meSiANIrxg" name="args">
+        <modelElement href="InyeccionDependencias.uml#_dGmlYnIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_e8gXF3IhEeu7meSiANIrxg" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_e8gXGHIhEeu7meSiANIrxg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_e8hlMHIhEeu7meSiANIrxg" name="Consola" generalizations="_e8g-IHIhEeu7meSiANIrxg">
+    <modelElement href="InyeccionDependencias.uml#_dGiT8HIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_e8hlMXIhEeu7meSiANIrxg" position="-288.0,-76.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_e8hlMnIhEeu7meSiANIrxg" label="+"/>
+    <attributes xmi:id="_e8hlM3IhEeu7meSiANIrxg" name="modelo">
+      <modelElement href="InyeccionDependencias.uml#_dGyyoHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_e8hlNHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_e8hlNXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_e8hlNnIhEeu7meSiANIrxg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_e8hlN3IhEeu7meSiANIrxg" name="Consola">
+      <modelElement href="InyeccionDependencias.uml#_dGi7AHIhEeu7meSiANIrxg"/>
+      <keywords xmi:id="_e8hlOHIhEeu7meSiANIrxg" keyword="create"/>
+      <visibility xmi:id="_e8hlOXIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_e8hlOnIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_e8hlO3IhEeu7meSiANIrxg">
+        <modelElement href="InyeccionDependencias.uml#_dGi7BHIhEeu7meSiANIrxg"/>
+        <type xmi:id="_e8hlPHIhEeu7meSiANIrxg" name="Consola">
+          <modelElement href="InyeccionDependencias.uml#_dGiT8HIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_e8hlPXIhEeu7meSiANIrxg" name="modelo">
+        <modelElement href="InyeccionDependencias.uml#_dGi7AXIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_e8hlPnIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_e8hlP3IhEeu7meSiANIrxg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_e8hlQHIhEeu7meSiANIrxg" name="jugar">
+      <modelElement href="InyeccionDependencias.uml#_dGi7BXIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_e8hlQXIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_e8hlQnIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_e8kBcHIhEeu7meSiANIrxg" name="PC" generalizations="_e8izUHIhEeu7meSiANIrxg">
+    <modelElement href="InyeccionDependencias.uml#_dGlXQXIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_e8kBcXIhEeu7meSiANIrxg" position="-555.0,-117.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_e8kBcnIhEeu7meSiANIrxg" label="+"/>
+    <attributes xmi:id="_e8kBc3IhEeu7meSiANIrxg" name="modelo">
+      <modelElement href="InyeccionDependencias.uml#_dGzZsXIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_e8kBdHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_e8kBdXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_e8kBdnIhEeu7meSiANIrxg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_e8kBd3IhEeu7meSiANIrxg" name="PC">
+      <modelElement href="InyeccionDependencias.uml#_dGl-UHIhEeu7meSiANIrxg"/>
+      <keywords xmi:id="_e8kBeHIhEeu7meSiANIrxg" keyword="create"/>
+      <visibility xmi:id="_e8kBeXIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_e8kBenIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_e8kBe3IhEeu7meSiANIrxg">
+        <modelElement href="InyeccionDependencias.uml#_dGl-VHIhEeu7meSiANIrxg"/>
+        <type xmi:id="_e8kBfHIhEeu7meSiANIrxg" name="PC">
+          <modelElement href="InyeccionDependencias.uml#_dGlXQXIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_e8kBfXIhEeu7meSiANIrxg" name="modelo">
+        <modelElement href="InyeccionDependencias.uml#_dGl-UXIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_e8kBfnIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_e8kBf3IhEeu7meSiANIrxg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_e8kBgHIhEeu7meSiANIrxg" name="jugar">
+      <modelElement href="InyeccionDependencias.uml#_dGl-VXIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_e8kBgXIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_e8kBgnIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_e8lPkHIhEeu7meSiANIrxg" name="FactoryDispositivos" abstractClass="true">
+    <modelElement href="InyeccionDependencias.uml#_dGjiEHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_e8lPkXIhEeu7meSiANIrxg" position="-948.0,-91.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_e8lPknIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_e8lPk3IhEeu7meSiANIrxg" name="FactoryDispositivos">
+      <modelElement href="InyeccionDependencias.uml#_dGkJInIhEeu7meSiANIrxg"/>
+      <keywords xmi:id="_e8lPlHIhEeu7meSiANIrxg" keyword="create"/>
+      <stereotypes xmi:id="_e8lPlXIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="InyeccionDependencias.uml#_dGkJJXIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_e8lPlnIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_e8lPl3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_e8lPmHIhEeu7meSiANIrxg">
+        <modelElement href="InyeccionDependencias.uml#_dGkJJnIhEeu7meSiANIrxg"/>
+        <type xmi:id="_e8lPmXIhEeu7meSiANIrxg" name="FactoryDispositivos">
+          <modelElement href="InyeccionDependencias.uml#_dGjiEHIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_e8lPmnIhEeu7meSiANIrxg" name="getDispositivo" staticOperation="true">
+      <modelElement href="InyeccionDependencias.uml#_dGxkgXIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_e8lPm3IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_e8lPnHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_e8lPnXIhEeu7meSiANIrxg">
+        <modelElement href="InyeccionDependencias.uml#_dGyLkXIhEeu7meSiANIrxg"/>
+        <type xmi:id="_e8lPnnIhEeu7meSiANIrxg" name="Jugable">
+          <modelElement href="InyeccionDependencias.uml#_dGkwMHIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_e8lPn3IhEeu7meSiANIrxg" name="tipo">
+        <modelElement href="InyeccionDependencias.uml#_dGyLkHIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_e8lPoHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_e8lPoXIhEeu7meSiANIrxg" name="tiposDispositivos">
+          <modelElement href="InyeccionDependencias.uml#_dGjiEXIhEeu7meSiANIrxg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:EnumerationVisual" xmi:id="_e8mdsHIhEeu7meSiANIrxg" name="tiposDispositivos">
+    <modelElement href="InyeccionDependencias.uml#_dGjiEXIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_e8mdsXIhEeu7meSiANIrxg" position="355.0,-106.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_e8mdsnIhEeu7meSiANIrxg" label="+"/>
+    <literals xmi:id="_e8mds3IhEeu7meSiANIrxg" name="CONSOLA">
+      <modelElement href="InyeccionDependencias.uml#_dGkJIHIhEeu7meSiANIrxg"/>
+    </literals>
+    <literals xmi:id="_e8mdtHIhEeu7meSiANIrxg" name="PC">
+      <modelElement href="InyeccionDependencias.uml#_dGkJIXIhEeu7meSiANIrxg"/>
+    </literals>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

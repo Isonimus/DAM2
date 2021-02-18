@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_sHnGcHIhEeu7meSiANIrxg">
+  <modelElement href="Strategy.uml#_sSA_p3IhEeu7meSiANIrxg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_sUAjsHIhEeu7meSiANIrxg" sourceAnchor="0.0,78.0" targetAnchor="75.0,130.0" superClass="_sUBKwHIhEeu7meSiANIrxg" subClass="_sT_VkHIhEeu7meSiANIrxg">
+    <modelElement href="Strategy.uml#_sSVvwHIhEeu7meSiANIrxg"/>
+    <bendpoints xmi:id="_she_AHIhEeu7meSiANIrxg" sourceX="-133" targetY="87"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_sUE1IXIhEeu7meSiANIrxg" targetItem="_sUFcOXIhEeu7meSiANIrxg" sourceItem="_sUE1IHIhEeu7meSiANIrxg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_sUFcMHIhEeu7meSiANIrxg" sourceAnchor="129.0,0.0" targetAnchor="105.0,36.0" target="_sUHRYHIhEeu7meSiANIrxg" source="_sUFcOXIhEeu7meSiANIrxg">
+    <modelElement href="Strategy.uml#_sSZaIHIhEeu7meSiANIrxg"/>
+    <bendpoints xmi:id="_shfmEnIhEeu7meSiANIrxg" sourceY="-90" targetX="199"/>
+    <stereotypes xmi:id="_sUFcMXIhEeu7meSiANIrxg" name="Reference">
+      <modelElement href="Strategy.uml#_sSaBMHIhEeu7meSiANIrxg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_sUFcMnIhEeu7meSiANIrxg" text="">
+      <visualProperties xmi:id="_shgNIHIhEeu7meSiANIrxg" position="-14.837264194376445,15.73462638729859"/>
+    </nameVisual>
+    <sourceRole xmi:id="_sUFcM3IhEeu7meSiANIrxg" aggregationKind="NONE" name="">
+      <modelElement href="Strategy.uml#_sSZaIXIhEeu7meSiANIrxg"/>
+      <visualProperties xmi:id="_shfmF3IhEeu7meSiANIrxg" position="0.8839889722435146,-80.34642364842705"/>
+      <visibility xmi:id="_sUFcNHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUFcNXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_sUFcNnIhEeu7meSiANIrxg" aggregationKind="NONE" name="estrategia" navigable="true">
+      <modelElement href="Strategy.uml#_sSXk83IhEeu7meSiANIrxg"/>
+      <visualProperties xmi:id="_shgNIXIhEeu7meSiANIrxg" position="173.94109467893955,-1.57379398368181"/>
+      <visibility xmi:id="_sUFcN3IhEeu7meSiANIrxg" label="-"/>
+      <cardinality xmi:id="_sUFcOHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_sUGqUHIhEeu7meSiANIrxg" sourceAnchor="75.0,0.0" targetAnchor="52.0,71.0" dashed="true" superClass="_sUHRYHIhEeu7meSiANIrxg" subClass="_sUBKwHIhEeu7meSiANIrxg">
+    <modelElement href="Strategy.uml#_sSVvwnIhEeu7meSiANIrxg"/>
+    <bendpoints xmi:id="_she_AXIhEeu7meSiANIrxg" sourceY="-30" targetX="-31" targetY="106"/>
+    <bendpoints xmi:id="_shfmEHIhEeu7meSiANIrxg" sourceX="31" sourceY="-30" targetY="106"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_sUJtoHIhEeu7meSiANIrxg" sourceAnchor="76.0,0.0" targetAnchor="52.0,71.0" dashed="true" superClass="_sUHRYHIhEeu7meSiANIrxg" subClass="_sUKUsHIhEeu7meSiANIrxg">
+    <modelElement href="Strategy.uml#_sSVvwXIhEeu7meSiANIrxg"/>
+    <bendpoints xmi:id="_shfmE3IhEeu7meSiANIrxg" sourceY="-96" targetX="451" targetY="191"/>
+    <bendpoints xmi:id="_shfmFHIhEeu7meSiANIrxg" sourceX="-343" sourceY="-96" targetX="108" targetY="191"/>
+    <bendpoints xmi:id="_shfmFXIhEeu7meSiANIrxg" sourceX="-343" sourceY="-181" targetX="108" targetY="106"/>
+    <bendpoints xmi:id="_shfmFnIhEeu7meSiANIrxg" sourceX="-451" sourceY="-181" targetY="106"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_sUJtoXIhEeu7meSiANIrxg" sourceAnchor="190.0,97.0" targetAnchor="76.0,168.0" superClass="_sUKUsHIhEeu7meSiANIrxg" subClass="_sUC_8HIhEeu7meSiANIrxg">
+    <modelElement href="Strategy.uml#_sSWW0HIhEeu7meSiANIrxg"/>
+    <bendpoints xmi:id="_shfmEXIhEeu7meSiANIrxg" sourceX="147" targetY="152"/>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_sUE1IHIhEeu7meSiANIrxg" sourceConnectionVisual="_sUE1IXIhEeu7meSiANIrxg" text="EL CONTEXTO DE LA ESTRATEGIA&#xD;&#xA;@author Iker Laforga&#xD;&#xA; *" item="_sUFcOXIhEeu7meSiANIrxg">
+    <modelElement href="Strategy.uml#_sSYzFHIhEeu7meSiANIrxg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_sT_VkHIhEeu7meSiANIrxg" name="ArcoNormal" generalizations="_sUAjsHIhEeu7meSiANIrxg">
+    <modelElement href="Strategy.uml#_sSF4IXIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_sT_VkXIhEeu7meSiANIrxg" position="30.0,30.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_sT_VknIhEeu7meSiANIrxg" label="+"/>
+    <attributes xmi:id="_sT_Vk3IhEeu7meSiANIrxg" defaultValue="15" name="dmg">
+      <modelElement href="Strategy.uml#_sSW94XIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_sT_VlHIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Strategy.uml#_sSW943IhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_sT_VlXIhEeu7meSiANIrxg" label="-"/>
+      <cardinality xmi:id="_sT_VlnIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_sT_Vl3IhEeu7meSiANIrxg" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_sT_VmHIhEeu7meSiANIrxg" name="ArcoNormal">
+      <modelElement href="Strategy.uml#_sSF4InIhEeu7meSiANIrxg"/>
+      <keywords xmi:id="_sT_VmXIhEeu7meSiANIrxg" keyword="create"/>
+      <stereotypes xmi:id="_sT_VmnIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Strategy.uml#_sSF4JXIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_sT_Vm3IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sT_VnHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_sT_VnXIhEeu7meSiANIrxg">
+        <modelElement href="Strategy.uml#_sSF4JnIhEeu7meSiANIrxg"/>
+        <type xmi:id="_sT_VnnIhEeu7meSiANIrxg" name="ArcoNormal">
+          <modelElement href="Strategy.uml#_sSF4IXIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_sT_Vn3IhEeu7meSiANIrxg" name="elegirObjetivo">
+      <modelElement href="Strategy.uml#_sSGfMHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_sT_VoHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sT_VoXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sT_VonIhEeu7meSiANIrxg" name="apuntar">
+      <modelElement href="Strategy.uml#_sSGfMXIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_sT_Vo3IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sT_VpHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sT_VpXIhEeu7meSiANIrxg" name="disparar">
+      <modelElement href="Strategy.uml#_sSGfMnIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_sT_VpnIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sT_Vp3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sT_VqHIhEeu7meSiANIrxg" name="terminarTurno">
+      <modelElement href="Strategy.uml#_sSGfM3IhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_sT_VqXIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sT_VqnIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_sUBKwHIhEeu7meSiANIrxg" name="AtaqueNormal" abstractClass="true" generalizations="_sUGqUHIhEeu7meSiANIrxg" subclassedBy="_sUAjsHIhEeu7meSiANIrxg">
+    <modelElement href="Strategy.uml#_sSIUYHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_sUBKwXIhEeu7meSiANIrxg" position="-178.0,-109.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_sUBKwnIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_sUBKw3IhEeu7meSiANIrxg" name="atacar">
+      <modelElement href="Strategy.uml#_sSIUYXIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_sUBKxHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUBKxXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sUBKxnIhEeu7meSiANIrxg" name="elegirObjetivo">
+      <modelElement href="Strategy.uml#_sSIUYnIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_sUBKx3IhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Strategy.uml#_sSIUY3IhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_sUBKyHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUBKyXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sUBKynIhEeu7meSiANIrxg" name="apuntar">
+      <modelElement href="Strategy.uml#_sSIUZHIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_sUBKy3IhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Strategy.uml#_sSI7cHIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_sUBKzHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUBKzXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sUBKznIhEeu7meSiANIrxg" name="disparar">
+      <modelElement href="Strategy.uml#_sSI7cXIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_sUBKz3IhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Strategy.uml#_sSI7cnIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_sUBK0HIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUBK0XIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sUBK0nIhEeu7meSiANIrxg" name="terminarTurno">
+      <modelElement href="Strategy.uml#_sSI7c3IhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_sUBK03IhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Strategy.uml#_sSI7dHIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_sUBK1HIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUBK1XIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_sUC_8HIhEeu7meSiANIrxg" name="ArcoHielo" generalizations="_sUJtoXIhEeu7meSiANIrxg">
+    <modelElement href="Strategy.uml#_sSJig3IhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_sUC_8XIhEeu7meSiANIrxg" position="42.0,265.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_sUC_8nIhEeu7meSiANIrxg" label="+"/>
+    <attributes xmi:id="_sUC_83IhEeu7meSiANIrxg" defaultValue="20" name="dmg">
+      <modelElement href="Strategy.uml#_sSXk8HIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_sUC_9HIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Strategy.uml#_sSXk8nIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_sUC_9XIhEeu7meSiANIrxg" label="-"/>
+      <cardinality xmi:id="_sUC_9nIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_sUC_93IhEeu7meSiANIrxg" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_sUC_-HIhEeu7meSiANIrxg" name="ArcoHielo">
+      <modelElement href="Strategy.uml#_sSKJkHIhEeu7meSiANIrxg"/>
+      <keywords xmi:id="_sUC_-XIhEeu7meSiANIrxg" keyword="create"/>
+      <stereotypes xmi:id="_sUC_-nIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Strategy.uml#_sSKJk3IhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_sUC_-3IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUC__HIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_sUC__XIhEeu7meSiANIrxg">
+        <modelElement href="Strategy.uml#_sSKJlHIhEeu7meSiANIrxg"/>
+        <type xmi:id="_sUC__nIhEeu7meSiANIrxg" name="ArcoHielo">
+          <modelElement href="Strategy.uml#_sSJig3IhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_sUC__3IhEeu7meSiANIrxg" name="elegirObjetivo">
+      <modelElement href="Strategy.uml#_sSKJlXIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_sUDAAHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUDAAXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sUDAAnIhEeu7meSiANIrxg" name="apuntar">
+      <modelElement href="Strategy.uml#_sSKJlnIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_sUDAA3IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUDABHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sUDABXIhEeu7meSiANIrxg" name="crearHielo">
+      <modelElement href="Strategy.uml#_sSKJl3IhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_sUDABnIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUDAB3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sUDACHIhEeu7meSiANIrxg" name="disparar">
+      <modelElement href="Strategy.uml#_sSKJmHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_sUDACXIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUDACnIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sUDAC3IhEeu7meSiANIrxg" name="congelar">
+      <modelElement href="Strategy.uml#_sSKJmXIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_sUDADHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUDADXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sUDADnIhEeu7meSiANIrxg" name="terminarTurno">
+      <modelElement href="Strategy.uml#_sSKwoHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_sUDAD3IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUDAEHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_sUFcOXIhEeu7meSiANIrxg" comments="_sUE1IHIhEeu7meSiANIrxg" targetConnectionVisual="_sUE1IXIhEeu7meSiANIrxg" name="Turno" associationsOut="_sUFcMHIhEeu7meSiANIrxg">
+    <modelElement href="Strategy.uml#_sSKwoXIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_sUFcOnIhEeu7meSiANIrxg" position="51.0,-190.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_sUFcO3IhEeu7meSiANIrxg" label="+"/>
+    <attributes xmi:id="_sUFcPHIhEeu7meSiANIrxg" name="estrategia">
+      <modelElement href="Strategy.uml#_sSXk83IhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_sUFcPXIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Strategy.uml#_sSXk9HIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_sUFcPnIhEeu7meSiANIrxg" label="-"/>
+      <cardinality xmi:id="_sUFcP3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_sUFcQHIhEeu7meSiANIrxg" name="Estrategia">
+        <modelElement href="Strategy.uml#_sSFREHIhEeu7meSiANIrxg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_sUFcQXIhEeu7meSiANIrxg" name="ejecutar">
+      <modelElement href="Strategy.uml#_sSKwonIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_sUFcQnIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUFcQ3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sUFcRHIhEeu7meSiANIrxg" name="Turno">
+      <modelElement href="Strategy.uml#_sSWW0XIhEeu7meSiANIrxg"/>
+      <keywords xmi:id="_sUFcRXIhEeu7meSiANIrxg" keyword="create"/>
+      <visibility xmi:id="_sUFcRnIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUFcR3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_sUFcSHIhEeu7meSiANIrxg">
+        <modelElement href="Strategy.uml#_sSW94HIhEeu7meSiANIrxg"/>
+        <type xmi:id="_sUFcSXIhEeu7meSiANIrxg" name="Turno">
+          <modelElement href="Strategy.uml#_sSKwoXIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_sUFcSnIhEeu7meSiANIrxg" name="estrategia">
+        <modelElement href="Strategy.uml#_sSWW0nIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_sUFcS3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_sUFcTHIhEeu7meSiANIrxg" name="Estrategia">
+          <modelElement href="Strategy.uml#_sSFREHIhEeu7meSiANIrxg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_sUHRYHIhEeu7meSiANIrxg" name="Estrategia" associationsIn="_sUFcMHIhEeu7meSiANIrxg" subclassedBy="_sUGqUHIhEeu7meSiANIrxg _sUJtoHIhEeu7meSiANIrxg">
+    <modelElement href="Strategy.uml#_sSFREHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_sUHRYXIhEeu7meSiANIrxg" position="-124.0,-316.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_sUHRYnIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_sUHRY3IhEeu7meSiANIrxg" name="atacar">
+      <modelElement href="Strategy.uml#_sSF4IHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_sUHRZHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUHRZXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_sUIfgHIhEeu7meSiANIrxg" name="Combate">
+    <modelElement href="Strategy.uml#_sSI7dXIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_sUIfgXIhEeu7meSiANIrxg" position="-228.0,183.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_sUIfgnIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_sUIfg3IhEeu7meSiANIrxg" name="main" staticOperation="true">
+      <modelElement href="Strategy.uml#_sSJigHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_sUIfhHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUIfhXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_sUIfhnIhEeu7meSiANIrxg" name="args">
+        <modelElement href="Strategy.uml#_sSJigXIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_sUIfh3IhEeu7meSiANIrxg" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_sUIfiHIhEeu7meSiANIrxg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_sUKUsHIhEeu7meSiANIrxg" name="AtaqueHielo" abstractClass="true" generalizations="_sUJtoHIhEeu7meSiANIrxg" subclassedBy="_sUJtoXIhEeu7meSiANIrxg">
+    <modelElement href="Strategy.uml#_sSGfNHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_sUKUsXIhEeu7meSiANIrxg" position="303.0,42.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_sUKUsnIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_sUKUs3IhEeu7meSiANIrxg" name="atacar">
+      <modelElement href="Strategy.uml#_sSHGQHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_sUKUtHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUKUtXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sUKUtnIhEeu7meSiANIrxg" name="elegirObjetivo">
+      <modelElement href="Strategy.uml#_sSHGQXIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_sUKUt3IhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Strategy.uml#_sSHGQnIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_sUKUuHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUKUuXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sUKUunIhEeu7meSiANIrxg" name="apuntar">
+      <modelElement href="Strategy.uml#_sSHGQ3IhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_sUKUu3IhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Strategy.uml#_sSHGRHIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_sUKUvHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUKUvXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sUKUvnIhEeu7meSiANIrxg" name="crearHielo">
+      <modelElement href="Strategy.uml#_sSHGRXIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_sUKUv3IhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Strategy.uml#_sSHGRnIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_sUKUwHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUKUwXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sUKUwnIhEeu7meSiANIrxg" name="disparar">
+      <modelElement href="Strategy.uml#_sSHGR3IhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_sUKUw3IhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Strategy.uml#_sSHGSHIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_sUKUxHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUKUxXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sUKUxnIhEeu7meSiANIrxg" name="congelar">
+      <modelElement href="Strategy.uml#_sSHtUHIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_sUKUx3IhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Strategy.uml#_sSHtUXIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_sUKUyHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUKUyXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_sUKUynIhEeu7meSiANIrxg" name="terminarTurno">
+      <modelElement href="Strategy.uml#_sSHtUnIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_sUKUy3IhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Strategy.uml#_sSHtU3IhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_sUKUzHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_sUKUzXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_isqO8HIhEeu7meSiANIrxg">
+  <modelElement href="Memento.uml#_i2SsEHIhEeu7meSiANIrxg"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_i4coMXIhEeu7meSiANIrxg" targetItem="_i4dPSXIhEeu7meSiANIrxg" sourceItem="_i4coMHIhEeu7meSiANIrxg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_i4dPQHIhEeu7meSiANIrxg" sourceAnchor="264.0,27.0" targetAnchor="89.0,99.0" target="_i4edYHIhEeu7meSiANIrxg" source="_i4dPSXIhEeu7meSiANIrxg">
+    <modelElement href="Memento.uml#_i2ncMXIhEeu7meSiANIrxg"/>
+    <bendpoints xmi:id="_jAV_8HIhEeu7meSiANIrxg" sourceX="148" targetY="15"/>
+    <stereotypes xmi:id="_i4dPQXIhEeu7meSiANIrxg" name="Reference">
+      <modelElement href="Memento.uml#_i2ncM3IhEeu7meSiANIrxg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_i4dPQnIhEeu7meSiANIrxg" text="">
+      <visualProperties xmi:id="_jAWnAXIhEeu7meSiANIrxg" position="-143.26157655252138,0.12992906550660166"/>
+    </nameVisual>
+    <sourceRole xmi:id="_i4dPQ3IhEeu7meSiANIrxg" aggregationKind="NONE" name="">
+      <modelElement href="Memento.uml#_i2ncMnIhEeu7meSiANIrxg"/>
+      <visualProperties xmi:id="_jAWnAHIhEeu7meSiANIrxg" position="43.083861329746526,-11.374669758925222"/>
+      <visibility xmi:id="_i4dPRHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_i4dPRXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_i4dPRnIhEeu7meSiANIrxg" aggregationKind="NONE" name="estado" navigable="true">
+      <modelElement href="Memento.uml#_i2lnAHIhEeu7meSiANIrxg"/>
+      <visualProperties xmi:id="_jAWnAnIhEeu7meSiANIrxg" position="-184.82716182170333,3.2874113318832485"/>
+      <visibility xmi:id="_i4dPR3IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_i4dPSHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_i4gSkXIhEeu7meSiANIrxg" targetItem="_i4g5qXIhEeu7meSiANIrxg" sourceItem="_i4gSkHIhEeu7meSiANIrxg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_i4g5oHIhEeu7meSiANIrxg" source="_i4g5qXIhEeu7meSiANIrxg">
+    <modelElement href="Memento.uml#_i2m1IXIhEeu7meSiANIrxg"/>
+    <stereotypes xmi:id="_i4g5oXIhEeu7meSiANIrxg" name="Reference">
+      <modelElement href="Memento.uml#_i2ncMHIhEeu7meSiANIrxg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_i4g5onIhEeu7meSiANIrxg" text=""/>
+    <sourceRole xmi:id="_i4g5o3IhEeu7meSiANIrxg" aggregationKind="NONE" name="">
+      <modelElement href="Memento.uml#_i2m1InIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_i4g5pHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_i4g5pXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_i4g5pnIhEeu7meSiANIrxg" aggregationKind="NONE" name="mementos" navigable="true">
+      <modelElement href="Memento.uml#_i2kY4HIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_i4g5p3IhEeu7meSiANIrxg" label="-"/>
+      <cardinality xmi:id="_i4g5qHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_i4jV4HIhEeu7meSiANIrxg" sourceAnchor="89.0,0.0" targetAnchor="118.0,92.0" target="_i4j89HIhEeu7meSiANIrxg" source="_i4edYHIhEeu7meSiANIrxg">
+    <modelElement href="Memento.uml#_i2mOHHIhEeu7meSiANIrxg"/>
+    <nameVisual xmi:id="_i4jV43IhEeu7meSiANIrxg" text="">
+      <visualProperties xmi:id="_jAXOEXIhEeu7meSiANIrxg" position="-10.886617016680816,-25.126050207424868"/>
+    </nameVisual>
+    <sourceRole xmi:id="_i4jV5HIhEeu7meSiANIrxg" aggregationKind="NONE" name="estado" navigable="true">
+      <modelElement href="Memento.uml#_i2lnAXIhEeu7meSiANIrxg"/>
+      <visualProperties xmi:id="_jAXOEHIhEeu7meSiANIrxg" position="-35.434843990006016,-78.73490047029722"/>
+      <visibility xmi:id="_i4j88XIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_i4j88HIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_i4jV5XIhEeu7meSiANIrxg" aggregationKind="NONE" name="">
+      <modelElement href="Memento.uml#_i2m1IHIhEeu7meSiANIrxg"/>
+      <visualProperties xmi:id="_jAXOEnIhEeu7meSiANIrxg" position="-17.375464530581496,4.986817699414942"/>
+      <visibility xmi:id="_i4j883IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_i4j88nIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_i4jV4nIhEeu7meSiANIrxg" targetItem="_i4j89HIhEeu7meSiANIrxg" sourceItem="_i4jV4XIhEeu7meSiANIrxg"/>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_i4coMHIhEeu7meSiANIrxg" sourceConnectionVisual="_i4coMXIhEeu7meSiANIrxg" text="CLASE 'CÁPSULA' PARA GUARDAR EL ESTADO&#xA;DE LA INSTANCIA DE TIPO 'JUEGO', Y PODER &#xA;RECUPERAR ESE ESTADO CUANDO SEA NECESARIO&#xA;&#xA;@author Iker Laforga&#xA; *" item="_i4dPSXIhEeu7meSiANIrxg">
+    <modelElement href="Memento.uml#_i2mOGnIhEeu7meSiANIrxg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_i4gSkHIhEeu7meSiANIrxg" sourceConnectionVisual="_i4gSkXIhEeu7meSiANIrxg" text="SE ENCARGA DE GUARDAR TODOS LOS CHECKPOINTS&#xA;QUE SE GENEREN, Y DE DAR ACCESO A LOS QUE YA&#xA;ESTÁN GUARDADOS&#xA;&#xA;@author Iker Laforga&#xA; *" item="_i4g5qXIhEeu7meSiANIrxg">
+    <modelElement href="Memento.uml#_i2mOGXIhEeu7meSiANIrxg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_i4jV4XIhEeu7meSiANIrxg" sourceConnectionVisual="_i4jV4nIhEeu7meSiANIrxg" text="SE ENCARGAR DE REALIZAR EL GUARDADO DEL&#xA;ESTADO DEL OBJETO EN CUESTIÓN (EN ESTE CASO,&#xA;DE TIPO 'JUEGO') Y DE RESTAURAR EL ESTADO A TRAVÉS&#xA;DE UN OBJETO 'MEMENTO'&#xA;&#xA;@author Iker Laforga&#xA; *" item="_i4j89HIhEeu7meSiANIrxg">
+    <modelElement href="Memento.uml#_i2mOG3IhEeu7meSiANIrxg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_i4dPSXIhEeu7meSiANIrxg" comments="_i4coMHIhEeu7meSiANIrxg" targetConnectionVisual="_i4coMXIhEeu7meSiANIrxg" name="Memento" associationsOut="_i4dPQHIhEeu7meSiANIrxg">
+    <modelElement href="Memento.uml#_i2YLpHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_i4dPSnIhEeu7meSiANIrxg" position="30.0,30.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_i4dPS3IhEeu7meSiANIrxg" label="+"/>
+    <attributes xmi:id="_i4dPTHIhEeu7meSiANIrxg" name="estado">
+      <modelElement href="Memento.uml#_i2lnAHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_i4dPTXIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_i4dPTnIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_i4dPT3IhEeu7meSiANIrxg" name="Juego">
+        <modelElement href="Memento.uml#_i2Xkk3IhEeu7meSiANIrxg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_i4dPUHIhEeu7meSiANIrxg" name="Memento">
+      <modelElement href="Memento.uml#_i2jx0HIhEeu7meSiANIrxg"/>
+      <keywords xmi:id="_i4dPUXIhEeu7meSiANIrxg" keyword="create"/>
+      <visibility xmi:id="_i4dPUnIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_i4dPU3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_i4dPVHIhEeu7meSiANIrxg">
+        <modelElement href="Memento.uml#_i2jx1HIhEeu7meSiANIrxg"/>
+        <type xmi:id="_i4dPVXIhEeu7meSiANIrxg" name="Memento">
+          <modelElement href="Memento.uml#_i2YLpHIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_i4dPVnIhEeu7meSiANIrxg" name="estado">
+        <modelElement href="Memento.uml#_i2jx0XIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_i4dPV3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_i4dPWHIhEeu7meSiANIrxg" name="Juego">
+          <modelElement href="Memento.uml#_i2Xkk3IhEeu7meSiANIrxg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_i4edYHIhEeu7meSiANIrxg" name="Juego" associationsIn="_i4dPQHIhEeu7meSiANIrxg" associationsOut="_i4jV4HIhEeu7meSiANIrxg">
+    <modelElement href="Memento.uml#_i2Xkk3IhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_i4edYXIhEeu7meSiANIrxg" position="353.0,-57.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_i4edYnIhEeu7meSiANIrxg" label="+"/>
+    <attributes xmi:id="_i4edY3IhEeu7meSiANIrxg" name="nombre">
+      <modelElement href="Memento.uml#_i2k_83IhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_i4edZHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_i4edZXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_i4edZnIhEeu7meSiANIrxg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_i4edZ3IhEeu7meSiANIrxg" name="checkPoint">
+      <modelElement href="Memento.uml#_i2k_9HIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_i4edaHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_i4edaXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_i4edanIhEeu7meSiANIrxg" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_i4eda3IhEeu7meSiANIrxg" name="toString">
+      <modelElement href="Memento.uml#_i2XklHIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_i4edbHIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Memento.uml#_i2YLoXIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_i4edbXIhEeu7meSiANIrxg" name="Annotations">
+        <modelElement href="Memento.uml#_i2YLonIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_i4edbnIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_i4edb3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_i4edcHIhEeu7meSiANIrxg">
+        <modelElement href="Memento.uml#_i2YLoHIhEeu7meSiANIrxg"/>
+        <type xmi:id="_i4edcXIhEeu7meSiANIrxg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_i4g5qXIhEeu7meSiANIrxg" comments="_i4gSkHIhEeu7meSiANIrxg" targetConnectionVisual="_i4gSkXIhEeu7meSiANIrxg" name="Caretaker" associationsOut="_i4g5oHIhEeu7meSiANIrxg">
+    <modelElement href="Memento.uml#_i2VvYHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_i4g5qnIhEeu7meSiANIrxg" position="13.0,164.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_i4g5q3IhEeu7meSiANIrxg" label="+"/>
+    <attributes xmi:id="_i4g5rHIhEeu7meSiANIrxg" defaultValue="new ArrayList&lt;>()" name="mementos">
+      <modelElement href="Memento.uml#_i2kY4HIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_i4g5rXIhEeu7meSiANIrxg" name="Generics">
+        <modelElement href="Memento.uml#_i2k_8HIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_i4g5rnIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Memento.uml#_i2k_8nIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_i4g5r3IhEeu7meSiANIrxg" label="-"/>
+      <cardinality xmi:id="_i4g5sHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_i4g5sXIhEeu7meSiANIrxg" name="ArrayList">
+        <modelElement href="Memento.uml#_i2ijsHIhEeu7meSiANIrxg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_i4g5snIhEeu7meSiANIrxg" name="getMemento">
+      <modelElement href="Memento.uml#_i2WWcHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_i4g5s3IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_i4g5tHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_i4g5tXIhEeu7meSiANIrxg">
+        <modelElement href="Memento.uml#_i2jKwnIhEeu7meSiANIrxg"/>
+        <type xmi:id="_i4g5tnIhEeu7meSiANIrxg" name="Memento">
+          <modelElement href="Memento.uml#_i2YLpHIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_i4g5t3IhEeu7meSiANIrxg" name="i">
+        <modelElement href="Memento.uml#_i2WWcXIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_i4g5uHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_i4g5uXIhEeu7meSiANIrxg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_i4g5unIhEeu7meSiANIrxg" name="addMemento">
+      <modelElement href="Memento.uml#_i2jKwHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_i4g5u3IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_i4g5vHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_i4g5vXIhEeu7meSiANIrxg" name="guardar">
+        <modelElement href="Memento.uml#_i2jKwXIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_i4g5vnIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_i4g5v3IhEeu7meSiANIrxg" name="Memento">
+          <modelElement href="Memento.uml#_i2YLpHIhEeu7meSiANIrxg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_i4iu0HIhEeu7meSiANIrxg" name="Demo">
+    <modelElement href="Memento.uml#_i2W9gHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_i4iu0XIhEeu7meSiANIrxg" position="67.0,333.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_i4iu0nIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_i4iu03IhEeu7meSiANIrxg" name="main" staticOperation="true">
+      <modelElement href="Memento.uml#_i2XkkHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_i4iu1HIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_i4iu1XIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_i4iu1nIhEeu7meSiANIrxg" name="args">
+        <modelElement href="Memento.uml#_i2XkkXIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_i4iu13IhEeu7meSiANIrxg" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_i4iu2HIhEeu7meSiANIrxg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_i4j89HIhEeu7meSiANIrxg" comments="_i4jV4XIhEeu7meSiANIrxg" targetConnectionVisual="_i4jV4nIhEeu7meSiANIrxg" name="Originator" associationsIn="_i4jV4HIhEeu7meSiANIrxg">
+    <modelElement href="Memento.uml#_i2ZZwHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_i4j89XIhEeu7meSiANIrxg" position="324.0,-204.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_i4j89nIhEeu7meSiANIrxg" label="+"/>
+    <attributes xmi:id="_i4j893IhEeu7meSiANIrxg" name="estado">
+      <modelElement href="Memento.uml#_i2lnAXIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_i4j8-HIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_i4j8-XIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_i4j8-nIhEeu7meSiANIrxg" name="Juego">
+        <modelElement href="Memento.uml#_i2Xkk3IhEeu7meSiANIrxg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_i4j8-3IhEeu7meSiANIrxg" name="Originator">
+      <modelElement href="Memento.uml#_i2ZZwXIhEeu7meSiANIrxg"/>
+      <keywords xmi:id="_i4j8_HIhEeu7meSiANIrxg" keyword="create"/>
+      <stereotypes xmi:id="_i4j8_XIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Memento.uml#_i2ZZxHIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_i4j8_nIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_i4j8_3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_i4j9AHIhEeu7meSiANIrxg">
+        <modelElement href="Memento.uml#_i2ZZxXIhEeu7meSiANIrxg"/>
+        <type xmi:id="_i4j9AXIhEeu7meSiANIrxg" name="Originator">
+          <modelElement href="Memento.uml#_i2ZZwHIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_i4j9AnIhEeu7meSiANIrxg" name="guardar">
+      <modelElement href="Memento.uml#_i2aA0HIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_i4j9A3IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_i4j9BHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_i4j9BXIhEeu7meSiANIrxg">
+        <modelElement href="Memento.uml#_i2jx1XIhEeu7meSiANIrxg"/>
+        <type xmi:id="_i4j9BnIhEeu7meSiANIrxg" name="Memento">
+          <modelElement href="Memento.uml#_i2YLpHIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_i4j9B3IhEeu7meSiANIrxg" name="restaurar">
+      <modelElement href="Memento.uml#_i2jx1nIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_i4j9CHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_i4j9CXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_i4j9CnIhEeu7meSiANIrxg" name="memento">
+        <modelElement href="Memento.uml#_i2jx13IhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_i4j9C3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_i4j9DHIhEeu7meSiANIrxg" name="Memento">
+          <modelElement href="Memento.uml#_i2YLpHIhEeu7meSiANIrxg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

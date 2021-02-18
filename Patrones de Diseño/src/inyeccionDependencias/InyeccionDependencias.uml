@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_c6nX0HIhEeu7meSiANIrxg" name="InyeccionDependencias">
+    <eAnnotations xmi:id="_dBXgEHIhEeu7meSiANIrxg" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_dBXgEXIhEeu7meSiANIrxg" source="codegen">
+        <details xmi:id="_dBXgEnIhEeu7meSiANIrxg" key="codegenDirectory" value="/Patrones de Diseño/src"/>
+        <details xmi:id="_e6F8QHIhEeu7meSiANIrxg" key="AssociatedSourceCode" value="/Patrones de Diseño/src/inyeccionDependencias/FactoryDispositivos.java;2126620056/1;/Patrones de Diseño/src/inyeccionDependencias/Consola.java;1218503042/1;/Patrones de Diseño/src/inyeccionDependencias/Jugable.java;1166611316/1;/Patrones de Diseño/src/inyeccionDependencias/Jugador.java;3191366972/1;/Patrones de Diseño/src/inyeccionDependencias/PC.java;2517425325/1;/Patrones de Diseño/src/inyeccionDependencias/ViernesNoche.java;2335648000/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_dGc0YHIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_dGdbcHIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_dGdbcXIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_dGdbcnIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_dGdbc3IhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_dGdbdHIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_dGdbdXIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_dGdbdnIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_dGdbd3IhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_dGeCgHIhEeu7meSiANIrxg" name="inyeccionDependencias">
+      <packagedElement xmi:type="uml:Class" xmi:id="_dGiT8HIhEeu7meSiANIrxg" name="Consola">
+        <ownedAttribute xmi:id="_dGyyoHIhEeu7meSiANIrxg" name="modelo">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <interfaceRealization xmi:id="_dGxkgHIhEeu7meSiANIrxg" client="_dGiT8HIhEeu7meSiANIrxg" supplier="_dGkwMHIhEeu7meSiANIrxg" contract="_dGkwMHIhEeu7meSiANIrxg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dGzZsnIhEeu7meSiANIrxg" name="Consola" specification="_dGi7AHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_dGzZs3IhEeu7meSiANIrxg" name="modelo">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_dGzZtHIhEeu7meSiANIrxg" type="_dGiT8HIhEeu7meSiANIrxg" direction="return"/>
+          <language>java</language>
+          <body>this.setModelo(modelo);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dG0AwHIhEeu7meSiANIrxg" name="jugar" specification="_dGi7BXIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>System.out.println(&quot;El jugador está usando la consola modelo &quot; + getModelo() + &quot;.&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_dGi7AHIhEeu7meSiANIrxg" name="Consola" method="_dGzZsnIhEeu7meSiANIrxg">
+          <eAnnotations xmi:id="_dGi7AnIhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_dGi7A3IhEeu7meSiANIrxg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_dGi7AXIhEeu7meSiANIrxg" name="modelo">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_dGi7BHIhEeu7meSiANIrxg" type="_dGiT8HIhEeu7meSiANIrxg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_dGi7BXIhEeu7meSiANIrxg" name="jugar" method="_dG0AwHIhEeu7meSiANIrxg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_dGjiEHIhEeu7meSiANIrxg" name="FactoryDispositivos" isAbstract="true">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dG0AwXIhEeu7meSiANIrxg" name="getDispositivo" specification="_dGxkgXIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_dG0AwnIhEeu7meSiANIrxg" name="tipo" type="_dGjiEXIhEeu7meSiANIrxg"/>
+          <ownedParameter xmi:id="_dG0Aw3IhEeu7meSiANIrxg" type="_dGkwMHIhEeu7meSiANIrxg" direction="return"/>
+          <language>java</language>
+          <body>switch(tipo) {&#xD;
+			&#xD;
+			case CONSOLA:&#xD;
+				return new Consola(&quot;Ps5&quot;);&#xD;
+				&#xD;
+			default:&#xD;
+				return new PC(&quot;Pepino&quot;);&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_dGkJInIhEeu7meSiANIrxg" name="FactoryDispositivos">
+          <eAnnotations xmi:id="_dGkJI3IhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_dGkJJHIhEeu7meSiANIrxg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_dGkJJnIhEeu7meSiANIrxg" type="_dGjiEHIhEeu7meSiANIrxg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_dGxkgXIhEeu7meSiANIrxg" name="getDispositivo" isStatic="true" method="_dG0AwXIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_dGyLkHIhEeu7meSiANIrxg" name="tipo" type="_dGjiEXIhEeu7meSiANIrxg"/>
+          <ownedParameter xmi:id="_dGyLkXIhEeu7meSiANIrxg" type="_dGkwMHIhEeu7meSiANIrxg" direction="return"/>
+        </ownedOperation>
+        <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_dGjiEXIhEeu7meSiANIrxg" name="tiposDispositivos">
+          <ownedLiteral xmi:id="_dGkJIHIhEeu7meSiANIrxg" name="CONSOLA"/>
+          <ownedLiteral xmi:id="_dGkJIXIhEeu7meSiANIrxg" name="PC"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_dGkwMHIhEeu7meSiANIrxg" name="Jugable">
+        <ownedOperation xmi:id="_dGkwMXIhEeu7meSiANIrxg" name="jugar"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_dGkwMnIhEeu7meSiANIrxg" name="Jugador">
+        <ownedComment xmi:id="_dG0Az3IhEeu7meSiANIrxg">
+          <body>INYECCIÓN DE DEPENDENCIAS&#xD;
+&#xD;
+1 - LAS CLASES DEBEN CONTENER CONCEPTOS ABSTRACTOS&#xD;
+EN VEZ DE IMPLEMENTACIONES CONCRETAS PARA EVITAR ACOPLAMIENTO&#xD;
+&#xD;
+2 - LOS OBJETOS QUE REQUIEREN LAS CLASES DEBEN SER APORTADOS&#xD;
+(INYECTADOS) POR UNA TERCERA PARTE, EN VEZ DE SER CREADOS&#xD;
+POR LA CLASE QUE LOS REQUIERE (DE NUEVO, AYUDA A DESACOPLAR EL &#xD;
+CÓDIGO DE UNA IMPLEMENTACIÓN CONCRETA)&#xD;
+&#xD;
+@author Iker Laforga&#xD;
+ *</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_dGyyoXIhEeu7meSiANIrxg" name="dispositivo" visibility="package" type="_dGkwMHIhEeu7meSiANIrxg" association="_dG0n0HIhEeu7meSiANIrxg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dG0AxHIhEeu7meSiANIrxg" name="Jugador" specification="_dGyLknIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_dG0AxXIhEeu7meSiANIrxg" name="dispositivo" type="_dGkwMHIhEeu7meSiANIrxg"/>
+          <ownedParameter xmi:id="_dG0AxnIhEeu7meSiANIrxg" type="_dGkwMnIhEeu7meSiANIrxg" direction="return"/>
+          <language>java</language>
+          <body>this.dispositivo = dispositivo;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dG0Ax3IhEeu7meSiANIrxg" name="jugar" specification="_dGlXQHIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>dispositivo.jugar();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_dGlXQHIhEeu7meSiANIrxg" name="jugar" method="_dG0Ax3IhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_dGyLknIhEeu7meSiANIrxg" name="Jugador" method="_dG0AxHIhEeu7meSiANIrxg">
+          <eAnnotations xmi:id="_dGyLlHIhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_dGyLlXIhEeu7meSiANIrxg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_dGyLk3IhEeu7meSiANIrxg" name="dispositivo" type="_dGkwMHIhEeu7meSiANIrxg"/>
+          <ownedParameter xmi:id="_dGyLlnIhEeu7meSiANIrxg" type="_dGkwMnIhEeu7meSiANIrxg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_dGlXQXIhEeu7meSiANIrxg" name="PC">
+        <ownedAttribute xmi:id="_dGzZsXIhEeu7meSiANIrxg" name="modelo">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <interfaceRealization xmi:id="_dGyLl3IhEeu7meSiANIrxg" client="_dGlXQXIhEeu7meSiANIrxg" supplier="_dGkwMHIhEeu7meSiANIrxg" contract="_dGkwMHIhEeu7meSiANIrxg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dG0AyHIhEeu7meSiANIrxg" name="PC" specification="_dGl-UHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_dG0AyXIhEeu7meSiANIrxg" name="modelo">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_dG0AynIhEeu7meSiANIrxg" type="_dGlXQXIhEeu7meSiANIrxg" direction="return"/>
+          <language>java</language>
+          <body>this.setModelo(modelo);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dG0Ay3IhEeu7meSiANIrxg" name="jugar" specification="_dGl-VXIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>System.out.println(&quot;El jugador está usando el PC modelo &quot; + getModelo() + &quot;.&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_dGl-UHIhEeu7meSiANIrxg" name="PC" method="_dG0AyHIhEeu7meSiANIrxg">
+          <eAnnotations xmi:id="_dGl-UnIhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_dGl-U3IhEeu7meSiANIrxg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_dGl-UXIhEeu7meSiANIrxg" name="modelo">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_dGl-VHIhEeu7meSiANIrxg" type="_dGlXQXIhEeu7meSiANIrxg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_dGl-VXIhEeu7meSiANIrxg" name="jugar" method="_dG0Ay3IhEeu7meSiANIrxg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_dGmlYHIhEeu7meSiANIrxg" name="ViernesNoche">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dG0AzHIhEeu7meSiANIrxg" name="main" specification="_dGmlYXIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_dG0AzXIhEeu7meSiANIrxg" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dG0AznIhEeu7meSiANIrxg" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>Jugable dispositivo = FactoryDispositivos.getDispositivo(FactoryDispositivos.tiposDispositivos.PC);&#xD;
+		Jugador AlexelCapo = new Jugador(dispositivo);&#xD;
+		AlexelCapo.jugar();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_dGmlYXIhEeu7meSiANIrxg" name="main" isStatic="true" method="_dG0AzHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_dGmlYnIhEeu7meSiANIrxg" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dGmlY3IhEeu7meSiANIrxg" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_dG0n0HIhEeu7meSiANIrxg" name="" memberEnd="_dG0n0XIhEeu7meSiANIrxg _dGyyoXIhEeu7meSiANIrxg">
+        <ownedEnd xmi:id="_dG0n0XIhEeu7meSiANIrxg" name="" type="_dGkwMnIhEeu7meSiANIrxg" association="_dG0n0HIhEeu7meSiANIrxg"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_dBYHIHIhEeu7meSiANIrxg">
+      <eAnnotations xmi:id="_dBYHIXIhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_dBYHInIhEeu7meSiANIrxg" base_Package="_c6nX0HIhEeu7meSiANIrxg">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_dGkJJXIhEeu7meSiANIrxg" base_Element="_dGkJInIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_dGzZsHIhEeu7meSiANIrxg" base_Element="_dGyyoXIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:Reference xmi:id="_dG0n0nIhEeu7meSiANIrxg" base_Element="_dG0n0HIhEeu7meSiANIrxg"/>
+</xmi:XMI>

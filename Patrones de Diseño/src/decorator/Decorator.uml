@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_P0DxQHIhEeu7meSiANIrxg" name="Decorator">
+    <eAnnotations xmi:id="_P6UKQHIhEeu7meSiANIrxg" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_P6UKQXIhEeu7meSiANIrxg" source="codegen">
+        <details xmi:id="_P6UKQnIhEeu7meSiANIrxg" key="codegenDirectory" value="/Patrones de Diseño/src"/>
+        <details xmi:id="_QCgc8HIhEeu7meSiANIrxg" key="AssociatedSourceCode" value="/Patrones de Diseño/src/decorator/UsuarioNormal.java;4094130691/1;/Patrones de Diseño/src/decorator/CuentaTelegram.java;665433796/1;/Patrones de Diseño/src/decorator/MuteDecorador.java;2953165724/1;/Patrones de Diseño/src/decorator/Telegram.java;498047890/1;/Patrones de Diseño/src/decorator/Usuario.java;2546630604/1;/Patrones de Diseño/src/decorator/UsuarioDecorador.java;261076873/1;/Patrones de Diseño/src/decorator/AdminDecorador.java;2682201253/1;/Patrones de Diseño/src/decorator/UsuarioPremium.java;2457452582/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_P_eXEHIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_P_eXEXIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_P_eXEnIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_P_eXE3IhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_P_eXFHIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_P_eXFXIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_P_e-IHIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_P_e-IXIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_P_e-InIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_P_e-I3IhEeu7meSiANIrxg" name="decorator">
+      <packagedElement xmi:type="uml:Class" xmi:id="_P_mS4HIhEeu7meSiANIrxg" name="UsuarioNormal">
+        <interfaceRealization xmi:id="_P__UcHIhEeu7meSiANIrxg" client="_P_mS4HIhEeu7meSiANIrxg" supplier="_P_m58HIhEeu7meSiANIrxg" contract="_P_m58HIhEeu7meSiANIrxg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_QAFbEHIhEeu7meSiANIrxg" name="abrirCuenta" specification="_P__UcXIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_QAFbEXIhEeu7meSiANIrxg" name="u" type="_P_p9QHIhEeu7meSiANIrxg"/>
+          <language>java</language>
+          <body>System.out.println(&quot;Se ha creado una nueva cuenta normal de Telegram.&quot;);&#xD;
+		System.out.println(&quot;Usuario: &quot; + u.getNombre() + &quot;.&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_P__UcXIhEeu7meSiANIrxg" name="abrirCuenta" method="_QAFbEHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_P__UcnIhEeu7meSiANIrxg" name="u" type="_P_p9QHIhEeu7meSiANIrxg"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_P_m58HIhEeu7meSiANIrxg" name="CuentaTelegram">
+        <ownedOperation xmi:id="_P__7g3IhEeu7meSiANIrxg" name="abrirCuenta">
+          <ownedParameter xmi:id="_P__7hHIhEeu7meSiANIrxg" name="u" type="_P_p9QHIhEeu7meSiANIrxg"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_P_nhAHIhEeu7meSiANIrxg" name="MuteDecorador">
+        <generalization xmi:id="_QABJpHIhEeu7meSiANIrxg" general="_P_rLYHIhEeu7meSiANIrxg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_QAFbEnIhEeu7meSiANIrxg" name="MuteDecorador" specification="_QAAikHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_QAFbE3IhEeu7meSiANIrxg" name="usuarioDecorado" type="_P_m58HIhEeu7meSiANIrxg"/>
+          <ownedParameter xmi:id="_QAFbFHIhEeu7meSiANIrxg" type="_P_nhAHIhEeu7meSiANIrxg" direction="return"/>
+          <language>java</language>
+          <body>super(usuarioDecorado);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_QAGCIHIhEeu7meSiANIrxg" name="abrirCuenta" specification="_QABJoHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_QAGCIXIhEeu7meSiANIrxg" name="u" type="_P_p9QHIhEeu7meSiANIrxg"/>
+          <language>java</language>
+          <body>usuarioDecorado.abrirCuenta(u);&#xD;
+		hacerMute(u);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_QAGCInIhEeu7meSiANIrxg" name="hacerMute" specification="_QABJonIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_QAGCI3IhEeu7meSiANIrxg" name="u" type="_P_p9QHIhEeu7meSiANIrxg"/>
+          <language>java</language>
+          <body>System.out.println(&quot;Ahora &quot; + u.getNombre() + &quot; está mutead@.&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_QAAikHIhEeu7meSiANIrxg" name="MuteDecorador" method="_QAFbEnIhEeu7meSiANIrxg">
+          <eAnnotations xmi:id="_QAAiknIhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_QAAik3IhEeu7meSiANIrxg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_QAAikXIhEeu7meSiANIrxg" name="usuarioDecorado" type="_P_m58HIhEeu7meSiANIrxg"/>
+          <ownedParameter xmi:id="_QAAilHIhEeu7meSiANIrxg" type="_P_nhAHIhEeu7meSiANIrxg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_QABJoHIhEeu7meSiANIrxg" name="abrirCuenta" method="_QAGCIHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_QABJoXIhEeu7meSiANIrxg" name="u" type="_P_p9QHIhEeu7meSiANIrxg"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_QABJonIhEeu7meSiANIrxg" name="hacerMute" method="_QAGCInIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_QABJo3IhEeu7meSiANIrxg" name="u" type="_P_p9QHIhEeu7meSiANIrxg"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_P_ovIHIhEeu7meSiANIrxg" name="Telegram">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_QAGCJHIhEeu7meSiANIrxg" name="main" specification="_P_pWMHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_QAGCJXIhEeu7meSiANIrxg" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QAGCJnIhEeu7meSiANIrxg" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>Usuario u = new Usuario(1, &quot;Marce&quot;);&#xD;
+		&#xD;
+		CuentaTelegram cuenta = new UsuarioPremium();&#xD;
+		CuentaTelegram cuentaAdmin = new AdminDecorador(cuenta);&#xD;
+		CuentaTelegram cuentaAdminMute = new MuteDecorador(cuentaAdmin); // SE PUEDE ANIDAR CAPAS&#xD;
+																		 // COMO UNA CEBOLLA, PERO&#xD;
+		cuentaAdminMute.abrirCuenta(u);									 // HAY QUE TENER EN CUENTA &#xD;
+																		 // QUE EL ORDEN IMPORTA. MUCHO. &#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_P_pWMHIhEeu7meSiANIrxg" name="main" isStatic="true" method="_QAGCJHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_P_pWMXIhEeu7meSiANIrxg" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_P_pWMnIhEeu7meSiANIrxg" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_P_p9QHIhEeu7meSiANIrxg" name="Usuario">
+        <ownedAttribute xmi:id="_QAE0AHIhEeu7meSiANIrxg" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_QAE0AXIhEeu7meSiANIrxg" name="nombre">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_QAGCJ3IhEeu7meSiANIrxg" name="Usuario" specification="_P_qkUnIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_QAGCKHIhEeu7meSiANIrxg" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_QAGCKXIhEeu7meSiANIrxg" name="nombre">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_QAGCKnIhEeu7meSiANIrxg" type="_P_p9QHIhEeu7meSiANIrxg" direction="return"/>
+          <language>java</language>
+          <body>this.id = id;&#xD;
+		this.nombre = nombre;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_P_p9QXIhEeu7meSiANIrxg" name="Usuario">
+          <eAnnotations xmi:id="_P_p9QnIhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_P_p9Q3IhEeu7meSiANIrxg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_P_qkUXIhEeu7meSiANIrxg" type="_P_p9QHIhEeu7meSiANIrxg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_P_qkUnIhEeu7meSiANIrxg" name="Usuario" method="_QAGCJ3IhEeu7meSiANIrxg">
+          <eAnnotations xmi:id="_P_qkVXIhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_P_qkVnIhEeu7meSiANIrxg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_P_qkU3IhEeu7meSiANIrxg" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_P_qkVHIhEeu7meSiANIrxg" name="nombre">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_P_qkV3IhEeu7meSiANIrxg" type="_P_p9QHIhEeu7meSiANIrxg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_P_rLYHIhEeu7meSiANIrxg" name="UsuarioDecorador" isAbstract="true">
+        <ownedAttribute xmi:id="_QAE0AnIhEeu7meSiANIrxg" name="usuarioDecorado" visibility="protected" type="_P_m58HIhEeu7meSiANIrxg" association="_QAHQQHIhEeu7meSiANIrxg"/>
+        <interfaceRealization xmi:id="_QABwsHIhEeu7meSiANIrxg" client="_P_rLYHIhEeu7meSiANIrxg" supplier="_P_m58HIhEeu7meSiANIrxg" contract="_P_m58HIhEeu7meSiANIrxg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_QAGCK3IhEeu7meSiANIrxg" name="UsuarioDecorador" specification="_QABwsXIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_QAGCLHIhEeu7meSiANIrxg" name="usuarioDecorado" type="_P_m58HIhEeu7meSiANIrxg"/>
+          <ownedParameter xmi:id="_QAGCLXIhEeu7meSiANIrxg" type="_P_rLYHIhEeu7meSiANIrxg" direction="return"/>
+          <language>java</language>
+          <body>this.usuarioDecorado = usuarioDecorado;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_QAGpMHIhEeu7meSiANIrxg" name="abrirCuenta" specification="_QACXwHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_QAGpMXIhEeu7meSiANIrxg" name="u" type="_P_p9QHIhEeu7meSiANIrxg"/>
+          <language>java</language>
+          <body>this.usuarioDecorado.abrirCuenta(u);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_QABwsXIhEeu7meSiANIrxg" name="UsuarioDecorador" method="_QAGCK3IhEeu7meSiANIrxg">
+          <eAnnotations xmi:id="_QABws3IhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_QABwtHIhEeu7meSiANIrxg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_QABwsnIhEeu7meSiANIrxg" name="usuarioDecorado" type="_P_m58HIhEeu7meSiANIrxg"/>
+          <ownedParameter xmi:id="_QABwtXIhEeu7meSiANIrxg" type="_P_rLYHIhEeu7meSiANIrxg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_QACXwHIhEeu7meSiANIrxg" name="abrirCuenta" method="_QAGpMHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_QACXwXIhEeu7meSiANIrxg" name="u" type="_P_p9QHIhEeu7meSiANIrxg"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_P_sZgHIhEeu7meSiANIrxg" name="AdminDecorador">
+        <generalization xmi:id="_QADl4HIhEeu7meSiANIrxg" general="_P_rLYHIhEeu7meSiANIrxg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_QAGpMnIhEeu7meSiANIrxg" name="AdminDecorador" specification="_QAC-0HIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_QAGpM3IhEeu7meSiANIrxg" name="usuarioDecorado" type="_P_m58HIhEeu7meSiANIrxg"/>
+          <ownedParameter xmi:id="_QAGpNHIhEeu7meSiANIrxg" type="_P_sZgHIhEeu7meSiANIrxg" direction="return"/>
+          <language>java</language>
+          <body>super(usuarioDecorado);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_QAGpNXIhEeu7meSiANIrxg" name="abrirCuenta" specification="_QAC-1XIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_QAGpNnIhEeu7meSiANIrxg" name="u" type="_P_p9QHIhEeu7meSiANIrxg"/>
+          <language>java</language>
+          <body>usuarioDecorado.abrirCuenta(u);&#xD;
+		hacerAdmin(u);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_QAGpN3IhEeu7meSiANIrxg" name="hacerAdmin" specification="_QAC-13IhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_QAGpOHIhEeu7meSiANIrxg" name="u" type="_P_p9QHIhEeu7meSiANIrxg"/>
+          <language>java</language>
+          <body>System.out.println(&quot;Ahora &quot; + u.getNombre() + &quot; tiene privilegios de Admin.&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_QAC-0HIhEeu7meSiANIrxg" name="AdminDecorador" method="_QAGpMnIhEeu7meSiANIrxg">
+          <eAnnotations xmi:id="_QAC-0nIhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_QAC-03IhEeu7meSiANIrxg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_QAC-0XIhEeu7meSiANIrxg" name="usuarioDecorado" type="_P_m58HIhEeu7meSiANIrxg"/>
+          <ownedParameter xmi:id="_QAC-1HIhEeu7meSiANIrxg" type="_P_sZgHIhEeu7meSiANIrxg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_QAC-1XIhEeu7meSiANIrxg" name="abrirCuenta" method="_QAGpNXIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_QAC-1nIhEeu7meSiANIrxg" name="u" type="_P_p9QHIhEeu7meSiANIrxg"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_QAC-13IhEeu7meSiANIrxg" name="hacerAdmin" method="_QAGpN3IhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_QAC-2HIhEeu7meSiANIrxg" name="u" type="_P_p9QHIhEeu7meSiANIrxg"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_P_tnoHIhEeu7meSiANIrxg" name="UsuarioPremium">
+        <interfaceRealization xmi:id="_QADl4XIhEeu7meSiANIrxg" client="_P_tnoHIhEeu7meSiANIrxg" supplier="_P_m58HIhEeu7meSiANIrxg" contract="_P_m58HIhEeu7meSiANIrxg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_QAGpOXIhEeu7meSiANIrxg" name="abrirCuenta" specification="_QADl4nIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_QAGpOnIhEeu7meSiANIrxg" name="u" type="_P_p9QHIhEeu7meSiANIrxg"/>
+          <language>java</language>
+          <body>System.out.println(&quot;Se ha creado una nueva cuenta Premium de Telegram.&quot;);&#xD;
+		System.out.println(&quot;Usuario: &quot; + u.getNombre() + &quot;.&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_QADl4nIhEeu7meSiANIrxg" name="abrirCuenta" method="_QAGpOXIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_QADl43IhEeu7meSiANIrxg" name="u" type="_P_p9QHIhEeu7meSiANIrxg"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_QAHQQHIhEeu7meSiANIrxg" name="" memberEnd="_QAHQQXIhEeu7meSiANIrxg _QAE0AnIhEeu7meSiANIrxg">
+        <ownedEnd xmi:id="_QAHQQXIhEeu7meSiANIrxg" name="" type="_P_rLYHIhEeu7meSiANIrxg" association="_QAHQQHIhEeu7meSiANIrxg"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_P6UKQ3IhEeu7meSiANIrxg">
+      <eAnnotations xmi:id="_P6UxUHIhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_P6UxUXIhEeu7meSiANIrxg" base_Package="_P0DxQHIhEeu7meSiANIrxg">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_P_qkUHIhEeu7meSiANIrxg" base_Element="_P_p9QXIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_P__7gHIhEeu7meSiANIrxg" base_Element="_P__UcXIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:Annotations xmi:id="_P__7gXIhEeu7meSiANIrxg" base_Element="_P__UcXIhEeu7meSiANIrxg">
+    <annotations xmi:id="_P__7gnIhEeu7meSiANIrxg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_QACXwnIhEeu7meSiANIrxg" base_Element="_QACXwHIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:Annotations xmi:id="_QACXw3IhEeu7meSiANIrxg" base_Element="_QACXwHIhEeu7meSiANIrxg">
+    <annotations xmi:id="_QACXxHIhEeu7meSiANIrxg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_QADl5HIhEeu7meSiANIrxg" base_Element="_QADl4nIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:Annotations xmi:id="_QAEM8HIhEeu7meSiANIrxg" base_Element="_QADl4nIhEeu7meSiANIrxg">
+    <annotations xmi:id="_QAEM8XIhEeu7meSiANIrxg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_QAE0A3IhEeu7meSiANIrxg" base_Element="_QAE0AnIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:Reference xmi:id="_QAH3UHIhEeu7meSiANIrxg" base_Element="_QAHQQHIhEeu7meSiANIrxg"/>
+</xmi:XMI>

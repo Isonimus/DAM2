@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_sGSQwHIhEeu7meSiANIrxg" name="Strategy">
+    <eAnnotations xmi:id="_sMu3AHIhEeu7meSiANIrxg" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_sMu3AXIhEeu7meSiANIrxg" source="codegen">
+        <details xmi:id="_sMu3AnIhEeu7meSiANIrxg" key="codegenDirectory" value="/Patrones de Diseño/src"/>
+        <details xmi:id="_sT6dEHIhEeu7meSiANIrxg" key="AssociatedSourceCode" value="/Patrones de Diseño/src/strategy/Estrategia.java;811913793/1;/Patrones de Diseño/src/strategy/ArcoNormal.java;2754056840/1;/Patrones de Diseño/src/strategy/AtaqueHielo.java;919789679/1;/Patrones de Diseño/src/strategy/AtaqueNormal.java;1346732472/1;/Patrones de Diseño/src/strategy/Combate.java;2031001242/1;/Patrones de Diseño/src/strategy/ArcoHielo.java;1039938621/1;/Patrones de Diseño/src/strategy/Turno.java;1908530471/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_sSAYkHIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_sSAYkXIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_sSA_oHIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_sSA_oXIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_sSA_onIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_sSA_o3IhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_sSA_pHIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_sSA_pXIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_sSA_pnIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_sSA_p3IhEeu7meSiANIrxg" name="strategy">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_sSFREHIhEeu7meSiANIrxg" name="Estrategia">
+        <ownedOperation xmi:id="_sSF4IHIhEeu7meSiANIrxg" name="atacar"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_sSF4IXIhEeu7meSiANIrxg" name="ArcoNormal">
+        <generalization xmi:id="_sSVvwHIhEeu7meSiANIrxg" general="_sSIUYHIhEeu7meSiANIrxg"/>
+        <ownedAttribute xmi:id="_sSW94XIhEeu7meSiANIrxg" name="dmg" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_sSW94nIhEeu7meSiANIrxg" value="15"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sSYMAHIhEeu7meSiANIrxg" name="elegirObjetivo" specification="_sSGfMHIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>System.out.println(&quot;Eligiendo objetivo...&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sSYMAXIhEeu7meSiANIrxg" name="apuntar" specification="_sSGfMXIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>System.out.println(&quot;Afinando la puntería...&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sSYMAnIhEeu7meSiANIrxg" name="disparar" specification="_sSGfMnIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>System.out.println(&quot;Tensando el arco...&quot;);&#xD;
+		System.out.println(&quot;¡Disparo!&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sSYMA3IhEeu7meSiANIrxg" name="terminarTurno" specification="_sSGfM3IhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>System.out.println(&quot;Has alcanzado al objetivo.&quot;);&#xD;
+		System.out.println(&quot;El objetivo recibe &quot; + dmg + &quot; puntos de daño.&quot;);&#xD;
+		System.out.println(&quot;Turno terminado.&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_sSF4InIhEeu7meSiANIrxg" name="ArcoNormal">
+          <eAnnotations xmi:id="_sSF4I3IhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_sSF4JHIhEeu7meSiANIrxg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_sSF4JnIhEeu7meSiANIrxg" type="_sSF4IXIhEeu7meSiANIrxg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_sSGfMHIhEeu7meSiANIrxg" name="elegirObjetivo" method="_sSYMAHIhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_sSGfMXIhEeu7meSiANIrxg" name="apuntar" method="_sSYMAXIhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_sSGfMnIhEeu7meSiANIrxg" name="disparar" method="_sSYMAnIhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_sSGfM3IhEeu7meSiANIrxg" name="terminarTurno" method="_sSYMA3IhEeu7meSiANIrxg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_sSGfNHIhEeu7meSiANIrxg" name="AtaqueHielo" isAbstract="true">
+        <interfaceRealization xmi:id="_sSVvwXIhEeu7meSiANIrxg" client="_sSGfNHIhEeu7meSiANIrxg" supplier="_sSFREHIhEeu7meSiANIrxg" contract="_sSFREHIhEeu7meSiANIrxg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sSYMBHIhEeu7meSiANIrxg" name="atacar" specification="_sSHGQHIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>elegirObjetivo();&#xD;
+		apuntar();&#xD;
+		crearHielo();&#xD;
+		disparar();&#xD;
+		congelar();&#xD;
+		terminarTurno();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_sSHGQHIhEeu7meSiANIrxg" name="atacar" method="_sSYMBHIhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_sSHGQXIhEeu7meSiANIrxg" name="elegirObjetivo"/>
+        <ownedOperation xmi:id="_sSHGQ3IhEeu7meSiANIrxg" name="apuntar"/>
+        <ownedOperation xmi:id="_sSHGRXIhEeu7meSiANIrxg" name="crearHielo"/>
+        <ownedOperation xmi:id="_sSHGR3IhEeu7meSiANIrxg" name="disparar"/>
+        <ownedOperation xmi:id="_sSHtUHIhEeu7meSiANIrxg" name="congelar"/>
+        <ownedOperation xmi:id="_sSHtUnIhEeu7meSiANIrxg" name="terminarTurno"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_sSIUYHIhEeu7meSiANIrxg" name="AtaqueNormal" isAbstract="true">
+        <interfaceRealization xmi:id="_sSVvwnIhEeu7meSiANIrxg" client="_sSIUYHIhEeu7meSiANIrxg" supplier="_sSFREHIhEeu7meSiANIrxg" contract="_sSFREHIhEeu7meSiANIrxg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sSYMBXIhEeu7meSiANIrxg" name="atacar" specification="_sSIUYXIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>elegirObjetivo();&#xD;
+		apuntar();&#xD;
+		disparar();&#xD;
+		terminarTurno();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_sSIUYXIhEeu7meSiANIrxg" name="atacar" method="_sSYMBXIhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_sSIUYnIhEeu7meSiANIrxg" name="elegirObjetivo"/>
+        <ownedOperation xmi:id="_sSIUZHIhEeu7meSiANIrxg" name="apuntar"/>
+        <ownedOperation xmi:id="_sSI7cXIhEeu7meSiANIrxg" name="disparar"/>
+        <ownedOperation xmi:id="_sSI7c3IhEeu7meSiANIrxg" name="terminarTurno"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_sSI7dXIhEeu7meSiANIrxg" name="Combate">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sSYMBnIhEeu7meSiANIrxg" name="main" specification="_sSJigHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_sSYMB3IhEeu7meSiANIrxg" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sSYMCHIhEeu7meSiANIrxg" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>Turno turno = new Turno(new ArcoHielo());&#xD;
+		turno.ejecutar();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_sSJigHIhEeu7meSiANIrxg" name="main" isStatic="true" method="_sSYMBnIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_sSJigXIhEeu7meSiANIrxg" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sSJignIhEeu7meSiANIrxg" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_sSJig3IhEeu7meSiANIrxg" name="ArcoHielo">
+        <generalization xmi:id="_sSWW0HIhEeu7meSiANIrxg" general="_sSGfNHIhEeu7meSiANIrxg"/>
+        <ownedAttribute xmi:id="_sSXk8HIhEeu7meSiANIrxg" name="dmg" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_sSXk8XIhEeu7meSiANIrxg" value="20"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sSYMCXIhEeu7meSiANIrxg" name="elegirObjetivo" specification="_sSKJlXIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>System.out.println(&quot;Eligiendo objetivo...&quot;);&#xD;
+		System.out.println(&quot;Empieza a levantarse una fría brisa.&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sSYMCnIhEeu7meSiANIrxg" name="apuntar" specification="_sSKJlnIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>System.out.println(&quot;Afinando la puntería...&quot;);&#xD;
+		System.out.println(&quot;El viento se arremolina a tu alrededor.&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sSYMC3IhEeu7meSiANIrxg" name="crearHielo" specification="_sSKJl3IhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>System.out.println(&quot;Se forman pequeños cristales de hielo en la punta de la flecha.&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sSYMDHIhEeu7meSiANIrxg" name="disparar" specification="_sSKJmHIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>System.out.println(&quot;Tensando el arco...&quot;);&#xD;
+		System.out.println(&quot;La cuerda cruje bajo tus dedos.&quot;);&#xD;
+		System.out.println(&quot;¡Disparo!&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sSYMDXIhEeu7meSiANIrxg" name="congelar" specification="_sSKJmXIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>System.out.println(&quot;La flecha se llena de escarcha a medida que avanza...&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sSYMDnIhEeu7meSiANIrxg" name="terminarTurno" specification="_sSKwoHIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>System.out.println(&quot;Has alcanzado al objetivo.&quot;);&#xD;
+		System.out.println(&quot;El objetivo recibe &quot; + dmg + &quot; puntos de daño.&quot;);&#xD;
+		System.out.println(&quot;¡Ahora tu objetivo está congelado!&quot;);&#xD;
+		System.out.println(&quot;Turno terminado.&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_sSKJkHIhEeu7meSiANIrxg" name="ArcoHielo">
+          <eAnnotations xmi:id="_sSKJkXIhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_sSKJknIhEeu7meSiANIrxg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_sSKJlHIhEeu7meSiANIrxg" type="_sSJig3IhEeu7meSiANIrxg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_sSKJlXIhEeu7meSiANIrxg" name="elegirObjetivo" method="_sSYMCXIhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_sSKJlnIhEeu7meSiANIrxg" name="apuntar" method="_sSYMCnIhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_sSKJl3IhEeu7meSiANIrxg" name="crearHielo" method="_sSYMC3IhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_sSKJmHIhEeu7meSiANIrxg" name="disparar" method="_sSYMDHIhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_sSKJmXIhEeu7meSiANIrxg" name="congelar" method="_sSYMDXIhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_sSKwoHIhEeu7meSiANIrxg" name="terminarTurno" method="_sSYMDnIhEeu7meSiANIrxg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_sSKwoXIhEeu7meSiANIrxg" name="Turno">
+        <ownedComment xmi:id="_sSYzFHIhEeu7meSiANIrxg">
+          <body>EL CONTEXTO DE LA ESTRATEGIA&#xD;
+@author Iker Laforga&#xD;
+ *</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_sSXk83IhEeu7meSiANIrxg" name="estrategia" visibility="private" type="_sSFREHIhEeu7meSiANIrxg" association="_sSZaIHIhEeu7meSiANIrxg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sSYzEHIhEeu7meSiANIrxg" name="Turno" specification="_sSWW0XIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_sSYzEXIhEeu7meSiANIrxg" name="estrategia" type="_sSFREHIhEeu7meSiANIrxg"/>
+          <ownedParameter xmi:id="_sSYzEnIhEeu7meSiANIrxg" type="_sSKwoXIhEeu7meSiANIrxg" direction="return"/>
+          <language>java</language>
+          <body>this.estrategia = estrategia;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sSYzE3IhEeu7meSiANIrxg" name="ejecutar" specification="_sSKwonIhEeu7meSiANIrxg">
+          <language>java</language>
+          <body>this.estrategia.atacar();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_sSKwonIhEeu7meSiANIrxg" name="ejecutar" method="_sSYzE3IhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_sSWW0XIhEeu7meSiANIrxg" name="Turno" method="_sSYzEHIhEeu7meSiANIrxg">
+          <eAnnotations xmi:id="_sSWW03IhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_sSWW1HIhEeu7meSiANIrxg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_sSWW0nIhEeu7meSiANIrxg" name="estrategia" type="_sSFREHIhEeu7meSiANIrxg"/>
+          <ownedParameter xmi:id="_sSW94HIhEeu7meSiANIrxg" type="_sSKwoXIhEeu7meSiANIrxg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_sSZaIHIhEeu7meSiANIrxg" name="" memberEnd="_sSZaIXIhEeu7meSiANIrxg _sSXk83IhEeu7meSiANIrxg">
+        <ownedEnd xmi:id="_sSZaIXIhEeu7meSiANIrxg" name="" type="_sSKwoXIhEeu7meSiANIrxg" association="_sSZaIHIhEeu7meSiANIrxg"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_sMu3A3IhEeu7meSiANIrxg">
+      <eAnnotations xmi:id="_sMu3BHIhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_sMveEHIhEeu7meSiANIrxg" base_Package="_sGSQwHIhEeu7meSiANIrxg">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_sSF4JXIhEeu7meSiANIrxg" base_Element="_sSF4InIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_sSHGQnIhEeu7meSiANIrxg" base_Element="_sSHGQXIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_sSHGRHIhEeu7meSiANIrxg" base_Element="_sSHGQ3IhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_sSHGRnIhEeu7meSiANIrxg" base_Element="_sSHGRXIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_sSHGSHIhEeu7meSiANIrxg" base_Element="_sSHGR3IhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_sSHtUXIhEeu7meSiANIrxg" base_Element="_sSHtUHIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_sSHtU3IhEeu7meSiANIrxg" base_Element="_sSHtUnIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_sSIUY3IhEeu7meSiANIrxg" base_Element="_sSIUYnIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_sSI7cHIhEeu7meSiANIrxg" base_Element="_sSIUZHIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_sSI7cnIhEeu7meSiANIrxg" base_Element="_sSI7cXIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_sSI7dHIhEeu7meSiANIrxg" base_Element="_sSI7c3IhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_sSKJk3IhEeu7meSiANIrxg" base_Element="_sSKJkHIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_sSW943IhEeu7meSiANIrxg" base_Element="_sSW94XIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_sSXk8nIhEeu7meSiANIrxg" base_Element="_sSXk8HIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_sSXk9HIhEeu7meSiANIrxg" base_Element="_sSXk83IhEeu7meSiANIrxg"/>
+  <UMLLabProfile:Reference xmi:id="_sSaBMHIhEeu7meSiANIrxg" base_Element="_sSZaIHIhEeu7meSiANIrxg"/>
+</xmi:XMI>

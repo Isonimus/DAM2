@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_HiBpoHIhEeu7meSiANIrxg">
+  <modelElement href="Builder.uml#_HsDvYHIhEeu7meSiANIrxg"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_HuNrgXIhEeu7meSiANIrxg" targetItem="_HuOSmXIhEeu7meSiANIrxg" sourceItem="_HuNrgHIhEeu7meSiANIrxg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_HuOSkHIhEeu7meSiANIrxg" sourceAnchor="79.0,0.0" targetAnchor="103.0,175.0" target="_HubG4HIhEeu7meSiANIrxg" source="_HuOSmXIhEeu7meSiANIrxg">
+    <modelElement href="Builder.uml#_Hsf0QHIhEeu7meSiANIrxg"/>
+    <stereotypes xmi:id="_HuOSkXIhEeu7meSiANIrxg" name="Reference">
+      <modelElement href="Builder.uml#_HsgbUHIhEeu7meSiANIrxg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_HuOSknIhEeu7meSiANIrxg" text="">
+      <visualProperties xmi:id="_H8R8sHIhEeu7meSiANIrxg" position="-25.313515346043843,-8.907965314030875"/>
+    </nameVisual>
+    <sourceRole xmi:id="_HuOSk3IhEeu7meSiANIrxg" aggregationKind="NONE" name="">
+      <modelElement href="Builder.uml#_Hsf0QXIhEeu7meSiANIrxg"/>
+      <visualProperties xmi:id="_H8RVpXIhEeu7meSiANIrxg" position="-17.4429117698661,-75.71132956210351"/>
+      <visibility xmi:id="_HuOSlHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HuOSlXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_HuOSlnIhEeu7meSiANIrxg" aggregationKind="NONE" name="pizza" navigable="true">
+      <modelElement href="Builder.uml#_HsdYA3IhEeu7meSiANIrxg"/>
+      <visualProperties xmi:id="_H8R8sXIhEeu7meSiANIrxg" position="-29.956116770604865,35.872793923452875"/>
+      <visibility xmi:id="_HuOSl3IhEeu7meSiANIrxg" label="#"/>
+      <cardinality xmi:id="_HuOSmHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_HuSkAHIhEeu7meSiANIrxg" sourceAnchor="162.0,46.0" targetAnchor="0.0,65.0" superClass="_HuOSmXIhEeu7meSiANIrxg" subClass="_HuTLEHIhEeu7meSiANIrxg">
+    <modelElement href="Builder.uml#_Hsbi0XIhEeu7meSiANIrxg"/>
+    <bendpoints xmi:id="_H8RVoHIhEeu7meSiANIrxg" sourceX="30" targetX="-58" targetY="166"/>
+    <bendpoints xmi:id="_H8RVoXIhEeu7meSiANIrxg" sourceX="30" sourceY="-166" targetX="-58"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_HuSkAnIhEeu7meSiANIrxg" targetItem="_HuTLEHIhEeu7meSiANIrxg" sourceItem="_HuSkAXIhEeu7meSiANIrxg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_HuVAQHIhEeu7meSiANIrxg" sourceAnchor="162.0,46.0" targetAnchor="0.0,65.0" superClass="_HuOSmXIhEeu7meSiANIrxg" subClass="_HuVnUHIhEeu7meSiANIrxg">
+    <modelElement href="Builder.uml#_Hsbi0HIhEeu7meSiANIrxg"/>
+    <bendpoints xmi:id="_H8RVonIhEeu7meSiANIrxg" sourceX="30" targetX="-58" targetY="318"/>
+    <bendpoints xmi:id="_H8RVo3IhEeu7meSiANIrxg" sourceX="30" sourceY="-318" targetX="-58"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_HuVAQnIhEeu7meSiANIrxg" targetItem="_HuVnUHIhEeu7meSiANIrxg" sourceItem="_HuVAQXIhEeu7meSiANIrxg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_HuW1cHIhEeu7meSiANIrxg" sourceAnchor="120.0,0.0" targetAnchor="0.0,7.0" target="_HuOSmXIhEeu7meSiANIrxg" source="_HuYDkXIhEeu7meSiANIrxg">
+    <modelElement href="Builder.uml#_HsgbUXIhEeu7meSiANIrxg"/>
+    <bendpoints xmi:id="_H8RVpHIhEeu7meSiANIrxg" sourceY="-178" targetX="-442"/>
+    <stereotypes xmi:id="_HuXchHIhEeu7meSiANIrxg" name="Reference">
+      <modelElement href="Builder.uml#_HsgbU3IhEeu7meSiANIrxg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_HuXcgXIhEeu7meSiANIrxg" text="">
+      <visualProperties xmi:id="_H8SjwHIhEeu7meSiANIrxg" position="-14.598427829769719,150.08026358494394"/>
+    </nameVisual>
+    <sourceRole xmi:id="_HuXcgnIhEeu7meSiANIrxg" aggregationKind="NONE" name="">
+      <modelElement href="Builder.uml#_HsgbUnIhEeu7meSiANIrxg"/>
+      <visualProperties xmi:id="_H8R8snIhEeu7meSiANIrxg" position="1.5073958876974416,-65.5825884022141"/>
+      <visibility xmi:id="_HuXchnIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HuXchXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_HuXcg3IhEeu7meSiANIrxg" aggregationKind="NONE" name="pizzaBuilder" navigable="true">
+      <modelElement href="Builder.uml#_HsdYBXIhEeu7meSiANIrxg"/>
+      <visualProperties xmi:id="_H8SjwXIhEeu7meSiANIrxg" position="-472.5648084944325,156.68842448596217"/>
+      <visibility xmi:id="_HuXciHIhEeu7meSiANIrxg" label="-"/>
+      <cardinality xmi:id="_HuXch3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_HuXcgHIhEeu7meSiANIrxg" targetItem="_HuYDkXIhEeu7meSiANIrxg" sourceItem="_HuW1cXIhEeu7meSiANIrxg"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_HuZ4wXIhEeu7meSiANIrxg" targetItem="_HubG4HIhEeu7meSiANIrxg" sourceItem="_HuZ4wHIhEeu7meSiANIrxg"/>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_HuNrgHIhEeu7meSiANIrxg" sourceConnectionVisual="_HuNrgXIhEeu7meSiANIrxg" text="ESTE ES EL CONSTRUCTOR ABSTRACTO&#xD;&#xA;TIENE COMO ATRIBUTO UN OBJETO DE &#xD;&#xA;LA CLASE PRODUCTO. CONTENE MÉTODOS&#xD;&#xA;ABSTRACTOS PARA LOS CONCRETE BUILDERS,&#xD;&#xA;QUE LOS USARÁN PARA ASIGNAR AL PRODUCTO&#xD;&#xA;SUS VALORES PREDETERMINADOS.&#xD;&#xA;&#xD;&#xA;@author Iker Laforga&#xD;&#xA; *" item="_HuOSmXIhEeu7meSiANIrxg">
+    <modelElement href="Builder.uml#_HsfNNnIhEeu7meSiANIrxg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_HuSkAXIhEeu7meSiANIrxg" sourceConnectionVisual="_HuSkAnIhEeu7meSiANIrxg" text="ESTE ES UN BUILDER CONCRETO. IMPLEMENTA LOS &#xD;&#xA;MÉTODOS ABSTRACTOS DEL ABSTRACT BUILDER&#xD;&#xA;A SU FORMA CONCRETA, PARA PRODUCIR PIZZAS&#xD;&#xA;DE UN ÚNICO TIPO (Margarita)&#xD;&#xA;&#xD;&#xA;@author Iker Laforga&#xD;&#xA; *" item="_HuTLEHIhEeu7meSiANIrxg">
+    <modelElement href="Builder.uml#_HsfNNHIhEeu7meSiANIrxg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_HuVAQXIhEeu7meSiANIrxg" sourceConnectionVisual="_HuVAQnIhEeu7meSiANIrxg" text="ESTE ES UN BUILDER CONCRETO. IMPLEMENTA LOS &#xD;&#xA;MÉTODOS ABSTRACTOS DEL ABSTRACT BUILDER&#xD;&#xA;A SU FORMA CONCRETA, PARA PRODUCIR PIZZAS&#xD;&#xA;DE UN ÚNICO TIPO (BARBACOA)&#xD;&#xA;&#xD;&#xA;@author Iker Laforga&#xD;&#xA; *" item="_HuVnUHIhEeu7meSiANIrxg">
+    <modelElement href="Builder.uml#_HsfNM3IhEeu7meSiANIrxg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_HuW1cXIhEeu7meSiANIrxg" sourceConnectionVisual="_HuXcgHIhEeu7meSiANIrxg" text="CLASE DIRECTOR&#xD;&#xA;GENERALIZA TODO&#xD;&#xA;@author multi&#xD;&#xA; *" item="_HuYDkXIhEeu7meSiANIrxg">
+    <modelElement href="Builder.uml#_HsfNN3IhEeu7meSiANIrxg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_HuZ4wHIhEeu7meSiANIrxg" sourceConnectionVisual="_HuZ4wXIhEeu7meSiANIrxg" text="CLASE PRODUCTO&#xD;&#xA;@author Iker Laforga&#xD;&#xA; *" item="_HubG4HIhEeu7meSiANIrxg">
+    <modelElement href="Builder.uml#_HsfNNXIhEeu7meSiANIrxg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_HuOSmXIhEeu7meSiANIrxg" comments="_HuNrgHIhEeu7meSiANIrxg" targetConnectionVisual="_HuNrgXIhEeu7meSiANIrxg" name="PizzaBuilder" abstractClass="true" associationsIn="_HuW1cHIhEeu7meSiANIrxg" associationsOut="_HuOSkHIhEeu7meSiANIrxg" subclassedBy="_HuSkAHIhEeu7meSiANIrxg _HuVAQHIhEeu7meSiANIrxg">
+    <modelElement href="Builder.uml#_HsM5UHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_HuOSmnIhEeu7meSiANIrxg" position="30.0,30.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_HuOSm3IhEeu7meSiANIrxg" label="+"/>
+    <attributes xmi:id="_HuOSnHIhEeu7meSiANIrxg" name="pizza">
+      <modelElement href="Builder.uml#_HsdYA3IhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_HuOSnXIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Builder.uml#_HsdYBHIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_HuOSnnIhEeu7meSiANIrxg" label="#"/>
+      <cardinality xmi:id="_HuOSn3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_HuOSoHIhEeu7meSiANIrxg" name="Pizza">
+        <modelElement href="Builder.uml#_HsLrMHIhEeu7meSiANIrxg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_HuOSoXIhEeu7meSiANIrxg" name="getPizza">
+      <modelElement href="Builder.uml#_HsM5UXIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_HuOSonIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HuOSo3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_HuOSpHIhEeu7meSiANIrxg">
+        <modelElement href="Builder.uml#_Hsbi0nIhEeu7meSiANIrxg"/>
+        <type xmi:id="_HuOSpXIhEeu7meSiANIrxg" name="Pizza">
+          <modelElement href="Builder.uml#_HsLrMHIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_HuOSpnIhEeu7meSiANIrxg" name="crearNuevaPizza">
+      <modelElement href="Builder.uml#_HsM5UnIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_HuOSp3IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HuOSqHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_HuOSqXIhEeu7meSiANIrxg" abstractOperation="true" name="buildMasa">
+      <modelElement href="Builder.uml#_HsM5U3IhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_HuOSqnIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HuOSq3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_HuOSrHIhEeu7meSiANIrxg" abstractOperation="true" name="buildSalsa">
+      <modelElement href="Builder.uml#_HsNgYHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_HuOSrXIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HuOSrnIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_HuOSr3IhEeu7meSiANIrxg" abstractOperation="true" name="buildRelleno">
+      <modelElement href="Builder.uml#_HsNgYXIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_HuOSsHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HuOSsXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_HuRV4HIhEeu7meSiANIrxg" name="ViernesNoche">
+    <modelElement href="Builder.uml#_HsOugHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_HuRV4XIhEeu7meSiANIrxg" position="-246.0,52.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_HuRV4nIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_HuRV43IhEeu7meSiANIrxg" name="main" staticOperation="true">
+      <modelElement href="Builder.uml#_HsOugXIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_HuRV5HIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Builder.uml#_HsPVkHIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_HuRV5XIhEeu7meSiANIrxg" name="Annotations">
+        <modelElement href="Builder.uml#_HsPVk3IhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_HuRV5nIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HuRV53IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_HuRV6HIhEeu7meSiANIrxg" name="args">
+        <modelElement href="Builder.uml#_HsOugnIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_HuRV6XIhEeu7meSiANIrxg" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_HuRV6nIhEeu7meSiANIrxg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_HuTLEHIhEeu7meSiANIrxg" comments="_HuSkAXIhEeu7meSiANIrxg" targetConnectionVisual="_HuSkAnIhEeu7meSiANIrxg" name="MargaritaPizzaBuilder" generalizations="_HuSkAHIhEeu7meSiANIrxg">
+    <modelElement href="Builder.uml#_HsKdEHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_HuTLEXIhEeu7meSiANIrxg" position="-220.0,215.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_HuTLEnIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_HuTLE3IhEeu7meSiANIrxg" name="buildMasa">
+      <modelElement href="Builder.uml#_HsKdEXIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_HuTLFHIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Builder.uml#_HsKdEnIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_HuTLFXIhEeu7meSiANIrxg" name="Annotations">
+        <modelElement href="Builder.uml#_HsKdE3IhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_HuTLFnIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HuTLF3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_HuTLGHIhEeu7meSiANIrxg" name="buildSalsa">
+      <modelElement href="Builder.uml#_HsKdFXIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_HuTLGXIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Builder.uml#_HsLEIHIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_HuTLGnIhEeu7meSiANIrxg" name="Annotations">
+        <modelElement href="Builder.uml#_HsLEIXIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_HuTLG3IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HuTLHHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_HuTLHXIhEeu7meSiANIrxg" name="buildRelleno">
+      <modelElement href="Builder.uml#_HsLEI3IhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_HuTLHnIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Builder.uml#_HsLEJHIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_HuTLH3IhEeu7meSiANIrxg" name="Annotations">
+        <modelElement href="Builder.uml#_HsLEJXIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_HuTLIHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HuTLIXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_HuVnUHIhEeu7meSiANIrxg" comments="_HuVAQXIhEeu7meSiANIrxg" targetConnectionVisual="_HuVAQnIhEeu7meSiANIrxg" name="BarbacoaPizzaBuilder" generalizations="_HuVAQHIhEeu7meSiANIrxg">
+    <modelElement href="Builder.uml#_HsIn4HIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_HuVnUXIhEeu7meSiANIrxg" position="-220.0,367.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_HuVnUnIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_HuVnU3IhEeu7meSiANIrxg" name="buildMasa">
+      <modelElement href="Builder.uml#_HsJO8HIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_HuVnVHIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Builder.uml#_HsJO8XIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_HuVnVXIhEeu7meSiANIrxg" name="Annotations">
+        <modelElement href="Builder.uml#_HsJO8nIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_HuVnVnIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HuVnV3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_HuVnWHIhEeu7meSiANIrxg" name="buildSalsa">
+      <modelElement href="Builder.uml#_HsJO9HIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_HuVnWXIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Builder.uml#_HsJO9XIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_HuVnWnIhEeu7meSiANIrxg" name="Annotations">
+        <modelElement href="Builder.uml#_HsJ2AHIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_HuVnW3IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HuVnXHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_HuVnXXIhEeu7meSiANIrxg" name="buildRelleno">
+      <modelElement href="Builder.uml#_HsJ2AnIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_HuVnXnIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Builder.uml#_HsJ2A3IhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_HuVnX3IhEeu7meSiANIrxg" name="Annotations">
+        <modelElement href="Builder.uml#_HsJ2BHIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_HuVnYHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HuVnYXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_HuYDkXIhEeu7meSiANIrxg" comments="_HuW1cXIhEeu7meSiANIrxg" targetConnectionVisual="_HuXcgHIhEeu7meSiANIrxg" name="Trattoria" associationsOut="_HuW1cHIhEeu7meSiANIrxg">
+    <modelElement href="Builder.uml#_HsNgYnIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_HuYDknIhEeu7meSiANIrxg" position="-532.0,215.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_HuYDk3IhEeu7meSiANIrxg" label="+"/>
+    <attributes xmi:id="_HuYDlHIhEeu7meSiANIrxg" name="pizzaBuilder">
+      <modelElement href="Builder.uml#_HsdYBXIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_HuYDlXIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Builder.uml#_Hsd_EHIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_HuYDlnIhEeu7meSiANIrxg" label="-"/>
+      <cardinality xmi:id="_HuYDl3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_HuYDmHIhEeu7meSiANIrxg" name="PizzaBuilder">
+        <modelElement href="Builder.uml#_HsM5UHIhEeu7meSiANIrxg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_HuYDmXIhEeu7meSiANIrxg" name="getPizza">
+      <modelElement href="Builder.uml#_HsOHcHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_HuYDmnIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HuYDm3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_HuYDnHIhEeu7meSiANIrxg">
+        <modelElement href="Builder.uml#_HscJ4nIhEeu7meSiANIrxg"/>
+        <type xmi:id="_HuYDnXIhEeu7meSiANIrxg" name="Pizza">
+          <modelElement href="Builder.uml#_HsLrMHIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_HuYDnnIhEeu7meSiANIrxg" name="prepararPizza">
+      <modelElement href="Builder.uml#_HsOHcXIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_HuYDn3IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HuYDoHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_HuYDoXIhEeu7meSiANIrxg" name="setPizzaBuilder">
+      <modelElement href="Builder.uml#_HscJ4HIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_HuYDonIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HuYDo3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_HuYDpHIhEeu7meSiANIrxg" name="pb">
+        <modelElement href="Builder.uml#_HscJ4XIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_HuYDpXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_HuYDpnIhEeu7meSiANIrxg" name="PizzaBuilder">
+          <modelElement href="Builder.uml#_HsM5UHIhEeu7meSiANIrxg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_HubG4HIhEeu7meSiANIrxg" comments="_HuZ4wHIhEeu7meSiANIrxg" targetConnectionVisual="_HuZ4wXIhEeu7meSiANIrxg" name="Pizza" associationsIn="_HuOSkHIhEeu7meSiANIrxg">
+    <modelElement href="Builder.uml#_HsLrMHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_HubG4XIhEeu7meSiANIrxg" position="6.0,-200.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_HubG4nIhEeu7meSiANIrxg" label="+"/>
+    <attributes xmi:id="_HubG43IhEeu7meSiANIrxg" defaultValue="null" name="masa">
+      <modelElement href="Builder.uml#_Hscw8HIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_HubG5HIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Builder.uml#_Hscw8nIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_HubG5XIhEeu7meSiANIrxg" label="-"/>
+      <cardinality xmi:id="_HubG5nIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_HubG53IhEeu7meSiANIrxg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_HubG6HIhEeu7meSiANIrxg" defaultValue="null" name="salsa">
+      <modelElement href="Builder.uml#_Hscw83IhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_HubG6XIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Builder.uml#_Hscw9XIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_HubG6nIhEeu7meSiANIrxg" label="-"/>
+      <cardinality xmi:id="_HubG63IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_HubG7HIhEeu7meSiANIrxg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_HubG7XIhEeu7meSiANIrxg" defaultValue="null" name="relleno">
+      <modelElement href="Builder.uml#_HsdYAHIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_HubG7nIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Builder.uml#_HsdYAnIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_HubG73IhEeu7meSiANIrxg" label="-"/>
+      <cardinality xmi:id="_HubG8HIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_HubG8XIhEeu7meSiANIrxg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_HubG8nIhEeu7meSiANIrxg" name="toString">
+      <modelElement href="Builder.uml#_HsLrMXIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_HubG83IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HubG9HIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_HubG9XIhEeu7meSiANIrxg">
+        <modelElement href="Builder.uml#_HsLrMnIhEeu7meSiANIrxg"/>
+        <type xmi:id="_HubG9nIhEeu7meSiANIrxg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_HubG93IhEeu7meSiANIrxg" name="setMasa">
+      <modelElement href="Builder.uml#_HsMSQHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_HubG-HIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HubG-XIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_HubG-nIhEeu7meSiANIrxg" name="masa">
+        <modelElement href="Builder.uml#_HsMSQXIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_HubG-3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_HubG_HIhEeu7meSiANIrxg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_HubG_XIhEeu7meSiANIrxg" name="setSalsa">
+      <modelElement href="Builder.uml#_HsMSQnIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_HubG_nIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HubG_3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_HubHAHIhEeu7meSiANIrxg" name="salsa">
+        <modelElement href="Builder.uml#_HsMSQ3IhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_HubHAXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_HubHAnIhEeu7meSiANIrxg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_HubHA3IhEeu7meSiANIrxg" name="setRelleno">
+      <modelElement href="Builder.uml#_HsMSRHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_HubHBHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_HubHBXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_HubHBnIhEeu7meSiANIrxg" name="relleno">
+        <modelElement href="Builder.uml#_HsMSRXIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_HubHB3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_HubHCHIhEeu7meSiANIrxg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_oK6AUHIhEeu7meSiANIrxg" name="Prototype">
+    <eAnnotations xmi:id="_oRPR0HIhEeu7meSiANIrxg" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_oRPR0XIhEeu7meSiANIrxg" source="codegen">
+        <details xmi:id="_oRP44HIhEeu7meSiANIrxg" key="codegenDirectory" value="/Patrones de Diseño/src"/>
+        <details xmi:id="_oYLnUHIhEeu7meSiANIrxg" key="AssociatedSourceCode" value="/Patrones de Diseño/src/prototype/Cuenta.java;3592961373/1;/Patrones de Diseño/src/prototype/Demo.java;1589005231/1;/Patrones de Diseño/src/prototype/ICuenta.java;2805546216/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_oWQUsHIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_oWQUsXIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_oWQUsnIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_oWQUs3IhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_oWQUtHIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_oWQUtXIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_oWQ7wHIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_oWQ7wXIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_oWQ7wnIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_oWRi0HIhEeu7meSiANIrxg" name="prototype">
+      <packagedElement xmi:type="uml:Class" xmi:id="_oWTYAHIhEeu7meSiANIrxg" name="Cuenta">
+        <ownedAttribute xmi:id="_oWch83IhEeu7meSiANIrxg" name="tipo">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_oWdJAHIhEeu7meSiANIrxg" name="saldo">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedAttribute>
+        <interfaceRealization xmi:id="_oWbT0HIhEeu7meSiANIrxg" client="_oWTYAHIhEeu7meSiANIrxg" supplier="_oWV0QHIhEeu7meSiANIrxg" contract="_oWV0QHIhEeu7meSiANIrxg"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_oWdJAXIhEeu7meSiANIrxg" name="Cuenta" specification="_oWT_EHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_oWdJAnIhEeu7meSiANIrxg" type="_oWTYAHIhEeu7meSiANIrxg" direction="return"/>
+          <language>java</language>
+          <body>setTipo(&quot;Ahorro&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_oWdJA3IhEeu7meSiANIrxg" name="clonar" specification="_oWT_FHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_oWdJBHIhEeu7meSiANIrxg" type="_oWV0QHIhEeu7meSiANIrxg" direction="return"/>
+          <language>java</language>
+          <body>Cuenta cuenta = null; //CREAR UNA CUENTA B&#xD;
+		&#xD;
+		try {&#xD;
+			&#xD;
+			cuenta = (Cuenta) clone(); //CLONAR (MÉTODO DE JAVA)&#xD;
+			&#xD;
+		}catch(CloneNotSupportedException e) { //SI NO SE PUEDE CLONAR&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+		&#xD;
+		return (ICuenta) cuenta;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_oWdJBXIhEeu7meSiANIrxg" name="toString" specification="_oWUmIHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_oWdJBnIhEeu7meSiANIrxg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return &quot;Cuenta [tipo = &quot; + getTipo() + &quot;, saldo = &quot; + getSaldo() + &quot;]&quot;;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_oWT_EHIhEeu7meSiANIrxg" name="Cuenta" method="_oWdJAXIhEeu7meSiANIrxg">
+          <eAnnotations xmi:id="_oWT_EXIhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_oWT_EnIhEeu7meSiANIrxg" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_oWT_E3IhEeu7meSiANIrxg" type="_oWTYAHIhEeu7meSiANIrxg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_oWT_FHIhEeu7meSiANIrxg" name="clonar" method="_oWdJA3IhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_oWbT0XIhEeu7meSiANIrxg" type="_oWV0QHIhEeu7meSiANIrxg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_oWUmIHIhEeu7meSiANIrxg" name="toString" method="_oWdJBXIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_oWUmIXIhEeu7meSiANIrxg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_oWVNMHIhEeu7meSiANIrxg" name="Demo">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_oWdwEHIhEeu7meSiANIrxg" name="main" specification="_oWVNMXIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_oWdwEXIhEeu7meSiANIrxg" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oWdwEnIhEeu7meSiANIrxg" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>Cuenta cuentaAhorro = new Cuenta();&#xD;
+		cuentaAhorro.setSaldo(2300);&#xD;
+		Cuenta cuentaClonada = (Cuenta) cuentaAhorro.clonar();&#xD;
+		&#xD;
+		if(cuentaClonada != null) {&#xD;
+			&#xD;
+			System.out.println(cuentaClonada);&#xD;
+		}&#xD;
+		&#xD;
+		//COMPARAR REFERENCIAS EN MEMORIA PARA VERIFICAR QUE NO ES EL MISMO OBJETO&#xD;
+		System.out.println(&quot;Son el mismo objeto en memoria: &quot; + (cuentaClonada == cuentaAhorro));&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_oWVNMXIhEeu7meSiANIrxg" name="main" isStatic="true" method="_oWdwEHIhEeu7meSiANIrxg">
+          <ownedParameter xmi:id="_oWVNMnIhEeu7meSiANIrxg" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oWVNM3IhEeu7meSiANIrxg" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_oWV0QHIhEeu7meSiANIrxg" name="ICuenta">
+        <generalization xmi:id="_oWch8nIhEeu7meSiANIrxg" general="_oWch8HIhEeu7meSiANIrxg"/>
+        <ownedOperation xmi:id="_oWV0QXIhEeu7meSiANIrxg" name="clonar">
+          <ownedParameter xmi:id="_oWb64HIhEeu7meSiANIrxg" type="_oWV0QHIhEeu7meSiANIrxg" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_oWb64XIhEeu7meSiANIrxg" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_oWb64nIhEeu7meSiANIrxg" name="lang">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_oWch8HIhEeu7meSiANIrxg" name="Cloneable"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_oRP44XIhEeu7meSiANIrxg">
+      <eAnnotations xmi:id="_oRP44nIhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_oRP443IhEeu7meSiANIrxg" base_Package="_oK6AUHIhEeu7meSiANIrxg">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:Reference xmi:id="_oWch8XIhEeu7meSiANIrxg" base_Element="_oWch8HIhEeu7meSiANIrxg"/>
+</xmi:XMI>
