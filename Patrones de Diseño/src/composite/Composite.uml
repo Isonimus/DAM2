@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
   <uml:Model xmi:id="_MgbdUHIhEeu7meSiANIrxg" name="Composite">
@@ -64,3 +65,71 @@
   <UMLLabProfile:LegacyStyledElement xmi:id="_MnBNgHIhEeu7meSiANIrxg" base_Element="_MnAmcXIhEeu7meSiANIrxg"/>
   <UMLLabProfile:Array xmi:id="_MnBNgnIhEeu7meSiANIrxg" base_Element="_MnAmcnIhEeu7meSiANIrxg"/>
 </xmi:XMI>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_MgbdUHIhEeu7meSiANIrxg" name="Composite">
+    <eAnnotations xmi:id="_MmuSkHIhEeu7meSiANIrxg" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_MmuSkXIhEeu7meSiANIrxg" source="codegen">
+        <details xmi:id="_MmuSknIhEeu7meSiANIrxg" key="codegenDirectory" value="/Patrones de Diseño/src"/>
+        <details xmi:id="_Mo6D4HIhEeu7meSiANIrxg" key="AssociatedSourceCode" value="/Patrones de Diseño/src/composite/Componente.java;2440640557/1;/Patrones de Diseño/src/composite/Compuesto.java;1715069847/1;/Patrones de Diseño/src/composite/Demo.java;3467635630/1;/Patrones de Diseño/src/composite/Hoja.java;617553499/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_Mm-KMHIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_Mm-KMXIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_Mm-KMnIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_Mm-KM3IhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_Mm-KNHIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_Mm-KNXIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_Mm-KNnIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_Mm-KN3IhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_Mm-KOHIhEeu7meSiANIrxg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Mm-xQHIhEeu7meSiANIrxg" name="composite">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Mm__YHIhEeu7meSiANIrxg" name="Componente" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Mm__YXIhEeu7meSiANIrxg" name="Compuesto">
+        <generalization xmi:id="_MnGGAHIhEeu7meSiANIrxg" general="_Mm__YHIhEeu7meSiANIrxg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_MnAmcHIhEeu7meSiANIrxg" name="Demo">
+        <ownedOperation xmi:id="_MnAmcXIhEeu7meSiANIrxg" name="main" isStatic="true">
+          <ownedParameter xmi:id="_MnAmcnIhEeu7meSiANIrxg" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MnBNgXIhEeu7meSiANIrxg" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_MnBNg3IhEeu7meSiANIrxg" name="Hoja">
+        <generalization xmi:id="_MnGGAXIhEeu7meSiANIrxg" general="_Mm__YHIhEeu7meSiANIrxg"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_MmuSk3IhEeu7meSiANIrxg">
+      <eAnnotations xmi:id="_MmuSlHIhEeu7meSiANIrxg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_Mmu5oHIhEeu7meSiANIrxg" base_Package="_MgbdUHIhEeu7meSiANIrxg">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_MnBNgHIhEeu7meSiANIrxg" base_Element="_MnAmcXIhEeu7meSiANIrxg"/>
+  <UMLLabProfile:Array xmi:id="_MnBNgnIhEeu7meSiANIrxg" base_Element="_MnAmcnIhEeu7meSiANIrxg"/>
+</xmi:XMI>
+>>>>>>> refs/remotes/origin/master

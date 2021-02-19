@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_P1QrIHIhEeu7meSiANIrxg">
   <modelElement href="Decorator.uml#_P_e-I3IhEeu7meSiANIrxg"/>
@@ -342,3 +343,349 @@
     </operations>
   </nodes>
 </com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_P1QrIHIhEeu7meSiANIrxg">
+  <modelElement href="Decorator.uml#_P_e-I3IhEeu7meSiANIrxg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_QCl8gHIhEeu7meSiANIrxg" sourceAnchor="436.0,37.0" targetAnchor="0.0,37.0" superClass="_QCnxsHIhEeu7meSiANIrxg" subClass="_QCkuYHIhEeu7meSiANIrxg">
+    <modelElement href="Decorator.uml#_QABJpHIhEeu7meSiANIrxg"/>
+    <bendpoints xmi:id="_QPNcMHIhEeu7meSiANIrxg" sourceX="29" targetX="-29" targetY="76"/>
+    <bendpoints xmi:id="_QPNcMXIhEeu7meSiANIrxg" sourceX="29" sourceY="-76" targetX="-29"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_QCl8gXIhEeu7meSiANIrxg" sourceAnchor="0.0,7.0" targetAnchor="194.0,36.0" dashed="true" superClass="_QCrcEHIhEeu7meSiANIrxg" subClass="_QCnxsHIhEeu7meSiANIrxg">
+    <modelElement href="Decorator.uml#_QABwsHIhEeu7meSiANIrxg"/>
+    <bendpoints xmi:id="_QPODQHIhEeu7meSiANIrxg" sourceX="-26" targetX="27" targetY="97"/>
+    <bendpoints xmi:id="_QPODQXIhEeu7meSiANIrxg" sourceX="-26" sourceY="-97" targetX="27"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_QCl8gnIhEeu7meSiANIrxg" sourceAnchor="230.0,0.0" targetAnchor="194.0,66.0" target="_QCrcEHIhEeu7meSiANIrxg" source="_QCnxsHIhEeu7meSiANIrxg">
+    <modelElement href="Decorator.uml#_QAHQQHIhEeu7meSiANIrxg"/>
+    <bendpoints xmi:id="_QPNcMnIhEeu7meSiANIrxg" sourceY="-60" targetX="283"/>
+    <stereotypes xmi:id="_QCnKoXIhEeu7meSiANIrxg" name="Reference">
+      <modelElement href="Decorator.uml#_QAH3UHIhEeu7meSiANIrxg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_QCmjkHIhEeu7meSiANIrxg" text="">
+      <visualProperties xmi:id="_QPOqUHIhEeu7meSiANIrxg" position="-12.009370061602567,33.81915293485133"/>
+    </nameVisual>
+    <sourceRole xmi:id="_QCmjkXIhEeu7meSiANIrxg" aggregationKind="NONE" name="">
+      <modelElement href="Decorator.uml#_QAHQQXIhEeu7meSiANIrxg"/>
+      <visualProperties xmi:id="_QPODSnIhEeu7meSiANIrxg" position="3.016721314000506,-76.85223357064223"/>
+      <visibility xmi:id="_QCnKo3IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_QCnKonIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_QCnKoHIhEeu7meSiANIrxg" aggregationKind="NONE" name="usuarioDecorado" navigable="true">
+      <modelElement href="Decorator.uml#_QAE0AnIhEeu7meSiANIrxg"/>
+      <visualProperties xmi:id="_QPOqUXIhEeu7meSiANIrxg" position="240.725678563957,62.79646569128953"/>
+      <visibility xmi:id="_QCnKpXIhEeu7meSiANIrxg" label="#"/>
+      <cardinality xmi:id="_QCnKpHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_QCo_0HIhEeu7meSiANIrxg" sourceAnchor="452.0,46.0" targetAnchor="0.0,37.0" superClass="_QCnxsHIhEeu7meSiANIrxg" subClass="_QCpm4HIhEeu7meSiANIrxg">
+    <modelElement href="Decorator.uml#_QADl4HIhEeu7meSiANIrxg"/>
+    <bendpoints xmi:id="_QPODQnIhEeu7meSiANIrxg" sourceX="48" targetX="-29" targetY="276"/>
+    <bendpoints xmi:id="_QPODQ3IhEeu7meSiANIrxg" sourceX="48" sourceY="-276" targetX="-29"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_QCsqMHIhEeu7meSiANIrxg" sourceAnchor="217.0,27.0" targetAnchor="194.0,36.0" dashed="true" superClass="_QCrcEHIhEeu7meSiANIrxg" subClass="_QCtRQHIhEeu7meSiANIrxg">
+    <modelElement href="Decorator.uml#_P__UcHIhEeu7meSiANIrxg"/>
+    <bendpoints xmi:id="_QPODRHIhEeu7meSiANIrxg" sourceX="136" targetX="528" targetY="262"/>
+    <bendpoints xmi:id="_QPODRXIhEeu7meSiANIrxg" sourceX="136" sourceY="-262" targetX="528"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_QCufYHIhEeu7meSiANIrxg" sourceAnchor="217.0,27.0" targetAnchor="194.0,36.0" dashed="true" superClass="_QCrcEHIhEeu7meSiANIrxg" subClass="_QCvGcHIhEeu7meSiANIrxg">
+    <modelElement href="Decorator.uml#_QADl4XIhEeu7meSiANIrxg"/>
+    <bendpoints xmi:id="_QPODRnIhEeu7meSiANIrxg" sourceX="166" targetX="558" targetY="395"/>
+    <bendpoints xmi:id="_QPODR3IhEeu7meSiANIrxg" sourceX="166" sourceY="-446" targetX="558" targetY="-51"/>
+    <bendpoints xmi:id="_QPODSHIhEeu7meSiANIrxg" sourceX="-365" sourceY="-446" targetX="27" targetY="-51"/>
+    <bendpoints xmi:id="_QPODSXIhEeu7meSiANIrxg" sourceX="-365" sourceY="-395" targetX="27"/>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_QCkuYHIhEeu7meSiANIrxg" name="MuteDecorador" generalizations="_QCl8gHIhEeu7meSiANIrxg">
+    <modelElement href="Decorator.uml#_P_nhAHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_QCkuYXIhEeu7meSiANIrxg" position="30.0,30.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_QCkuYnIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_QCkuY3IhEeu7meSiANIrxg" name="MuteDecorador">
+      <modelElement href="Decorator.uml#_QAAikHIhEeu7meSiANIrxg"/>
+      <keywords xmi:id="_QCkuZHIhEeu7meSiANIrxg" keyword="create"/>
+      <visibility xmi:id="_QCkuZXIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_QCkuZnIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_QCkuZ3IhEeu7meSiANIrxg">
+        <modelElement href="Decorator.uml#_QAAilHIhEeu7meSiANIrxg"/>
+        <type xmi:id="_QCkuaHIhEeu7meSiANIrxg" name="MuteDecorador">
+          <modelElement href="Decorator.uml#_P_nhAHIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_QCkuaXIhEeu7meSiANIrxg" name="usuarioDecorado">
+        <modelElement href="Decorator.uml#_QAAikXIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_QCkuanIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_QCkua3IhEeu7meSiANIrxg" name="CuentaTelegram">
+          <modelElement href="Decorator.uml#_P_m58HIhEeu7meSiANIrxg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_QCkubHIhEeu7meSiANIrxg" name="abrirCuenta">
+      <modelElement href="Decorator.uml#_QABJoHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_QCkubXIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_QCkubnIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_QCkub3IhEeu7meSiANIrxg" name="u">
+        <modelElement href="Decorator.uml#_QABJoXIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_QCkucHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_QCkucXIhEeu7meSiANIrxg" name="Usuario">
+          <modelElement href="Decorator.uml#_P_p9QHIhEeu7meSiANIrxg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_QCkucnIhEeu7meSiANIrxg" name="hacerMute">
+      <modelElement href="Decorator.uml#_QABJonIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_QCkuc3IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_QCkudHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_QCkudXIhEeu7meSiANIrxg" name="u">
+        <modelElement href="Decorator.uml#_QABJo3IhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_QCkudnIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_QCkud3IhEeu7meSiANIrxg" name="Usuario">
+          <modelElement href="Decorator.uml#_P_p9QHIhEeu7meSiANIrxg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_QCnxsHIhEeu7meSiANIrxg" name="UsuarioDecorador" abstractClass="true" associationsOut="_QCl8gnIhEeu7meSiANIrxg" generalizations="_QCl8gXIhEeu7meSiANIrxg" subclassedBy="_QCl8gHIhEeu7meSiANIrxg _QCo_0HIhEeu7meSiANIrxg">
+    <modelElement href="Decorator.uml#_P_rLYHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_QCnxsXIhEeu7meSiANIrxg" position="524.0,-46.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_QCnxsnIhEeu7meSiANIrxg" label="+"/>
+    <attributes xmi:id="_QCnxs3IhEeu7meSiANIrxg" name="usuarioDecorado">
+      <modelElement href="Decorator.uml#_QAE0AnIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_QCnxtHIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Decorator.uml#_QAE0A3IhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_QCnxtXIhEeu7meSiANIrxg" label="#"/>
+      <cardinality xmi:id="_QCnxtnIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_QCnxt3IhEeu7meSiANIrxg" name="CuentaTelegram">
+        <modelElement href="Decorator.uml#_P_m58HIhEeu7meSiANIrxg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_QCnxuHIhEeu7meSiANIrxg" name="UsuarioDecorador">
+      <modelElement href="Decorator.uml#_QABwsXIhEeu7meSiANIrxg"/>
+      <keywords xmi:id="_QCnxuXIhEeu7meSiANIrxg" keyword="create"/>
+      <visibility xmi:id="_QCnxunIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_QCnxu3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_QCnxvHIhEeu7meSiANIrxg">
+        <modelElement href="Decorator.uml#_QABwtXIhEeu7meSiANIrxg"/>
+        <type xmi:id="_QCnxvXIhEeu7meSiANIrxg" name="UsuarioDecorador">
+          <modelElement href="Decorator.uml#_P_rLYHIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_QCnxvnIhEeu7meSiANIrxg" name="usuarioDecorado">
+        <modelElement href="Decorator.uml#_QABwsnIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_QCnxv3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_QCnxwHIhEeu7meSiANIrxg" name="CuentaTelegram">
+          <modelElement href="Decorator.uml#_P_m58HIhEeu7meSiANIrxg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_QCnxwXIhEeu7meSiANIrxg" name="abrirCuenta">
+      <modelElement href="Decorator.uml#_QACXwHIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_QCnxwnIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Decorator.uml#_QACXwnIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_QCnxw3IhEeu7meSiANIrxg" name="Annotations">
+        <modelElement href="Decorator.uml#_QACXw3IhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_QCnxxHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_QCnxxXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_QCnxxnIhEeu7meSiANIrxg" name="u">
+        <modelElement href="Decorator.uml#_QACXwXIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_QCnxx3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_QCnxyHIhEeu7meSiANIrxg" name="Usuario">
+          <modelElement href="Decorator.uml#_P_p9QHIhEeu7meSiANIrxg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_QCpm4HIhEeu7meSiANIrxg" name="AdminDecorador" generalizations="_QCo_0HIhEeu7meSiANIrxg">
+    <modelElement href="Decorator.uml#_P_sZgHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_QCpm4XIhEeu7meSiANIrxg" position="-5.0,221.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_QCpm4nIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_QCpm43IhEeu7meSiANIrxg" name="AdminDecorador">
+      <modelElement href="Decorator.uml#_QAC-0HIhEeu7meSiANIrxg"/>
+      <keywords xmi:id="_QCpm5HIhEeu7meSiANIrxg" keyword="create"/>
+      <visibility xmi:id="_QCpm5XIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_QCpm5nIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_QCpm53IhEeu7meSiANIrxg">
+        <modelElement href="Decorator.uml#_QAC-1HIhEeu7meSiANIrxg"/>
+        <type xmi:id="_QCpm6HIhEeu7meSiANIrxg" name="AdminDecorador">
+          <modelElement href="Decorator.uml#_P_sZgHIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_QCpm6XIhEeu7meSiANIrxg" name="usuarioDecorado">
+        <modelElement href="Decorator.uml#_QAC-0XIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_QCpm6nIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_QCpm63IhEeu7meSiANIrxg" name="CuentaTelegram">
+          <modelElement href="Decorator.uml#_P_m58HIhEeu7meSiANIrxg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_QCpm7HIhEeu7meSiANIrxg" name="abrirCuenta">
+      <modelElement href="Decorator.uml#_QAC-1XIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_QCpm7XIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_QCpm7nIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_QCpm73IhEeu7meSiANIrxg" name="u">
+        <modelElement href="Decorator.uml#_QAC-1nIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_QCpm8HIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_QCpm8XIhEeu7meSiANIrxg" name="Usuario">
+          <modelElement href="Decorator.uml#_P_p9QHIhEeu7meSiANIrxg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_QCpm8nIhEeu7meSiANIrxg" name="hacerAdmin">
+      <modelElement href="Decorator.uml#_QAC-13IhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_QCpm83IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_QCpm9HIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_QCpm9XIhEeu7meSiANIrxg" name="u">
+        <modelElement href="Decorator.uml#_QAC-2HIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_QCpm9nIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_QCpm93IhEeu7meSiANIrxg" name="Usuario">
+          <modelElement href="Decorator.uml#_P_p9QHIhEeu7meSiANIrxg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_QCq1AHIhEeu7meSiANIrxg" name="Telegram">
+    <modelElement href="Decorator.uml#_P_ovIHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_QCq1AXIhEeu7meSiANIrxg" position="153.0,394.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_QCq1AnIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_QCq1A3IhEeu7meSiANIrxg" name="main" staticOperation="true">
+      <modelElement href="Decorator.uml#_P_pWMHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_QCq1BHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_QCq1BXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_QCq1BnIhEeu7meSiANIrxg" name="args">
+        <modelElement href="Decorator.uml#_P_pWMXIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_QCq1B3IhEeu7meSiANIrxg" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_QCq1CHIhEeu7meSiANIrxg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_QCrcEHIhEeu7meSiANIrxg" name="CuentaTelegram" associationsIn="_QCl8gnIhEeu7meSiANIrxg" subclassedBy="_QCl8gXIhEeu7meSiANIrxg _QCsqMHIhEeu7meSiANIrxg _QCufYHIhEeu7meSiANIrxg">
+    <modelElement href="Decorator.uml#_P_m58HIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_QCrcEXIhEeu7meSiANIrxg" position="277.0,-172.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_QCrcEnIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_QCrcE3IhEeu7meSiANIrxg" name="abrirCuenta">
+      <modelElement href="Decorator.uml#_P__7g3IhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_QCrcFHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_QCrcFXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_QCrcFnIhEeu7meSiANIrxg" name="u">
+        <modelElement href="Decorator.uml#_P__7hHIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_QCrcF3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_QCrcGHIhEeu7meSiANIrxg" name="Usuario">
+          <modelElement href="Decorator.uml#_P_p9QHIhEeu7meSiANIrxg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_QCtRQHIhEeu7meSiANIrxg" name="UsuarioNormal" generalizations="_QCsqMHIhEeu7meSiANIrxg">
+    <modelElement href="Decorator.uml#_P_mS4HIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_QCtRQXIhEeu7meSiANIrxg" position="646.0,99.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_QCtRQnIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_QCtRQ3IhEeu7meSiANIrxg" name="abrirCuenta">
+      <modelElement href="Decorator.uml#_P__UcXIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_QCtRRHIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Decorator.uml#_P__7gHIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_QCtRRXIhEeu7meSiANIrxg" name="Annotations">
+        <modelElement href="Decorator.uml#_P__7gXIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_QCtRRnIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_QCtRR3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_QCtRSHIhEeu7meSiANIrxg" name="u">
+        <modelElement href="Decorator.uml#_P__UcnIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_QCtRSXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_QCtRSnIhEeu7meSiANIrxg" name="Usuario">
+          <modelElement href="Decorator.uml#_P_p9QHIhEeu7meSiANIrxg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_QCvGcHIhEeu7meSiANIrxg" name="UsuarioPremium" generalizations="_QCufYHIhEeu7meSiANIrxg">
+    <modelElement href="Decorator.uml#_P_tnoHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_QCvGcXIhEeu7meSiANIrxg" position="646.0,232.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_QCvGcnIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_QCvGc3IhEeu7meSiANIrxg" name="abrirCuenta">
+      <modelElement href="Decorator.uml#_QADl4nIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_QCvGdHIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Decorator.uml#_QADl5HIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_QCvGdXIhEeu7meSiANIrxg" name="Annotations">
+        <modelElement href="Decorator.uml#_QAEM8HIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_QCvGdnIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_QCvGd3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_QCvGeHIhEeu7meSiANIrxg" name="u">
+        <modelElement href="Decorator.uml#_QADl43IhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_QCvGeXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_QCvGenIhEeu7meSiANIrxg" name="Usuario">
+          <modelElement href="Decorator.uml#_P_p9QHIhEeu7meSiANIrxg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_QCwUkHIhEeu7meSiANIrxg" name="Usuario">
+    <modelElement href="Decorator.uml#_P_p9QHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_QCwUkXIhEeu7meSiANIrxg" position="-352.0,30.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_QCwUknIhEeu7meSiANIrxg" label="+"/>
+    <attributes xmi:id="_QCwUk3IhEeu7meSiANIrxg" name="id">
+      <modelElement href="Decorator.uml#_QAE0AHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_QCwUlHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_QCwUlXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_QCwUlnIhEeu7meSiANIrxg" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_QCwUl3IhEeu7meSiANIrxg" name="nombre">
+      <modelElement href="Decorator.uml#_QAE0AXIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_QCwUmHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_QCwUmXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_QCwUmnIhEeu7meSiANIrxg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_QCwUm3IhEeu7meSiANIrxg" name="Usuario">
+      <modelElement href="Decorator.uml#_P_p9QXIhEeu7meSiANIrxg"/>
+      <keywords xmi:id="_QCwUnHIhEeu7meSiANIrxg" keyword="create"/>
+      <stereotypes xmi:id="_QCwUnXIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Decorator.uml#_P_qkUHIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_QCwUnnIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_QCwUn3IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_QCwUoHIhEeu7meSiANIrxg">
+        <modelElement href="Decorator.uml#_P_qkUXIhEeu7meSiANIrxg"/>
+        <type xmi:id="_QCwUoXIhEeu7meSiANIrxg" name="Usuario">
+          <modelElement href="Decorator.uml#_P_p9QHIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_QCwUonIhEeu7meSiANIrxg" name="Usuario">
+      <modelElement href="Decorator.uml#_P_qkUnIhEeu7meSiANIrxg"/>
+      <keywords xmi:id="_QCwUo3IhEeu7meSiANIrxg" keyword="create"/>
+      <visibility xmi:id="_QCwUpHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_QCwUpXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_QCwUpnIhEeu7meSiANIrxg">
+        <modelElement href="Decorator.uml#_P_qkV3IhEeu7meSiANIrxg"/>
+        <type xmi:id="_QCwUp3IhEeu7meSiANIrxg" name="Usuario">
+          <modelElement href="Decorator.uml#_P_p9QHIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_QCwUqHIhEeu7meSiANIrxg" name="id">
+        <modelElement href="Decorator.uml#_P_qkU3IhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_QCwUqXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_QCwUqnIhEeu7meSiANIrxg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_QCwUq3IhEeu7meSiANIrxg" name="nombre">
+        <modelElement href="Decorator.uml#_P_qkVHIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_QCwUrHIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+        <type xmi:id="_QCwUrXIhEeu7meSiANIrxg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
+>>>>>>> refs/remotes/origin/master

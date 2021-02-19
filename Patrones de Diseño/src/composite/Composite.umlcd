@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_MhcxAHIhEeu7meSiANIrxg">
   <modelElement href="Composite.uml#_Mm-xQHIhEeu7meSiANIrxg"/>
@@ -45,3 +46,52 @@
     <visibility xmi:id="_MpB_snIhEeu7meSiANIrxg" label="+"/>
   </nodes>
 </com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_MhcxAHIhEeu7meSiANIrxg">
+  <modelElement href="Composite.uml#_Mm-xQHIhEeu7meSiANIrxg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_Mo_jcHIhEeu7meSiANIrxg" sourceAnchor="27.0,0.0" targetAnchor="41.0,27.0" superClass="_Mo-8YHIhEeu7meSiANIrxg" subClass="_Mo_jcXIhEeu7meSiANIrxg">
+    <modelElement href="Composite.uml#_MnGGAHIhEeu7meSiANIrxg"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_MpBYoHIhEeu7meSiANIrxg" sourceAnchor="18.0,0.0" targetAnchor="41.0,27.0" superClass="_Mo-8YHIhEeu7meSiANIrxg" subClass="_MpB_sHIhEeu7meSiANIrxg">
+    <modelElement href="Composite.uml#_MnGGAXIhEeu7meSiANIrxg"/>
+    <bendpoints xmi:id="_Mrp14HIhEeu7meSiANIrxg" sourceY="-28" targetX="120" targetY="27"/>
+    <bendpoints xmi:id="_Mrp14XIhEeu7meSiANIrxg" sourceX="-120" sourceY="-28" targetY="27"/>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_Mo-8YHIhEeu7meSiANIrxg" name="Componente" abstractClass="true" subclassedBy="_Mo_jcHIhEeu7meSiANIrxg _MpBYoHIhEeu7meSiANIrxg">
+    <modelElement href="Composite.uml#_Mm__YHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_Mo-8YXIhEeu7meSiANIrxg" position="30.0,30.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_Mo-8YnIhEeu7meSiANIrxg" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_Mo_jcXIhEeu7meSiANIrxg" name="Compuesto" generalizations="_Mo_jcHIhEeu7meSiANIrxg">
+    <modelElement href="Composite.uml#_Mm__YXIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_Mo_jcnIhEeu7meSiANIrxg" position="44.0,189.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_MpAKgHIhEeu7meSiANIrxg" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_MpAxkHIhEeu7meSiANIrxg" name="Demo">
+    <modelElement href="Composite.uml#_MnAmcHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_MpAxkXIhEeu7meSiANIrxg" position="-230.0,85.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_MpAxknIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_MpAxk3IhEeu7meSiANIrxg" name="main" staticOperation="true">
+      <modelElement href="Composite.uml#_MnAmcXIhEeu7meSiANIrxg"/>
+      <stereotypes xmi:id="_MpAxlHIhEeu7meSiANIrxg" name="LegacyStyledElement">
+        <modelElement href="Composite.uml#_MnBNgHIhEeu7meSiANIrxg"/>
+      </stereotypes>
+      <visibility xmi:id="_MpAxlXIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_MpAxlnIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_MpAxl3IhEeu7meSiANIrxg" name="args">
+        <modelElement href="Composite.uml#_MnAmcnIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_MpAxmHIhEeu7meSiANIrxg" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_MpAxmXIhEeu7meSiANIrxg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_MpB_sHIhEeu7meSiANIrxg" name="Hoja" generalizations="_MpBYoHIhEeu7meSiANIrxg">
+    <modelElement href="Composite.uml#_MnBNg3IhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_MpB_sXIhEeu7meSiANIrxg" position="173.0,112.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_MpB_snIhEeu7meSiANIrxg" label="+"/>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
+>>>>>>> refs/remotes/origin/master

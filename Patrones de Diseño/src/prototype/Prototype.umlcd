@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_oMIvYHIhEeu7meSiANIrxg">
   <modelElement href="Prototype.uml#_oWRi0HIhEeu7meSiANIrxg"/>
@@ -93,3 +94,100 @@
     </operations>
   </nodes>
 </com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_oMIvYHIhEeu7meSiANIrxg">
+  <modelElement href="Prototype.uml#_oWRi0HIhEeu7meSiANIrxg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_oYRG4HIhEeu7meSiANIrxg" sourceAnchor="79.0,0.0" targetAnchor="78.0,71.0" dashed="true" superClass="_oYS8EHIhEeu7meSiANIrxg" subClass="_oYRG4XIhEeu7meSiANIrxg">
+    <modelElement href="Prototype.uml#_oWbT0HIhEeu7meSiANIrxg"/>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_oYRG4XIhEeu7meSiANIrxg" name="Cuenta" generalizations="_oYRG4HIhEeu7meSiANIrxg">
+    <modelElement href="Prototype.uml#_oWTYAHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_oYRG4nIhEeu7meSiANIrxg" position="30.0,30.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_oYRG43IhEeu7meSiANIrxg" label="+"/>
+    <attributes xmi:id="_oYRG5HIhEeu7meSiANIrxg" name="tipo">
+      <modelElement href="Prototype.uml#_oWch83IhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_oYRG5XIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_oYRG5nIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_oYRG53IhEeu7meSiANIrxg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_oYRG6HIhEeu7meSiANIrxg" name="saldo">
+      <modelElement href="Prototype.uml#_oWdJAHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_oYRG6XIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_oYRG6nIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <type xmi:id="_oYRG63IhEeu7meSiANIrxg" name="double">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_oYRG7HIhEeu7meSiANIrxg" name="Cuenta">
+      <modelElement href="Prototype.uml#_oWT_EHIhEeu7meSiANIrxg"/>
+      <keywords xmi:id="_oYRG7XIhEeu7meSiANIrxg" keyword="create"/>
+      <visibility xmi:id="_oYRG7nIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_oYRG73IhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_oYRG8HIhEeu7meSiANIrxg">
+        <modelElement href="Prototype.uml#_oWT_E3IhEeu7meSiANIrxg"/>
+        <type xmi:id="_oYRG8XIhEeu7meSiANIrxg" name="Cuenta">
+          <modelElement href="Prototype.uml#_oWTYAHIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_oYRG8nIhEeu7meSiANIrxg" name="clonar">
+      <modelElement href="Prototype.uml#_oWT_FHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_oYRG83IhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_oYRG9HIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_oYRG9XIhEeu7meSiANIrxg">
+        <modelElement href="Prototype.uml#_oWbT0XIhEeu7meSiANIrxg"/>
+        <type xmi:id="_oYRG9nIhEeu7meSiANIrxg" name="ICuenta">
+          <modelElement href="Prototype.uml#_oWV0QHIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_oYRG93IhEeu7meSiANIrxg" name="toString">
+      <modelElement href="Prototype.uml#_oWUmIHIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_oYRG-HIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_oYRG-XIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_oYRG-nIhEeu7meSiANIrxg">
+        <modelElement href="Prototype.uml#_oWUmIXIhEeu7meSiANIrxg"/>
+        <type xmi:id="_oYRG-3IhEeu7meSiANIrxg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_oYS8EHIhEeu7meSiANIrxg" name="ICuenta" subclassedBy="_oYRG4HIhEeu7meSiANIrxg">
+    <modelElement href="Prototype.uml#_oWV0QHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_oYS8EXIhEeu7meSiANIrxg" position="31.0,-96.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_oYS8EnIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_oYS8E3IhEeu7meSiANIrxg" name="clonar">
+      <modelElement href="Prototype.uml#_oWV0QXIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_oYS8FHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_oYS8FXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_oYS8FnIhEeu7meSiANIrxg">
+        <modelElement href="Prototype.uml#_oWb64HIhEeu7meSiANIrxg"/>
+        <type xmi:id="_oYS8F3IhEeu7meSiANIrxg" name="ICuenta">
+          <modelElement href="Prototype.uml#_oWV0QHIhEeu7meSiANIrxg"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_oYTjIHIhEeu7meSiANIrxg" name="Demo">
+    <modelElement href="Prototype.uml#_oWVNMHIhEeu7meSiANIrxg"/>
+    <visualProperties xmi:id="_oYTjIXIhEeu7meSiANIrxg" position="248.0,-8.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_oYTjInIhEeu7meSiANIrxg" label="+"/>
+    <operations xmi:id="_oYTjI3IhEeu7meSiANIrxg" name="main" staticOperation="true">
+      <modelElement href="Prototype.uml#_oWVNMXIhEeu7meSiANIrxg"/>
+      <visibility xmi:id="_oYTjJHIhEeu7meSiANIrxg" label="+"/>
+      <cardinality xmi:id="_oYTjJXIhEeu7meSiANIrxg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_oYTjJnIhEeu7meSiANIrxg" name="args">
+        <modelElement href="Prototype.uml#_oWVNMnIhEeu7meSiANIrxg"/>
+        <cardinality xmi:id="_oYTjJ3IhEeu7meSiANIrxg" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_oYTjKHIhEeu7meSiANIrxg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
+>>>>>>> refs/remotes/origin/master

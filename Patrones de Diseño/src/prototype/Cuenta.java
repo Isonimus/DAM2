@@ -1,5 +1,10 @@
 package prototype;
-
+/**
+ * IMPLEMENTaCIÓN CONCRETA DE LA CLASE CUENTA
+ * TIENE LA CAPACIDAD DE CLONARSE
+ * @author Iker Laforga
+ *
+ */
 public class Cuenta implements ICuenta{
 	
 	private String tipo;
