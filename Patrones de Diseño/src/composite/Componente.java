@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package composite;
 
 import java.util.Iterator;
@@ -16,10 +15,3 @@ public abstract class Componente {
 	public abstract void eliminar(Componente c);
 	public abstract Iterator<Componente> crearIterador();
 }
-=======
-package composite;
-
-public abstract class Componente {
-
-}
->>>>>>> refs/remotes/origin/master

@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 package composite;
 
 import java.util.Iterator;
 
 /**
  * 
- * @author PIker Laforga
+ * @author Iker Laforga
  *
  */
 
@@ -48,10 +47,3 @@ public class Hoja extends Componente{
 	public Iterator<Componente> crearIterador() {
 	return null;}
 }
-=======
-package composite;
-
-public class Hoja extends Componente{
-
-}
->>>>>>> refs/remotes/origin/master

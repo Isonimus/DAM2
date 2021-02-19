@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package composite;
 
 import java.util.ArrayList;
@@ -54,10 +53,3 @@ public class Compuesto extends Componente{
 		return listaComponentes.iterator();
 	}
 }
-=======
-package composite;
-
-public class Compuesto extends Componente{
-
-}
->>>>>>> refs/remotes/origin/master
