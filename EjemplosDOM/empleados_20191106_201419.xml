@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<empleados>
+	<empleado>
+		<codEmpleado>1</codEmpleado>
+		<nombre>martin</nombre>
+		<apellido>lopez</apellido>
+	</empleado>
+	<empleado>
+		<codEmpleado>2</codEmpleado>
+		<nombre>andres</nombre>
+		<apellido>martinez</apellido>
+	</empleado>
+</empleados>
