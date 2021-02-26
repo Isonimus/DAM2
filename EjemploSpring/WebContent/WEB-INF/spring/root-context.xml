@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- Ejemplo DI -->
+	<bean id="accesoDatos" class="com.tongosa.tombola.di.impl.AccesoDatosOracle2">
+		<property name="numMaxConexiones" value="20" />
+		<property name="numMinConexiones" value="8" />
+	</bean>
+	<!-- Ejemplo AOP -->
+	<bean id="accesoDatos2" 
+	class="com.tongosa.tombola.di.impl.AccesoDatos2" />
+	<bean id="ejecutarBeforeMethod" 
+	class="com.tongosa.tombola.aop.EjecutarBeforeMethod" />
+	<bean id="accesoDatos2Proxy" 
+	class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="accesoDatos2" />
+		<property name="interceptorNames">
+			<list>
+				<value>ejecutarBeforeMethod</value>
+			</list>
+		</property>
+	</bean>
+</beans>
