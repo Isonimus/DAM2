@@ -1,0 +1,294 @@
+:root {
+  	--main-bg-color: rgb(237, 235, 236);
+  	--main-blue: #173F5F;
+  	--main-green: #009879;
+  	--main-yellow: #F6D55D;
+  	--main-pseudoblack: #3e3e3d;
+  	--padding-superior: 160px;
+}
+
+body{
+	background-color:var(--main-bg-color);
+	margin:0;
+	padding-top:var(--padding-superior);
+}
+
+h1{
+	font-family : arial;
+	color: var(--main-green);
+}
+
+h3{
+	font-family : arial;
+	color: var(--main-green);
+}
+
+.contenedor{
+	display: flex;
+  	justify-content: center;
+}
+
+.contenedorVerical{
+	display: flex;
+	flex-direction: column;
+  	justify-content: center;
+}
+
+.centrado{
+	text-align: center;
+	font-family : arial;
+	justify-content: center;
+}
+
+.amarillo{
+	background-color:rgb(249, 253, 232);
+}
+
+.login{
+	text-align:center;
+	height:30px;
+	font-size:14pt;
+	width:100%;
+}
+
+.tablaEstilada{
+	font-family : arial;
+	border-collapse: collapse;
+	border-radius:6px;
+	-moz-border-radius:6px;
+	margin: 25px;
+	font-size: 0.9em;
+	min-width: 400px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.tablaEstilada th, 
+.tablaEstilada td{
+	padding: 12px 15px;
+	text-align: center;
+}
+
+.tablaEstilada tbody tr{
+	color:var(--main-pseudoblack);
+}
+
+.tablaEstilada thead tr{
+	border-radius:6px;
+	-moz-border-radius:6px;
+	font-size: 14px;
+	background-color: var(--main-green);
+	color:#ffffff;
+}
+
+.tablaEstilada thead{
+border-radius: 3px 3px 0px 0px;
+}
+
+.tablaEstilada tbody tr{
+	border-bottom: thin solid #dddddd;
+}
+
+.tablaEstilada tbody tr:hover{
+	color:var(--main-green);
+}
+
+.tablaEstilada tbody tr:nth-of-type(even){
+	background-color: #f3f3f3;
+}
+
+.tablaEstilada tbody tr:last-of-type{
+	border-bottom: 2px solid var(--main-green);
+}
+
+.tablaEstilada tbody tr input{
+	width:95%;
+}
+
+.tablaEstilada tbody tr td a,
+#saludo a{
+	color: var(--main-green);
+	text-decoration:none;
+	font-weight: 600;
+}
+
+.tablaEstilada tbody tr td a:hover,
+#saludo a:hover{
+	color: var(--main-yellow);
+}
+
+.tablaEstilada tbody tr button[type=submit]{
+	
+	background-color: var(--main-green);
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.tablaEstilada tbody tr button[type=submit]:disabled{
+	
+	background-color: var(--main-bg-color);
+	color: var(--main-pseudoblack);
+}
+
+.tablaEstilada tbody tr button[type=submit]:active,
+.tablaEstilada tbody tr button[type=submit]:focus{
+	outline-color: var(--main-green);
+	border: none;
+}
+
+.tablaEstilada tbody tr button[type=reset]{
+	
+	background-color: red;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.tablaEstilada tbody tr button[type=reset]:active,
+.tablaEstilada tbody tr button[type=reset]:focus{
+	outline-color: var(--main-green);
+	border: none;
+}
+
+.tablaEstilada tbody tr button:hover{
+	background-color: var(--main-yellow);
+	color: var(--main-green);
+}
+
+input:focus {
+	background-color: var(--main-yellow);
+    outline-color: var(--main-green);
+    box-shadow: 0 0 4px #719ECE;
+}
+
+#header{
+	top:0;
+	position:fixed;
+	width:100%;
+	display: flex;
+	flex-direction: column;
+	padding: 10px 15px;
+	padding-top:0px;
+  	justify-content: center;
+  	background-color:#f3f3f3;
+  	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#header button{
+	background-color: var(--main-green);
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	cursor: pointer;
+	float: left;
+}
+
+#header button:hover{
+	background-color: var(--main-yellow);
+	color:var(--main-green);
+}
+
+#header button[disabled]{
+	background-color: var(--main-yellow);
+	color: var(--main-green);
+}
+
+#header button:active,
+#header button:focus{
+	outline-color: var(--main-green);
+	border: none;
+}
+
+#saludo{
+	color: var(--main-green);
+	background-color:var(--main-green);
+	font-family : arial;
+	z-index:100;
+	float:right;
+	position:fixed;
+	top:10px;
+	right:20px;
+	border:thin;
+	padding:5px;
+	border-color: var(--main-green);
+	border-style: solid;
+	border-radius:3px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+#barraBusqueda{
+	position:fixed;
+	top:calc(var(--padding-superior) + 20);
+	right:20px;
+	display: flex; 
+	flex-direction:column;
+	justify-content: center;
+	background-color:var(--main-green);
+	z-index:100;
+	float:right;
+	margin-top:-60px;
+	padding:5px;
+	border-radius:3px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+#barraBusqueda button{
+	background-color: var(--main-green);
+	border: none;
+}
+
+#barraBusqueda button:hover{
+	background-color: var(--main-yellow);
+}
+
+#barraBusqueda button:active,
+#barraBusqueda button:focus{
+	outline-color: var(--main-green);
+	border: none;
+}
+
+#barraBusqueda label{
+	font-family : arial;
+	color: white;
+	margin-top:5px;
+}
+
+#footer{
+	display: flex;
+  	justify-content: center;
+  	color: #ffffff;
+  	background-color: var(--main-green);
+  	font-family : arial;
+  	padding: 5px;
+  	position: fixed;
+    bottom:0;
+    width: 100%;
+  	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#footer a{
+	color: white;
+	text-decoration:none;
+}
+
+#footer a:hover{
+	color: var(--main-yellow);
+	text-decoration:none;
+}
+
+.ajusteFooter{
+	padding-bottom: 5rem;
+}
